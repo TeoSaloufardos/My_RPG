@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{0033047D-51FE-B7C4-9EC4-EF4BED59252F}</ProjectGuid>
+    <ProjectGuid>{0BE87C23-1595-B1FC-A05B-D197044E4741}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.ProBuilder.Csg</AssemblyName>
@@ -56,15 +56,15 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\External\CSG\Classes\Vertex.cs" />
     <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\External\CSG\Classes\Model.cs" />
-    <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\External\CSG\CSG.cs" />
     <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\External\CSG\Classes\Polygon.cs" />
-    <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\External\CSG\Classes\Plane.cs" />
+    <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\External\CSG\Classes\Node.cs" />
+    <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\External\CSG\CSG.cs" />
+    <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\External\CSG\Classes\VertexUtility.cs" />
     <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\External\CSG\Classes\VertexAttributes.cs" />
     <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\External\CSG\AssemblyInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\External\CSG\Classes\Node.cs" />
-    <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\External\CSG\Classes\VertexUtility.cs" />
+    <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\External\CSG\Classes\Vertex.cs" />
+    <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\External\CSG\Classes\Plane.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.probuilder@5.0.7\External\CSG\Unity.ProBuilder.Csg.asmdef" />

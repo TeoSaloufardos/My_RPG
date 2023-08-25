@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4CDC8D30-E856-5E72-078C-F1BA51A8B67B}</ProjectGuid>
+    <ProjectGuid>{373839EE-1CCE-D16F-B6ED-B32AE5E0A457}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.ProGrids.Editor</AssemblyName>
@@ -56,26 +56,26 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\PlayModeStateListener.cs" />
-    <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\PreferenceKeys.cs" />
-    <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\ScenePreferencesWindow.cs" />
-    <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\EditorUtility.cs" />
-    <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\Version.cs" />
-    <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\Defaults.cs" />
-    <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\SnapSettings.cs" />
     <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\ProGridsEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\AssemblyInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\MenuItems.cs" />
+    <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\Changelog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\SemVer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\ToggleContent.cs" />
     <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\ProGridsEnums.cs" />
-    <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\IconUtility.cs" />
     <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\Snapping.cs" />
     <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\ProGridsSettingsProvider.cs" />
     <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\ProGridsSceneToolbar.cs" />
-    <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\SemVer.cs" />
-    <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\Changelog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\SnapSettings.cs" />
     <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\Preferences.cs" />
-    <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\ToggleContent.cs" />
+    <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\PlayModeStateListener.cs" />
+    <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\ScenePreferencesWindow.cs" />
+    <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\EditorUtility.cs" />
+    <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\PreferenceKeys.cs" />
     <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\GridRenderer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\IconUtility.cs" />
+    <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\MenuItems.cs" />
+    <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\Version.cs" />
+    <Compile Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\Defaults.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.progrids@3.0.3-preview.6\Editor\Unity.ProGrids.Editor.asmdef" />
@@ -750,19 +750,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.ProGrids.csproj">
-      <Project>{81C00951-5820-4CC2-EA20-5AA7488F0662}</Project>
+      <Project>{C49B810C-A4EB-07CE-0D07-20E0E6A4C17E}</Project>
       <Name>Unity.ProGrids</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Settings.Editor.csproj">
-      <Project>{2ECFD76A-4CC9-13B0-6C46-C0D9FC9EB250}</Project>
+      <Project>{F098C5E9-F2B5-9458-F199-EF177B0327FA}</Project>
       <Name>Unity.Settings.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{5A8B4A44-CE13-B995-9781-9B76143CE364}</Project>
+      <Project>{A26D2B7B-24B6-3BD5-B42C-800DF897AAF2}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{4ABDA0F2-2B25-866F-7D5D-86BA87217C1A}</Project>
+      <Project>{958DCC63-8D2E-F050-83DF-48994EC3E5E0}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{8D2EB109-75A1-73FE-E265-75F3E4B3A9BD}</ProjectGuid>
+    <ProjectGuid>{3DE4FC49-D2B1-C518-57C3-2ABF03A04DA0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.ProBuilder.AssetIdRemapUtility</AssemblyName>
@@ -56,13 +56,13 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\AssetIdRemapUtility\Editor\AssemblyInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\AssetIdRemapUtility\Editor\PackageImporter.cs" />
-    <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\AssetIdRemapUtility\Editor\AssetId.cs" />
     <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\AssetIdRemapUtility\Editor\AssetIdRemapBuilderEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\AssetIdRemapUtility\Editor\AssetIdRemapEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\AssetIdRemapUtility\Editor\PackageImporter.cs" />
     <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\AssetIdRemapUtility\Editor\AssetIdRemapBuilderTreeView.cs" />
     <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\AssetIdRemapUtility\Editor\AssetTreeView.cs" />
-    <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\AssetIdRemapUtility\Editor\AssetIdRemapEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\AssetIdRemapUtility\Editor\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\AssetIdRemapUtility\Editor\AssetId.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.probuilder@5.0.7\AssetIdRemapUtility\Editor\Unity.ProBuilder.AssetIdRemapUtility.asmdef" />
@@ -737,11 +737,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{5A8B4A44-CE13-B995-9781-9B76143CE364}</Project>
+      <Project>{A26D2B7B-24B6-3BD5-B42C-800DF897AAF2}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{4ABDA0F2-2B25-866F-7D5D-86BA87217C1A}</Project>
+      <Project>{958DCC63-8D2E-F050-83DF-48994EC3E5E0}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>
