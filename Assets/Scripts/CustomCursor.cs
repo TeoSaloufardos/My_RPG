@@ -7,6 +7,7 @@ public class CustomCursor : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] GameObject cursorObject; //Εδω θα λαμβανω το cursor που θα ακολουθει το ποντικι.
     
+    
     void Start()
     {
         Cursor.visible = false; //Οριζω το default cursor να μην εμφανιζεται.
