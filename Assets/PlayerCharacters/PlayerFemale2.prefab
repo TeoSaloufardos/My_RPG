@@ -214,6 +214,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Female1.2
       objectReference: {fileID: 0}
+    - target: {fileID: 6874913550928275913, guid: 136bbd8d0c1da3b42850cdd7d3ebf799, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 6880935409634334467, guid: 136bbd8d0c1da3b42850cdd7d3ebf799, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -282,6 +286,35 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6874913550928275913, guid: 136bbd8d0c1da3b42850cdd7d3ebf799, type: 3}
   m_PrefabInstance: {fileID: 4798502414141401020}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &6938206553601425227
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2161496883033919093}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &140207099919272932
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2161496883033919093}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.738491, z: 0.5700073}
+  m_Center: {x: 0, y: 0.8498821, z: -0.033233643}
 --- !u!114 &5440640003426320871
 MonoBehaviour:
   m_ObjectHideFlags: 0
