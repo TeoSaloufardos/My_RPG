@@ -22,7 +22,7 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51004
+52267
 Successfully changed project path to: /Users/teotataris/Documents/GitHub/My_RPG
 /Users/teotataris/Documents/GitHub/My_RPG
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -54,11 +54,11 @@ Successfully changed project path to: /Users/teotataris/Documents/GitHub/My_RPG
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [7924437760] Host "[IP] 192.168.170.5 [Port] 0 [Flags] 2 [Guid] 3959948927 [EditorId] 3959948927 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air-Teo.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [7924437760] Host "[IP] 172.20.10.8 [Port] 0 [Flags] 2 [Guid] 3770913378 [EditorId] 3770913378 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air-Teo.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [7924437760] Host "[IP] 192.168.170.5 [Port] 0 [Flags] 2 [Guid] 3959948927 [EditorId] 3959948927 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air-Teo.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [7924437760] Host "[IP] 172.20.10.8 [Port] 0 [Flags] 2 [Guid] 3770913378 [EditorId] 3770913378 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air-Teo.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 157.75 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 265.02 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.25f1 (68ef2c4f8861)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/Resources/UnitySubsystems
@@ -73,147 +73,90 @@ Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
 Mono config path = '/Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56211
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56638
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.000621 seconds.
+Registered in 0.001205 seconds.
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 152.90 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 118.78 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.703 seconds
+- Completed reload, in  0.556 seconds
 Domain Reload Profiling:
-	ReloadAssembly (703ms)
-		BeginReloadAssembly (99ms)
+	ReloadAssembly (556ms)
+		BeginReloadAssembly (98ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (507ms)
-			LoadAssemblies (97ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (136ms)
+			CreateAndSetChildDomain (0ms)
+		EndReloadAssembly (391ms)
+			LoadAssemblies (98ms)
+			RebuildTransferFunctionScriptingTraits (1ms)
+			SetupTypeCache (84ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (29ms)
-			SetupLoadedEditorAssemblies (296ms)
+			RebuildScriptCaches (24ms)
+			SetupLoadedEditorAssemblies (252ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (153ms)
-				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (106ms)
-				ProcessInitializeOnLoadMethodAttributes (32ms)
+				RefreshPlugins (119ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (99ms)
+				ProcessInitializeOnLoadMethodAttributes (29ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001975 seconds.
+Registered in 0.007769 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image /Users/teotataris/Documents/GitHub/My_RPG/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image /Users/teotataris/Documents/GitHub/My_RPG/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 166.03 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 134.75 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.426 seconds
+- Completed reload, in  1.405 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1426ms)
-		BeginReloadAssembly (88ms)
+	ReloadAssembly (1406ms)
+		BeginReloadAssembly (66ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
+			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (20ms)
-		EndReloadAssembly (1255ms)
-			LoadAssemblies (53ms)
+			CreateAndSetChildDomain (17ms)
+		EndReloadAssembly (1241ms)
+			LoadAssemblies (138ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (309ms)
-			ReleaseScriptCaches (7ms)
-			RebuildScriptCaches (93ms)
-			SetupLoadedEditorAssemblies (755ms)
+			SetupTypeCache (281ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (72ms)
+			SetupLoadedEditorAssemblies (712ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (2ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (166ms)
-				BeforeProcessingInitializeOnLoad (116ms)
-				ProcessInitializeOnLoadAttributes (424ms)
-				ProcessInitializeOnLoadMethodAttributes (45ms)
+				RefreshPlugins (135ms)
+				BeforeProcessingInitializeOnLoad (93ms)
+				ProcessInitializeOnLoadAttributes (442ms)
+				ProcessInitializeOnLoadMethodAttributes (38ms)
 				AfterProcessingInitializeOnLoad (1ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (3ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launching external process: /Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/Tools/UnityShaderCompiler
-Launched and connected shader compiler UnityShaderCompiler after 0.29 seconds
-Refreshing native plugins compatible for Editor in 1.65 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler after 0.24 seconds
+Refreshing native plugins compatible for Editor in 1.26 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5972 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 84 unused Assets / (3.4 MB). Loaded Objects now: 6442.
-Memory consumption went from 325.0 MB to 321.6 MB.
-Total: 9.089834 ms (FindLiveObjects: 2.068667 ms CreateObjectMapping: 0.126792 ms MarkObjects: 5.784291 ms  DeleteObjects: 1.108584 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002067 seconds.
-Begin MonoManager ReloadAssembly
-Thread 0x2b2e87000 may have been prematurely finalized
-Symbol file LoadedFromMemory doesn't match image /Users/teotataris/Documents/GitHub/My_RPG/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image /Users/teotataris/Documents/GitHub/My_RPG/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 1.40 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.988 seconds
-Domain Reload Profiling:
-	ReloadAssembly (989ms)
-		BeginReloadAssembly (125ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (57ms)
-		EndReloadAssembly (799ms)
-			LoadAssemblies (45ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (265ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (46ms)
-			SetupLoadedEditorAssemblies (420ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (2ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (68ms)
-				ProcessInitializeOnLoadAttributes (311ms)
-				ProcessInitializeOnLoadMethodAttributes (36ms)
-				AfterProcessingInitializeOnLoad (1ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (3ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 4.94 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5786 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 55 unused Assets / (3.3 MB). Loaded Objects now: 6458.
-Memory consumption went from 305.0 MB to 301.6 MB.
-Total: 3.237500 ms (FindLiveObjects: 0.199042 ms CreateObjectMapping: 0.074042 ms MarkObjects: 2.531750 ms  DeleteObjects: 0.432000 ms)
+Unloading 5973 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 84 unused Assets / (3.9 MB). Loaded Objects now: 6443.
+Memory consumption went from 327.5 MB to 323.6 MB.
+Total: 11.692125 ms (FindLiveObjects: 1.306917 ms CreateObjectMapping: 0.232208 ms MarkObjects: 6.745000 ms  DeleteObjects: 3.407166 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -227,121 +170,40 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 531365.411135 seconds.
-  path: Assets/Scripts/SavePlayer.cs
-  artifactKey: Guid(bbdbfeebfaa9b3c46b4abd183539e699) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/SavePlayer.cs using Guid(bbdbfeebfaa9b3c46b4abd183539e699) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63bead9a98750a804ed5a0ebd63e926d') in 0.106070 seconds 
+  Time since last request: 536617.072012 seconds.
+  path: Assets/UI-Fonts-Tools/RPG_UI/ChooseText.png
+  artifactKey: Guid(bfab74031f5263846b8793b732ab907a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI-Fonts-Tools/RPG_UI/ChooseText.png using Guid(bfab74031f5263846b8793b732ab907a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47fc332015b64e9bd7e3ce8d9e2160ce') in 0.747738 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 51.152740 seconds.
-  path: Assets/Scripts/ItemPickUp.cs
-  artifactKey: Guid(7210d3d542f230345873348e2222829c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/ItemPickUp.cs using Guid(7210d3d542f230345873348e2222829c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd6de6556e52501a9cd1a702330dcfb3') in 0.002214 seconds 
+  Time since last request: 0.000153 seconds.
+  path: Assets/UI-Fonts-Tools/RPG_UI/CharacterBG.png
+  artifactKey: Guid(36e5aeef39de2144cb766133ae079ede) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI-Fonts-Tools/RPG_UI/CharacterBG.png using Guid(36e5aeef39de2144cb766133ae079ede) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '924a20c2d40a22ca1b1d99bda031d09e') in 0.124530 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 62.020318 seconds.
-  path: Assets/Scripts/PopUpMessageHandler.cs
-  artifactKey: Guid(54cc4526bcf6a43619f384f2f0489737) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/PopUpMessageHandler.cs using Guid(54cc4526bcf6a43619f384f2f0489737) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39ce83d368714889e18c72c2275e4685') in 0.005008 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002167 seconds.
-Begin MonoManager ReloadAssembly
-Thread 0x17fb07000 may have been prematurely finalized
-Symbol file LoadedFromMemory doesn't match image /Users/teotataris/Documents/GitHub/My_RPG/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image /Users/teotataris/Documents/GitHub/My_RPG/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.91 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.922 seconds
-Domain Reload Profiling:
-	ReloadAssembly (923ms)
-		BeginReloadAssembly (113ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (50ms)
-		EndReloadAssembly (751ms)
-			LoadAssemblies (57ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (236ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (48ms)
-			SetupLoadedEditorAssemblies (383ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (2ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (63ms)
-				ProcessInitializeOnLoadAttributes (281ms)
-				ProcessInitializeOnLoadMethodAttributes (35ms)
-				AfterProcessingInitializeOnLoad (1ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (3ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.63 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5787 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 55 unused Assets / (3.4 MB). Loaded Objects now: 6475.
-Memory consumption went from 309.2 MB to 305.8 MB.
-Total: 3.185792 ms (FindLiveObjects: 0.187667 ms CreateObjectMapping: 0.076500 ms MarkObjects: 2.444167 ms  DeleteObjects: 0.476917 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  Time since last request: 0.000116 seconds.
+  path: Assets/UI-Fonts-Tools/RPG_UI/NextButtonOn.png
+  artifactKey: Guid(e2adbcdd5ebf3e344b057a84893b9bb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI-Fonts-Tools/RPG_UI/NextButtonOn.png using Guid(e2adbcdd5ebf3e344b057a84893b9bb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f0e5c62fe45e4739e95c0ecad6a9cc9') in 0.016443 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 1108.187668 seconds.
-  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Regular.ttf
-  artifactKey: Guid(30dc370b164eefc43b95744fc796dad0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Regular.ttf using Guid(30dc370b164eefc43b95744fc796dad0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cbf036782a3fd9e6ed091258c6e45a9') in 1.588235 seconds 
+  Time since last request: 0.000051 seconds.
+  path: Assets/UI-Fonts-Tools/RPG_UI/BackButtonOff.png
+  artifactKey: Guid(1e8dc924c8560f64d988f0edafa22ea8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI-Fonts-Tools/RPG_UI/BackButtonOff.png using Guid(1e8dc924c8560f64d988f0edafa22ea8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '183e5f328dc651563a333a77b5737cca') in 0.009094 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000169 seconds.
-  path: Assets/UI-Fonts-Tools/Fonts-Ui/vinque rg.otf
-  artifactKey: Guid(ad9f9a1e9c4f6414eb766dc637642acb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI-Fonts-Tools/Fonts-Ui/vinque rg.otf using Guid(ad9f9a1e9c4f6414eb766dc637642acb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fb8e412add8e6be305e7cde3c0e195e') in 0.403797 seconds 
+  Time since last request: 0.000065 seconds.
+  path: Assets/UI-Fonts-Tools/RPG_UI/AcceptOn.png
+  artifactKey: Guid(86f78fcdb9f355c42b14a0fdb56016c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI-Fonts-Tools/RPG_UI/AcceptOn.png using Guid(86f78fcdb9f355c42b14a0fdb56016c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e465f00e2ffc7242e2c0d3a554d1bf89') in 0.008118 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.464185 seconds.
-  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-LightItalic.ttf
-  artifactKey: Guid(5e63515167650a541b309ba3bfd4db3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-LightItalic.ttf using Guid(5e63515167650a541b309ba3bfd4db3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdfb5df2d8d4da4d532716ecf91267c5') in 0.016131 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.005595 seconds.
-  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Light.ttf
-  artifactKey: Guid(2a29e27936eb547458f646f71125b264) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Light.ttf using Guid(2a29e27936eb547458f646f71125b264) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '047b997353c02bf7f910d4151d540446') in 0.008907 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.015693 seconds.
-  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Bold.ttf
-  artifactKey: Guid(3750c318f40cab44a97d3a81beaefeb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Bold.ttf using Guid(3750c318f40cab44a97d3a81beaefeb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6242643e3b6f96c4824ab9df949bd26d') in 0.007940 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.002353 seconds.
-  path: Packages/com.unity.progrids/Font/Asap-Medium-ProGrids.otf
-  artifactKey: Guid(8c2220bd5fd560c4297e93c4c66a2ba8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.progrids/Font/Asap-Medium-ProGrids.otf using Guid(8c2220bd5fd560c4297e93c4c66a2ba8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca548c257697af9a39dfd5995d8b2ec1') in 0.011288 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000043 seconds.
-  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Black.ttf
-  artifactKey: Guid(1062c701058745940ae5dca6219c64c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Black.ttf using Guid(1062c701058745940ae5dca6219c64c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf1bf77d396545decf9df55ce81c2a00') in 0.006293 seconds 
+  Time since last request: 0.000185 seconds.
+  path: Assets/UI-Fonts-Tools/Materials/OLD-Materials for UI/Stamina.mat
+  artifactKey: Guid(6aaadd041d9f3481b8c847f3c0a04f10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI-Fonts-Tools/Materials/OLD-Materials for UI/Stamina.mat using Guid(6aaadd041d9f3481b8c847f3c0a04f10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5773c9b402cf365294469844b87e065b') in 0.913082 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting
