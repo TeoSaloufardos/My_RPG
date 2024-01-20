@@ -16,6 +16,10 @@ public class InventoryItems : MonoBehaviour
     //Πεδια που αφορουν την καταχωρηση αντικειμενων στο inventory 
     [SerializeField] private List<Image> emptySlots; //Πινακας που περιεχει καθε emptySlot (διαθεσιμο slot)
     [SerializeField] private List<Sprite> icons; //Το συνολογο των αντικειμενων με τα εικονιδια τους
+    [SerializeField] private List<String> transferItemNames;
+
+    public static List<String> itemNames = new List<string>(); /*Αυτο το χρησιμοποιω για να μπορω να γραψω μεσω του unity τα ονοματα
+    των αντικειμενων ετσι ωστε με πινακα μετα να μπορω να εμφανιζω τα ονοματα τους μεσω μιας for*/
     [SerializeField] private Sprite theEmptySlot; //Οριζω ποιο ειναι το empty slot (πως μοιαζει)
     
     public static bool iconUpdate = false; //Το χρησιμοποιω για να ξερω ποτε θα πρεπει να ενημερωσω το icon
@@ -29,10 +33,17 @@ public class InventoryItems : MonoBehaviour
     {
         //desertMushrooms = 0;
         //roots = 0;
+        
+        itemNames.Clear();
         inventoryMenu.SetActive(false);
         openBook.SetActive(false);
         ui.SetActive(true);
-        maxSizeOfEmptySlots = emptySlots.Count; 
+        maxSizeOfEmptySlots = emptySlots.Count;
+
+        for (int i = 0; i < transferItemNames.Count; i++)
+        {
+            itemNames.Add(transferItemNames[i]);
+        }
     }
 
     // Update is called once per frame
@@ -48,6 +59,8 @@ public class InventoryItems : MonoBehaviour
                     που βρηκαμε την κενη θεση.*/
                     emptySlots[i].sprite = icons[newIconID]; /*Μεσα απο τα δεδομενα στο πινακα icons μπορουμε με το id που λαμβανεται απο το itempickup script
                     να καταγραφει και εμφανιστει το νεο αντικειμενο που μαζεψε ο παικτης.*/
+
+                    emptySlots[i].transform.gameObject.GetComponent<PopUpMessageHandler>().objectID = newIconID;
                 }
             }
             StartCoroutine(Reset()); /*Το StartCoroutine ειναι μια μεθοδος που μου επιτρεπει να τρεξει μια μεθοδος με
