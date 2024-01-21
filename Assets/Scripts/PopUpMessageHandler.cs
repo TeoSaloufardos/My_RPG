@@ -45,7 +45,7 @@ public class PopUpMessageHandler : MonoBehaviour, IPointerEnterHandler, IPointer
     }
     void Start()
     {
-        
+        textBox.SetActive(false);
     }
 
     // Update is called once per frame
@@ -71,8 +71,13 @@ public class PopUpMessageHandler : MonoBehaviour, IPointerEnterHandler, IPointer
 
     public void MessageDisplay()
     {
-        
-            if (objectID == 2)
+        /*Απο το inventoryItems και απο το itempickup μας ερχεται η πληροφορια του τι αντικειμενου εχει λαβει ο παικτης
+         απο τον κοσμο. Για αρχη γινεται ενας ελεγχος εαν το αντικειμενο που ελαβε ειναι καποιο απο τα αντικειμενα
+         που μπορουν να μπουν μαζι και εαν ειναι τοτε τα καταχωρει σε στυβες, εαν οχι τοτε προχωραει στην ευρεση του
+         ονοματος του αντικειμενο αυτου μεσα απο τον πινακα που ειναι static στο inventory items και εχουν καταχωρηθει
+         τα ονοματα τους με σειρα οπως και στην λιστα αντικειμενων. Αναλογα με το αντικειμενο εμφανιζεται ποσα εχει, το 
+         ονομα του αντικειμενου και το παραθυρο οπου χρειαζεται.*/
+            /*if (objectID == 2)
             {
                 itemTitle.text = InventoryItems.itemNames[objectID];
                 message.text = "Έχεις " + InventoryItems.desertMushrooms + "x " + InventoryItems.itemNames[objectID];
@@ -88,6 +93,19 @@ public class PopUpMessageHandler : MonoBehaviour, IPointerEnterHandler, IPointer
             {
                 itemTitle.text = InventoryItems.itemNames[objectID];
                 message.text = "Έχεις 1 " + "x " + InventoryItems.itemNames[objectID];
+            }*/
+
+            for (int i = 0; i < InventoryItems.ItemsQuantities.Count; i++)
+            {
+                if (i == objectID)
+                {
+                    itemTitle.text = InventoryItems.itemNames[objectID];
+                    message.text = "Έχεις " + InventoryItems.ItemsQuantities[i] + "x " + InventoryItems.itemNames[objectID];
+                }
+            }
+            if (objectID == 0)
+            {
+                textBox.SetActive(false);
             }
         
     }

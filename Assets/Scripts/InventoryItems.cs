@@ -16,16 +16,21 @@ public class InventoryItems : MonoBehaviour
     //Πεδια που αφορουν την καταχωρηση αντικειμενων στο inventory 
     [SerializeField] private List<Image> emptySlots; //Πινακας που περιεχει καθε emptySlot (διαθεσιμο slot)
     [SerializeField] private List<Sprite> icons; //Το συνολογο των αντικειμενων με τα εικονιδια τους
-    [SerializeField] private List<String> transferItemNames;
-
-    public static List<String> itemNames = new List<string>(); /*Αυτο το χρησιμοποιω για να μπορω να γραψω μεσω του unity τα ονοματα
-    των αντικειμενων ετσι ωστε με πινακα μετα να μπορω να εμφανιζω τα ονοματα τους μεσω μιας for*/
     [SerializeField] private Sprite theEmptySlot; //Οριζω ποιο ειναι το empty slot (πως μοιαζει)
     
+    //Βασεις δεδομενων που με βοηθουν στην διαχειρηση των αντικειμενων.
+    public static List<String> itemNames = new List<string>(); /*Αυτο το χρησιμοποιω για να μπορω να γραψω μεσω του unity τα ονοματα, τα κανω transfer απο
+    τον πινακα transferItemNames. Αυτο το κανω για να εχω προσβαση στα ονοματα των αντικειμενων.*/
+    [SerializeField] private List<String> transferItemNames; //Πινακα που δηλωνω τα ονοματα των αντικειμενων, συμφωνα με την σειρα που εχουν
+    public static List<int> ItemsQuantities = new List<int>();
+    
+    //Μεταβλητες που με βοηθουν στην διαχειρηση των αλλαγων στο ui.
     public static bool iconUpdate = false; //Το χρησιμοποιω για να ξερω ποτε θα πρεπει να ενημερωσω το icon
     private int maxSizeOfEmptySlots; //Κραταει το maxSize των διαθεσιμων slots
     public static int newIconID = 0; //Δεχεται το Item Id για να καταχωρηθει στον πινακα και να εμφανιστει στο Inventory
+    public static bool hasFreeSpace = true;
 
+    //Προσωρινα
     public static int desertMushrooms = 0;
     public static int roots = 0;
     
@@ -39,8 +44,11 @@ public class InventoryItems : MonoBehaviour
         openBook.SetActive(false);
         ui.SetActive(true);
         maxSizeOfEmptySlots = emptySlots.Count;
-
-        for (int i = 0; i < transferItemNames.Count; i++)
+        constructItemsAndQuantities();
+        
+        //μεταφερω τα δεδομενα απο τον πινακα στο unity σε εναν static για να ειναι κοινος σε ολα τα scripts και
+        //αμεταβλητος.
+        for (int i = 0; i < transferItemNames.Count; i++) 
         {
             itemNames.Add(transferItemNames[i]);
         }
@@ -53,6 +61,10 @@ public class InventoryItems : MonoBehaviour
         {
             for (int i = 0; i < maxSizeOfEmptySlots; i++)
             {
+                if (i == emptySlots.Count + 1)
+                {
+                    hasFreeSpace = false;
+                }
                 if (emptySlots[i].sprite == theEmptySlot)
                 {
                     maxSizeOfEmptySlots = i; /*Βαζοντας εδω την τωρινη θεση δεν ξανα εφαρμοζει αλλη λουπα γιατι δεν το χρειαζομαστε απο την στιγμη
@@ -97,5 +109,12 @@ public class InventoryItems : MonoBehaviour
         true που θα δεχτει το iconUpdate*/
     }
     
+    public void constructItemsAndQuantities()
+    {
+        for (int i = 0; i < icons.Count; i++)
+        {
+            ItemsQuantities.Add(0);
+        }
+    }
     
 }
