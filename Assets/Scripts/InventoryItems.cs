@@ -29,6 +29,7 @@ public class InventoryItems : MonoBehaviour
     private int maxSizeOfEmptySlots; //Κραταει το maxSize των διαθεσιμων slots
     public static int newIconID = 0; //Δεχεται το Item Id για να καταχωρηθει στον πινακα και να εμφανιστει στο Inventory
     public static bool hasFreeSpace = true;
+    public static int totalCoins = 0; //Συνολο κερματων που εχει ο παικτης
 
     //Προσωρινα
     public static int desertMushrooms = 0;
