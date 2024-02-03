@@ -1,23 +1,30 @@
+Unity Editor version:    2021.3.25f1 (68ef2c4f8861)
+Branch:                  2021.3/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 14.0 (Build 23A339)
+Darwin version:          23.0.0
+Architecture:            arm64
+Running under Rosetta:   NO
+Available memory:        8192 MB
 Using pre-set license
-Built from '2021.3/staging' branch; Version is '2021.3.25f1 (68ef2c4f8861) revision 6876972'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22631) 64bit Enterprise' Language: 'en' Physical Memory: 16334 MB
-BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+Pro License: YES
 
 COMMAND LINE ARGUMENTS:
-X:\2021.3.25f1\Editor\Unity.exe
+/Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/MacOS/Unity
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker3
 -projectPath
-X:/GitHub/My_RPG
+/Users/teotataris/Documents/GitHub/My_RPG
 -logFile
 Logs/AssetImportWorker3.log
 -srvPort
-50986
-Successfully changed project path to: X:/GitHub/My_RPG
-X:/GitHub/My_RPG
+53997
+Successfully changed project path to: /Users/teotataris/Documents/GitHub/My_RPG
+/Users/teotataris/Documents/GitHub/My_RPG
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,236 +54,120 @@ X:/GitHub/My_RPG
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [18204] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 2451273551 [EditorId] 2451273551 [Version] 1048832 [Id] WindowsEditor(7,Teo) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [7924437760] Host "[IP] 10.4.22.40 [Port] 0 [Flags] 2 [Guid] 2536976022 [EditorId] 2536976022 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air-Teo.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [18204] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 2451273551 [EditorId] 2451273551 [Version] 1048832 [Id] WindowsEditor(7,Teo) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [7924437760] Host "[IP] 10.4.22.40 [Port] 0 [Flags] 2 [Guid] 2536976022 [EditorId] 2536976022 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air-Teo.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 201.51 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 245.84 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.25f1 (68ef2c4f8861)
-[Subsystems] Discovering subsystems at path X:/2021.3.25f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path X:/GitHub/My_RPG/Assets
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/teotataris/Documents/GitHub/My_RPG/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
-Direct3D:
-    Version:  Direct3D 11.0 [level 11.1]
-    Renderer: Radeon RX 580 Series (ID=0x67df)
-    Vendor:   ATI
-    VRAM:     4074 MB
-    Driver:   31.0.21902.5
+ preferred device: Apple M1 (high power)
+Metal devices available: 1
+0: Apple M1 (high power)
+Using device Apple M1 (high power)
+Initializing Metal device caps: Apple M1
 Initialize mono
-Mono path[0] = 'X:/2021.3.25f1/Editor/Data/Managed'
-Mono path[1] = 'X:/2021.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'X:/2021.3.25f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56700
+Mono path[0] = '/Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
+Mono config path = '/Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56284
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: X:/2021.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002037 seconds.
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 166.91 ms, found 5 plugins.
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.001022 seconds.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 126.94 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.834 seconds
+- Completed reload, in  0.539 seconds
 Domain Reload Profiling:
-	ReloadAssembly (834ms)
-		BeginReloadAssembly (117ms)
+	ReloadAssembly (540ms)
+		BeginReloadAssembly (84ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (614ms)
-			LoadAssemblies (117ms)
+		EndReloadAssembly (392ms)
+			LoadAssemblies (84ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (123ms)
+			SetupTypeCache (83ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (30ms)
-			SetupLoadedEditorAssemblies (407ms)
+			RebuildScriptCaches (19ms)
+			SetupLoadedEditorAssemblies (257ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (167ms)
+				RefreshPlugins (127ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (163ms)
-				ProcessInitializeOnLoadMethodAttributes (67ms)
+				ProcessInitializeOnLoadAttributes (96ms)
+				ProcessInitializeOnLoadMethodAttributes (29ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.008418 seconds.
+Registered in 0.007148 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image X:\GitHub\My_RPG\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image X:\GitHub\My_RPG\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 171.94 ms, found 5 plugins.
+Symbol file LoadedFromMemory doesn't match image /Users/teotataris/Documents/GitHub/My_RPG/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/teotataris/Documents/GitHub/My_RPG/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 122.69 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.733 seconds
+- Completed reload, in  1.155 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1734ms)
-		BeginReloadAssembly (156ms)
+	ReloadAssembly (1155ms)
+		BeginReloadAssembly (88ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
+			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (20ms)
-		EndReloadAssembly (1458ms)
-			LoadAssemblies (151ms)
+			CreateAndSetChildDomain (16ms)
+		EndReloadAssembly (1005ms)
+			LoadAssemblies (103ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (367ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (84ms)
-			SetupLoadedEditorAssemblies (846ms)
+			SetupTypeCache (215ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (47ms)
+			SetupLoadedEditorAssemblies (639ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (172ms)
-				BeforeProcessingInitializeOnLoad (125ms)
-				ProcessInitializeOnLoadAttributes (462ms)
-				ProcessInitializeOnLoadMethodAttributes (80ms)
-				AfterProcessingInitializeOnLoad (3ms)
+				RefreshPlugins (123ms)
+				BeforeProcessingInitializeOnLoad (82ms)
+				ProcessInitializeOnLoadAttributes (395ms)
+				ProcessInitializeOnLoadMethodAttributes (35ms)
+				AfterProcessingInitializeOnLoad (1ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
-Refreshing native plugins compatible for Editor in 1.49 ms, found 5 plugins.
+Launching external process: /Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.25 seconds
+Refreshing native plugins compatible for Editor in 1.01 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 5976 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 84 unused Assets / (3.5 MB). Loaded Objects now: 6451.
-Memory consumption went from 335.2 MB to 331.7 MB.
-Total: 5.014200 ms (FindLiveObjects: 0.578400 ms CreateObjectMapping: 0.264000 ms MarkObjects: 3.273700 ms  DeleteObjects: 0.897300 ms)
+Unloading 86 unused Assets / (3.7 MB). Loaded Objects now: 6447.
+Memory consumption went from 336.5 MB to 332.8 MB.
+Total: 6.217125 ms (FindLiveObjects: 0.338334 ms CreateObjectMapping: 0.108458 ms MarkObjects: 4.579625 ms  DeleteObjects: 1.189916 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 6507.792519 seconds.
-  path: Assets/Prefabs/Trees (Japanese)/JapaneseGardenPackage/Prefabs/SakuraTree_A_Textures/shadow.png
-  artifactKey: Guid(bf4fe399ebd9fc274b1d6f70fd9a5066) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Trees (Japanese)/JapaneseGardenPackage/Prefabs/SakuraTree_A_Textures/shadow.png using Guid(bf4fe399ebd9fc274b1d6f70fd9a5066) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6defaf28a13aaae0faac6b894436bb1') in 0.139725 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 145.431203 seconds.
-  path: Assets/Useful Stuff/AncientRuins/TextureMaterials/T_AncientRuins_Rocks_D.png
-  artifactKey: Guid(8b48d41a1a078504a8712cd3309a0b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Useful Stuff/AncientRuins/TextureMaterials/T_AncientRuins_Rocks_D.png using Guid(8b48d41a1a078504a8712cd3309a0b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd328e3eb0fd9d7279770fb1eef1fcbcf') in 0.010403 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 10.432531 seconds.
-  path: Assets/Useful Stuff/AncientRuins/TextureMaterials/T_AncientRuins_Rocks_D.png
-  artifactKey: Guid(8b48d41a1a078504a8712cd3309a0b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Useful Stuff/AncientRuins/TextureMaterials/T_AncientRuins_Rocks_D.png using Guid(8b48d41a1a078504a8712cd3309a0b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f252f349c99188ecfe6fb01f08d0cae9') in 0.012852 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.168056 seconds.
-  path: Assets/Useful Stuff/AncientRuins/TextureMaterials/T_AncientRuins_Rocks_D.png
-  artifactKey: Guid(8b48d41a1a078504a8712cd3309a0b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Useful Stuff/AncientRuins/TextureMaterials/T_AncientRuins_Rocks_D.png using Guid(8b48d41a1a078504a8712cd3309a0b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67f1bb6af3075bd149edf4576cfccac3') in 0.009223 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.734780 seconds.
-  path: Assets/Useful Stuff/AncientRuins/TextureMaterials/T_AncientRuins_Rocks_D.png
-  artifactKey: Guid(8b48d41a1a078504a8712cd3309a0b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Useful Stuff/AncientRuins/TextureMaterials/T_AncientRuins_Rocks_D.png using Guid(8b48d41a1a078504a8712cd3309a0b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e93501a8978218767b9eba8703f2c336') in 0.008892 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.682965 seconds.
-  path: Assets/Useful Stuff/AncientRuins/TextureMaterials/T_AncientRuins_Rocks_D.png
-  artifactKey: Guid(8b48d41a1a078504a8712cd3309a0b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Useful Stuff/AncientRuins/TextureMaterials/T_AncientRuins_Rocks_D.png using Guid(8b48d41a1a078504a8712cd3309a0b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aba3b2cc9dd6bd20a2460d61d5ea2dcd') in 0.008440 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 60.904225 seconds.
-  path: Assets/Useful Stuff/AncientRuins/TextureMaterials/T_AncientRuins_Props_D.png
-  artifactKey: Guid(34f06fdd0e95457418dfb081a084d13f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Useful Stuff/AncientRuins/TextureMaterials/T_AncientRuins_Props_D.png using Guid(34f06fdd0e95457418dfb081a084d13f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6c925c9b22a0c536cd4e7228a6a7755') in 0.010932 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.629528 seconds.
-  path: Assets/Useful Stuff/AncientRuins/TextureMaterials/T_AncientRuins_Props_D.png
-  artifactKey: Guid(34f06fdd0e95457418dfb081a084d13f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Useful Stuff/AncientRuins/TextureMaterials/T_AncientRuins_Props_D.png using Guid(34f06fdd0e95457418dfb081a084d13f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd90786d9a8263c2dfa39787005de1b93') in 0.008504 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 9.099185 seconds.
-  path: Assets/Useful Stuff/AncientRuins/TextureMaterials/T_AncientRuins_Props_D.png
-  artifactKey: Guid(34f06fdd0e95457418dfb081a084d13f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Useful Stuff/AncientRuins/TextureMaterials/T_AncientRuins_Props_D.png using Guid(34f06fdd0e95457418dfb081a084d13f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cd0d286e9237002bbaac1939188f534') in 0.012695 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 38.598936 seconds.
-  path: Assets/Useful Stuff/YughuesFreeBushes2018/Textures/T_Bush01_d.tga
-  artifactKey: Guid(94db8a6f822aa8245ae0a58f78870c2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Useful Stuff/YughuesFreeBushes2018/Textures/T_Bush01_d.tga using Guid(94db8a6f822aa8245ae0a58f78870c2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c0eba9f43be69f3d0567b6ca83f3d0a') in 0.142087 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Useful Stuff/YughuesFreeBushes2018/Textures/T_Bush05_d.tga
-  artifactKey: Guid(e5e8c327df51a9d4f90c9c4feba738cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Useful Stuff/YughuesFreeBushes2018/Textures/T_Bush05_d.tga using Guid(e5e8c327df51a9d4f90c9c4feba738cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b6d00a083a8b45b795a294550f522a8') in 0.157088 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/Useful Stuff/YughuesFreeBushes2018/Textures/T_Bush02_n.tga
-  artifactKey: Guid(11821533c3f1535419549afbeccb9bff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Useful Stuff/YughuesFreeBushes2018/Textures/T_Bush02_n.tga using Guid(11821533c3f1535419549afbeccb9bff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d95cb41b4f77e5593dfdda3fbc28db7') in 0.084708 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000057 seconds.
-  path: Assets/Useful Stuff/YughuesFreeBushes2018/Textures/T_Bush05_ao.tga
-  artifactKey: Guid(0d0dc078d5df69540bf846e62e1e490b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Useful Stuff/YughuesFreeBushes2018/Textures/T_Bush05_ao.tga using Guid(0d0dc078d5df69540bf846e62e1e490b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f8af6640c7891df337787d0147cd6e0') in 0.099106 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/Useful Stuff/YughuesFreeBushes2018/Textures/T_Bush05_n.tga
-  artifactKey: Guid(f806c4f41a3a09e41a05d701470cc59d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Useful Stuff/YughuesFreeBushes2018/Textures/T_Bush05_n.tga using Guid(f806c4f41a3a09e41a05d701470cc59d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6603a609934177efc9c0d3ee2a25339') in 0.162717 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Useful Stuff/YughuesFreeBushes2018/Textures/T_Bush04_n.tga
-  artifactKey: Guid(fd90dc93bb966f343bcf6302c2c8c0b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Useful Stuff/YughuesFreeBushes2018/Textures/T_Bush04_n.tga using Guid(fd90dc93bb966f343bcf6302c2c8c0b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c5cfe10c0d66a0d147787e306d6debb') in 0.120203 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/Useful Stuff/YughuesFreeBushes2018/Textures/T_Bush03_ao.tga
-  artifactKey: Guid(30d2e3318757c534d90937e9c4b0a1d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Useful Stuff/YughuesFreeBushes2018/Textures/T_Bush03_ao.tga using Guid(30d2e3318757c534d90937e9c4b0a1d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6045b3d4840c4062497144882872d7e') in 0.053701 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/Useful Stuff/YughuesFreeBushes2018/Textures/T_Bush01_s.tga
-  artifactKey: Guid(01ac228eec7ceda4ba0395dea3410cef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Useful Stuff/YughuesFreeBushes2018/Textures/T_Bush01_s.tga using Guid(01ac228eec7ceda4ba0395dea3410cef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ade9b46e11f7f8fcb1a062568b6b6f35') in 0.046234 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/Useful Stuff/YughuesFreeBushes2018/Textures/T_Bush03_n.tga
-  artifactKey: Guid(13a3162fb7a76b241be49f1756129239) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Useful Stuff/YughuesFreeBushes2018/Textures/T_Bush03_n.tga using Guid(13a3162fb7a76b241be49f1756129239) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75f76afa2ba1f749a7da7cc3e4a47f02') in 0.044887 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Useful Stuff/YughuesFreeBushes2018/Textures/T_Bush01_n.tga
-  artifactKey: Guid(2f1e681c00689bf429eece67c03d8635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Useful Stuff/YughuesFreeBushes2018/Textures/T_Bush01_n.tga using Guid(2f1e681c00689bf429eece67c03d8635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13791ae55b07866ddf00751eea381924') in 0.095884 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
