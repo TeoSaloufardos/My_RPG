@@ -322,6 +322,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 799bda8bfa0002b4e9a65bbeec700a5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveArea:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!195 &8265108678543854877
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -343,7 +346,7 @@ NavMeshAgent:
   m_Height: 1.79
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 2
 --- !u!4 &6851961028755292743 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5193780317482339914, guid: 165badd7fb1be3943af55061d0161fd3, type: 3}

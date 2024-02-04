@@ -13,6 +13,9 @@ public class CharacterMovement : MonoBehaviour
     private float velocity;
     private float xAxisVelocity;
     private float zAxisVelocity;
+    [SerializeField] private LayerMask moveArea; //Λυση στο προβλημα με τον παικτη και το roof handler.
+    //Επιλεγοντας το default layer μεσα απο το character ουσιαστικα καθωριζω οτι ο παικτης θα εχει ως raycast περιοχη
+    //μονο το default layer.
     
     
     
@@ -33,7 +36,7 @@ public class CharacterMovement : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);//λαμβανει το position που στοχευει το ποντικι συμφωνα με την οπτικη της main καμερας
-            if (Physics.Raycast(ray, out mouseHit))
+            if (Physics.Raycast(ray, out mouseHit,300, moveArea))
             {
                 navMeshAgent.destination = mouseHit.point;//Το παιρναει στο Destination του Character με το NavMeshAgent.
             }

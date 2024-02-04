@@ -8,7 +8,7 @@ public class UiMessageHandler : MonoBehaviour
     [SerializeField] private GameObject aboveUiPanel;
     [SerializeField] private Text uiMessage;
     public static string passedMessage = null; //ειναι static για να μπορει να δεχεται τιμες απο τα scripts.
-    public static float desiredDelay = 3f; //default ειναι 3s αλλα μπορει να αλλαχτει στον κωδικα μεσα.
+    public static float desiredDelay = 1.5f; //default ειναι 3s αλλα μπορει να αλλαχτει στον κωδικα μεσα.
     
     void Start()
     {
@@ -40,7 +40,7 @@ public class UiMessageHandler : MonoBehaviour
         //Καθαριζει το μηνυμα, τον χρονο και εξαφανιζει το panel τελειως.
         uiMessage.text = "";
         passedMessage = null;
-        desiredDelay = 3;
+        desiredDelay = 1.5f;
         aboveUiPanel.SetActive(false);
         
     }

@@ -11,7 +11,8 @@ public class Spawner : MonoBehaviour
     [SerializeField] private Transform spawnPosistion;
     void Start()
     {
-        Instantiate(characters[SavePlayer.characterPositionData], spawnPosistion.position, spawnPosistion.rotation); //Το Instantiate(OBJECT, POSITION) είναι μια μεθοδος που μπορει να κανει spawn μεσα στον χαρτη αντικειμενα συμφωνα με τις παραμετρους που του δινουμε, παντα χρειαζεται το object και το position του.
+        Instantiate(characters[SavePlayer.characterPositionData], spawnPosistion.position, spawnPosistion.rotation); //Το Instantiate(OBJECT, POSITION) είναι μια μεθοδος που μπορει να κανει spawn
+        //μεσα στον χαρτη αντικειμενα συμφωνα με τις παραμετρους που του δινουμε, παντα χρειαζεται το object και το position του.
          
     }
 
