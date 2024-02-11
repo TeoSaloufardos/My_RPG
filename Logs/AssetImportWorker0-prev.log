@@ -1,0 +1,545 @@
+Unity Editor version:    2021.3.25f1 (68ef2c4f8861)
+Branch:                  2021.3/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 14.0 (Build 23A339)
+Darwin version:          23.0.0
+Architecture:            arm64
+Running under Rosetta:   NO
+Available memory:        8192 MB
+Using pre-set license
+Pro License: YES
+
+COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+/Users/teotataris/Documents/GitHub/My_RPG
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+59018
+Successfully changed project path to: /Users/teotataris/Documents/GitHub/My_RPG
+/Users/teotataris/Documents/GitHub/My_RPG
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [8138396416] Host "[IP] 10.4.22.16 [Port] 0 [Flags] 2 [Guid] 4158438025 [EditorId] 4158438025 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air-Teo.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [8138396416] Host "[IP] 10.4.22.16 [Port] 0 [Flags] 2 [Guid] 4158438025 [EditorId] 4158438025 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air-Teo.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 125.93 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.25f1 (68ef2c4f8861)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/teotataris/Documents/GitHub/My_RPG/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+ preferred device: Apple M1 (high power)
+Metal devices available: 1
+0: Apple M1 (high power)
+Using device Apple M1 (high power)
+Initializing Metal device caps: Apple M1
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
+Mono config path = '/Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56590
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.000385 seconds.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 121.75 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.571 seconds
+Domain Reload Profiling:
+	ReloadAssembly (572ms)
+		BeginReloadAssembly (131ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (376ms)
+			LoadAssemblies (128ms)
+			RebuildTransferFunctionScriptingTraits (1ms)
+			SetupTypeCache (80ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (24ms)
+			SetupLoadedEditorAssemblies (243ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (122ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (88ms)
+				ProcessInitializeOnLoadMethodAttributes (29ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001776 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/teotataris/Documents/GitHub/My_RPG/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/teotataris/Documents/GitHub/My_RPG/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 121.65 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.100 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1101ms)
+		BeginReloadAssembly (70ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (16ms)
+		EndReloadAssembly (962ms)
+			LoadAssemblies (51ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (242ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (64ms)
+			SetupLoadedEditorAssemblies (580ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (2ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (122ms)
+				BeforeProcessingInitializeOnLoad (89ms)
+				ProcessInitializeOnLoadAttributes (331ms)
+				ProcessInitializeOnLoadMethodAttributes (36ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launching external process: /Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.22 seconds
+Refreshing native plugins compatible for Editor in 1.22 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5977 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 86 unused Assets / (3.9 MB). Loaded Objects now: 6448.
+Memory consumption went from 338.0 MB to 334.1 MB.
+Total: 6.277208 ms (FindLiveObjects: 0.776375 ms CreateObjectMapping: 0.111042 ms MarkObjects: 4.341208 ms  DeleteObjects: 1.047208 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 37703.948044 seconds.
+  path: Assets/Prefabs/ChestAnimationCoins.prefab
+  artifactKey: Guid(4a6fc5921363344b8a17ef5f085a5276) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/ChestAnimationCoins.prefab using Guid(4a6fc5921363344b8a17ef5f085a5276) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c197fcf545caa88eb2910e17efad59c') in 0.592551 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 48.772824 seconds.
+  path: Assets/Prefabs/Buildings/Bar.prefab
+  artifactKey: Guid(3eca6a9da7d0540498578daff06ad8b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Buildings/Bar.prefab using Guid(3eca6a9da7d0540498578daff06ad8b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d53fb767c0be93ca8a2c55dbe10ed8f') in 0.266134 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Prefabs/Buildings/Witch House.prefab
+  artifactKey: Guid(88bbd12936390954197c0daa49927814) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Buildings/Witch House.prefab using Guid(88bbd12936390954197c0daa49927814) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '830328065734147ef6ad8edb2bf35098') in 0.196207 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 23.929068 seconds.
+  path: Assets/Prefabs/NPC-MOBS/castle_guard_01.fbx
+  artifactKey: Guid(81fd4e1fb2541457fa2f3b2889461c9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/castle_guard_01.fbx using Guid(81fd4e1fb2541457fa2f3b2889461c9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac5aca27419670bc0d54c3a89264fee2') in 0.180151 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 145.992273 seconds.
+  path: Assets/Prefabs/NPC-MOBS/Peasant Man.fbx
+  artifactKey: Guid(0633d96724e1a47978ab40bba2bc2729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/Peasant Man.fbx using Guid(0633d96724e1a47978ab40bba2bc2729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1b5fc8dfb42b348cadb365bc3f626b6') in 0.061522 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.043484 seconds.
+  path: Assets/Prefabs/NPC-MOBS/Materials
+  artifactKey: Guid(109e6b539a48744d68bb0d1e4eeff459) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/Materials using Guid(109e6b539a48744d68bb0d1e4eeff459) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bddf3300b73c634205dde825f8572386') in 0.001081 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.059341 seconds.
+  path: Assets/Prefabs/NPC-MOBS
+  artifactKey: Guid(ac2aee0a51251434abe9ffcfef70cac6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS using Guid(ac2aee0a51251434abe9ffcfef70cac6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8db3c9438d4840b35133f8e591e7709') in 0.001627 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.486875 seconds.
+  path: Assets/Prefabs/NPC-MOBS/Peasant Girl.fbx
+  artifactKey: Guid(8e48aa7b121b7495f9fde05ad295ec6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/Peasant Girl.fbx using Guid(8e48aa7b121b7495f9fde05ad295ec6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ea28a578661d54e0872bbcffcf512cc') in 0.037077 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 130.382009 seconds.
+  path: Assets/Prefabs/NPC-MOBS/Peasant Girl.fbx
+  artifactKey: Guid(8e48aa7b121b7495f9fde05ad295ec6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/Peasant Girl.fbx using Guid(8e48aa7b121b7495f9fde05ad295ec6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdb733d69c45a001a69ee957ef9b85af') in 0.064694 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.012252 seconds.
+  path: Assets/Prefabs/NPC-MOBS/Peasant Girl.fbx
+  artifactKey: Guid(8e48aa7b121b7495f9fde05ad295ec6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/Peasant Girl.fbx using Guid(8e48aa7b121b7495f9fde05ad295ec6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb4c91c81ac73d419793fcb1d79b2dcc') in 0.059854 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.172237 seconds.
+  path: Assets/Prefabs/NPC-MOBS/Peasant Girl.fbx
+  artifactKey: Guid(8e48aa7b121b7495f9fde05ad295ec6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/Peasant Girl.fbx using Guid(8e48aa7b121b7495f9fde05ad295ec6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1584ba24398cffc22f069a98674f45d') in 0.021906 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.829047 seconds.
+  path: Assets/Prefabs/NPC-MOBS/Peasant Girl.fbx
+  artifactKey: Guid(8e48aa7b121b7495f9fde05ad295ec6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/Peasant Girl.fbx using Guid(8e48aa7b121b7495f9fde05ad295ec6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ee417d70e3a994a403112e52cb951e9') in 0.060682 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.973493 seconds.
+  path: Assets/Prefabs/NPC-MOBS/Peasant Girl.fbm
+  artifactKey: Guid(8485700c08aad48a1bced68bef8150ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/Peasant Girl.fbm using Guid(8485700c08aad48a1bced68bef8150ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9d5b4c81afd93001c6b8e85d39113bc') in 0.001807 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 24.824655 seconds.
+  path: Assets/Prefabs/NPC-MOBS/Peasant Girl.fbx
+  artifactKey: Guid(8e48aa7b121b7495f9fde05ad295ec6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/Peasant Girl.fbx using Guid(8e48aa7b121b7495f9fde05ad295ec6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '240a9b3842eef35d448458b6862ecc19') in 0.053517 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.435833 seconds.
+  path: Assets/Prefabs/NPC-MOBS/Peasant Girl.fbx
+  artifactKey: Guid(8e48aa7b121b7495f9fde05ad295ec6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/Peasant Girl.fbx using Guid(8e48aa7b121b7495f9fde05ad295ec6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0816db4395afa8c1dd0bb0dca57b3365') in 0.021908 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 130.624840 seconds.
+  path: Assets/Prefabs/NPC-MOBS/character.fbx
+  artifactKey: Guid(95136e7973603458c8deb934bbdd4dbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/character.fbx using Guid(95136e7973603458c8deb934bbdd4dbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efe5645bd8dec22f519184131ee7d6cc') in 0.081301 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.304231 seconds.
+  path: Assets/Prefabs/NPC-MOBS/character.fbx
+  artifactKey: Guid(95136e7973603458c8deb934bbdd4dbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/character.fbx using Guid(95136e7973603458c8deb934bbdd4dbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fe6725ca29c5672b428cdd34268c451') in 0.038058 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 38.866804 seconds.
+  path: Assets/Prefabs/NPC-MOBS/character 1.fbx
+  artifactKey: Guid(b593cf31d1dbb4a1fb54218a985b4431) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/character 1.fbx using Guid(b593cf31d1dbb4a1fb54218a985b4431) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b3b68a793950f9a656a45878096c6ac') in 0.590676 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.519089 seconds.
+  path: Assets/Prefabs/NPC-MOBS/character 1.fbx
+  artifactKey: Guid(b593cf31d1dbb4a1fb54218a985b4431) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/character 1.fbx using Guid(b593cf31d1dbb4a1fb54218a985b4431) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '919152c054c9adad0aa47dc0a5556134') in 0.057640 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.972895 seconds.
+  path: Assets/Prefabs/NPC-MOBS/character.fbm
+  artifactKey: Guid(d78f839c94b7b4ce99d2ee41bfd9fe0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/character.fbm using Guid(d78f839c94b7b4ce99d2ee41bfd9fe0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0baa0e7e4d64a27849417dc4910854cb') in 0.003750 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.305714 seconds.
+  path: Assets/Prefabs/NPC-MOBS/character 1.fbx
+  artifactKey: Guid(b593cf31d1dbb4a1fb54218a985b4431) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/character 1.fbx using Guid(b593cf31d1dbb4a1fb54218a985b4431) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc6b97609ed60d48cbe1a704a99d79ba') in 0.054974 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.601791 seconds.
+  path: Assets/Prefabs/NPC-MOBS/character 1.fbx
+  artifactKey: Guid(b593cf31d1dbb4a1fb54218a985b4431) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/character 1.fbx using Guid(b593cf31d1dbb4a1fb54218a985b4431) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45889b47b64389d7a7d030d0e8e2a776') in 0.020297 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.216061 seconds.
+  path: Assets/Prefabs/NPC-MOBS/character 1.fbm
+  artifactKey: Guid(9779fc979c5254913847f7b73b212702) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/character 1.fbm using Guid(9779fc979c5254913847f7b73b212702) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50ecbaa1365330e060d857181e0eca2b') in 0.002378 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 30.712512 seconds.
+  path: Assets/Prefabs/NPC-MOBS/character 2.fbx
+  artifactKey: Guid(54e3a601cfd524cb2b108a1eac8ddfed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/character 2.fbx using Guid(54e3a601cfd524cb2b108a1eac8ddfed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5697f0e3b3f597413a51e8aa59bda162') in 0.072864 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.719315 seconds.
+  path: Assets/Prefabs/NPC-MOBS/character 2.fbx
+  artifactKey: Guid(54e3a601cfd524cb2b108a1eac8ddfed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/character 2.fbx using Guid(54e3a601cfd524cb2b108a1eac8ddfed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35ab18b2e0d37ba3275e43210bba757b') in 0.058083 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.729860 seconds.
+  path: Assets/Prefabs/NPC-MOBS/character 1.fbm/Peasant_Man_diffuse.png
+  artifactKey: Guid(70901180e4917436f8c0736b89723fc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/character 1.fbm/Peasant_Man_diffuse.png using Guid(70901180e4917436f8c0736b89723fc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a343481ad48e2fe89b6774cab8990287') in 0.550342 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000097 seconds.
+  path: Assets/Prefabs/NPC-MOBS/character 1.fbm/Peasant_Man_specular.png
+  artifactKey: Guid(51f496d6f02304a2e822cae98184cbf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/character 1.fbm/Peasant_Man_specular.png using Guid(51f496d6f02304a2e822cae98184cbf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8ce297e70a1b9aaa9134353252e9426') in 0.012355 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.739815 seconds.
+  path: Assets/Prefabs/NPC-MOBS/Peasant Man.fbx
+  artifactKey: Guid(0633d96724e1a47978ab40bba2bc2729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/Peasant Man.fbx using Guid(0633d96724e1a47978ab40bba2bc2729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2706784d9ec7c0309e5ffd2609806124') in 0.062068 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.489929 seconds.
+  path: Assets/Prefabs/NPC-MOBS/castle_guard_01.fbx
+  artifactKey: Guid(81fd4e1fb2541457fa2f3b2889461c9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/castle_guard_01.fbx using Guid(81fd4e1fb2541457fa2f3b2889461c9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bdaf33a08d1d376e54fb233a0e9feb1') in 0.043197 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.557759 seconds.
+  path: Assets/Prefabs/NPC-MOBS/castle_guard_01 1.fbx
+  artifactKey: Guid(f5dec5dec84f64b22a90f724b1a96651) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/castle_guard_01 1.fbx using Guid(f5dec5dec84f64b22a90f724b1a96651) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9ee5bebca8586760f0ea25f323acb6c') in 0.045467 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.905397 seconds.
+  path: Assets/Prefabs/NPC-MOBS/castle_guard_01 1.fbx
+  artifactKey: Guid(f5dec5dec84f64b22a90f724b1a96651) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/castle_guard_01 1.fbx using Guid(f5dec5dec84f64b22a90f724b1a96651) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a1827298f7d144d402c7394e8a2d371') in 0.053773 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 18.944694 seconds.
+  path: Assets/Prefabs/NPC-MOBS/Peasant Girl 1.fbx
+  artifactKey: Guid(6d719c69bc79d4d629899b90ad7e4c8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/Peasant Girl 1.fbx using Guid(6d719c69bc79d4d629899b90ad7e4c8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd752ac94efb9cf91d86ee69ac28a4a4') in 0.115768 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.812765 seconds.
+  path: Assets/Prefabs/NPC-MOBS/Peasant Girl 1.fbx
+  artifactKey: Guid(6d719c69bc79d4d629899b90ad7e4c8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/Peasant Girl 1.fbx using Guid(6d719c69bc79d4d629899b90ad7e4c8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b380239b276168fd09627f8b174478d3') in 0.050758 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 166.443242 seconds.
+  path: Assets/Prefabs/NPC-MOBS/Peasant Girl.fbm/Peasant_Girl_diffuse.png
+  artifactKey: Guid(9c76f6b812f214f2b82517064551fd10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/Peasant Girl.fbm/Peasant_Girl_diffuse.png using Guid(9c76f6b812f214f2b82517064551fd10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e03bf2644019ae1497a01791b8ba8d4') in 0.048726 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/Prefabs/NPC-MOBS/Peasant Girl.fbm/Peasant_Girl_specular.png
+  artifactKey: Guid(d1769ec85aeda44a18a536407392572d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/Peasant Girl.fbm/Peasant_Girl_specular.png using Guid(d1769ec85aeda44a18a536407392572d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f04961e3b4a79b93809137f9bf0750c9') in 0.014730 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.506764 seconds.
+  path: Assets/Prefabs/NPC-MOBS/Peasant Girl.fbm/Peasant_Girl_diffuse 2.png
+  artifactKey: Guid(740331338fd274dffba6b255d005f1aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/Peasant Girl.fbm/Peasant_Girl_diffuse 2.png using Guid(740331338fd274dffba6b255d005f1aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd74fae9d4bc5da2ff9670081bb2e99cd') in 0.006487 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.927474 seconds.
+  path: Assets/Prefabs/NPC-MOBS/character 1.fbm/Peasant_Man_diffuse 2.png
+  artifactKey: Guid(32002600e2d284712b31afd6fdbc6785) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/character 1.fbm/Peasant_Man_diffuse 2.png using Guid(32002600e2d284712b31afd6fdbc6785) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0180ea2266f34172ade0ba78e7e7f78e') in 0.050714 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000091 seconds.
+  path: Assets/Prefabs/NPC-MOBS/character 1.fbm/Peasant_Man_diffuse 4.png
+  artifactKey: Guid(b090bf3cc84b04fff946b28f5a6b8cc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/character 1.fbm/Peasant_Man_diffuse 4.png using Guid(b090bf3cc84b04fff946b28f5a6b8cc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35c656cfa0036b83183c70fd2dc42e1c') in 0.006197 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 89.468345 seconds.
+  path: Assets/Prefabs/NPC-MOBS/castle_guard_01.fbm
+  artifactKey: Guid(9990bed9d21db4f58a92a7d37303b5f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/castle_guard_01.fbm using Guid(9990bed9d21db4f58a92a7d37303b5f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3af77f13f61f43d5777f6f624e815fe') in 0.005114 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000268 seconds.
+  path: Assets/Prefabs/NPC-MOBS/castle_guard_01.fbm/Guard_02__specular.png
+  artifactKey: Guid(dee8a847ebfa24f17af1ff8243ca2da4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/castle_guard_01.fbm/Guard_02__specular.png using Guid(dee8a847ebfa24f17af1ff8243ca2da4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '201e030457d51a4bb2655d5deafc69e2') in 0.025573 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Prefabs/NPC-MOBS/castle_guard_01.fbm/Guard_02__normal.png
+  artifactKey: Guid(b48b5312b7a88426091722b0575df496) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/castle_guard_01.fbm/Guard_02__normal.png using Guid(b48b5312b7a88426091722b0575df496) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63357b56e1389817b940626432396002') in 0.014819 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 55.867442 seconds.
+  path: Assets/Prefabs/NPC-MOBS/Peasant_Girl_diffuse 2.png
+  artifactKey: Guid(aa187e54134d34e47b5b98589b4f5cdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/Peasant_Girl_diffuse 2.png using Guid(aa187e54134d34e47b5b98589b4f5cdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a779be8c2e3f0d8465f6abf1583cdf33') in 0.044857 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000134 seconds.
+  path: Assets/Prefabs/NPC-MOBS/Peasant_Man_diffuse 3.png
+  artifactKey: Guid(daf54257c43c14912b5157eb31cf9903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/Peasant_Man_diffuse 3.png using Guid(daf54257c43c14912b5157eb31cf9903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2eed48e44c7a4054a5c5154262243bcc') in 0.007291 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.059000 seconds.
+  path: Assets/Useful Stuff/FantasyEnvironments/Environments/Ambient-Occlusion-Trees/FBX/Oak_tree1.fbx
+  artifactKey: Guid(fd2181bb73ea8824bb12c11a7d60e62e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/FantasyEnvironments/Environments/Ambient-Occlusion-Trees/FBX/Oak_tree1.fbx using Guid(fd2181bb73ea8824bb12c11a7d60e62e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a632d3daf0b5aca489167b7a6468d3fe') in 0.748399 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000111 seconds.
+  path: Assets/Prefabs/Trees (Japanese)/JapaneseGardenPackage/Prefabs/SakuraTree_B.prefab
+  artifactKey: Guid(488c1b23b5470bb4986ad7d362420766) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Trees (Japanese)/JapaneseGardenPackage/Prefabs/SakuraTree_B.prefab using Guid(488c1b23b5470bb4986ad7d362420766) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d623c99fefd6f5c5598627ba5922584') in 0.093264 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Useful Stuff/FantasyEnvironments/Environments/Ambient-Occlusion-Trees/Materials/Birch_leaves.mat
+  artifactKey: Guid(6b7cbd10b1b54624aad174204ed5e57d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/FantasyEnvironments/Environments/Ambient-Occlusion-Trees/Materials/Birch_leaves.mat using Guid(6b7cbd10b1b54624aad174204ed5e57d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2ff778bb0b828587dd271ae0239e7fd') in 0.054414 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/Prefabs/Trees (Japanese)/JapaneseGardenPackage/Prefabs/SakuraTree_C.prefab
+  artifactKey: Guid(67d3abe897c93a08e9593b0a183f2bb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Trees (Japanese)/JapaneseGardenPackage/Prefabs/SakuraTree_C.prefab using Guid(67d3abe897c93a08e9593b0a183f2bb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc9d8148d53292e99ae58d501f98f4e3') in 0.373938 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Useful Stuff/FantasyEnvironments/Environments/Ambient-Occlusion-Trees/Materials/Birch_leaves 1.mat
+  artifactKey: Guid(ffc6ec73fb923634287e7dd921c9292d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/FantasyEnvironments/Environments/Ambient-Occlusion-Trees/Materials/Birch_leaves 1.mat using Guid(ffc6ec73fb923634287e7dd921c9292d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1167c43535f92ca228e583cc8f156212') in 0.009442 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/Prefabs/Trees (Japanese)/JapaneseGardenPackage/Prefabs/BlackPineTree_B.prefab
+  artifactKey: Guid(6a8478d973ae3ac75a084871ef5cbffb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Trees (Japanese)/JapaneseGardenPackage/Prefabs/BlackPineTree_B.prefab using Guid(6a8478d973ae3ac75a084871ef5cbffb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13672ba77271095a629338128046de0d') in 0.045189 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000125 seconds.
+  path: Assets/Prefabs/Trees (Japanese)/JapaneseGardenPackage/Prefabs/SakuraTree_A.prefab
+  artifactKey: Guid(1d346702b2107531e939003fb256261b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Trees (Japanese)/JapaneseGardenPackage/Prefabs/SakuraTree_A.prefab using Guid(1d346702b2107531e939003fb256261b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6e027f62552e7062da21002c3039ec5') in 0.045920 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.863160 seconds.
+  path: Assets/Useful Stuff/Simple Modular Dungeon/Components/Materials/Book 001/Book Binding 001.mat
+  artifactKey: Guid(c1def28896547dc4e9beacb6bcfe8e16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/Simple Modular Dungeon/Components/Materials/Book 001/Book Binding 001.mat using Guid(c1def28896547dc4e9beacb6bcfe8e16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dcb0d4e59914ff5fd226f40b509bfce3') in 0.022995 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000077 seconds.
+  path: Assets/Useful Stuff/Simple Modular Dungeon/Components/Materials/Book 006/Book Binding 006.mat
+  artifactKey: Guid(3a8716fb3f38d8e44a8daf9a14787e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/Simple Modular Dungeon/Components/Materials/Book 006/Book Binding 006.mat using Guid(3a8716fb3f38d8e44a8daf9a14787e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1858f01bca0e7727a2ac9f13bb5f1a5e') in 0.020724 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Prefabs/Trees (Japanese)/JapaneseGardenPackage/Materials/brocco_jg_dirt_01.mat
+  artifactKey: Guid(83185657e39575bbcbed2a7fb5a47cca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Trees (Japanese)/JapaneseGardenPackage/Materials/brocco_jg_dirt_01.mat using Guid(83185657e39575bbcbed2a7fb5a47cca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df5eb88b3c0955283760c96da1cb2f97') in 0.013334 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Prefabs/Trees (Japanese)/JapaneseGardenPackage/Materials/brocco_jg_rock.mat
+  artifactKey: Guid(1f420555c987bebdb81915cd43a47494) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Trees (Japanese)/JapaneseGardenPackage/Materials/brocco_jg_rock.mat using Guid(1f420555c987bebdb81915cd43a47494) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e34b115877ae6f89ea2554676174f954') in 0.008410 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Useful Stuff/Simple Modular Dungeon/Components/Materials/Book 007/Book Binding 007.mat
+  artifactKey: Guid(83e8a9512105a0849b48bcccb3372f68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/Simple Modular Dungeon/Components/Materials/Book 007/Book Binding 007.mat using Guid(83e8a9512105a0849b48bcccb3372f68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44e3f6891402c0e45004c9959a7ccf10') in 0.010007 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/Useful Stuff/Simple Modular Dungeon/Components/Materials/Book 010/Book Binding 010.mat
+  artifactKey: Guid(7ff47a7c0ac6d844c98b25cd381ff9b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/Simple Modular Dungeon/Components/Materials/Book 010/Book Binding 010.mat using Guid(7ff47a7c0ac6d844c98b25cd381ff9b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cb6cbe27e47505c1f5913f0e10d27b8') in 0.020296 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000093 seconds.
+  path: Assets/Useful Stuff/Simple Modular Dungeon/Components/Materials/Book 008/Book Binding 008.mat
+  artifactKey: Guid(6553f6edf6f9a0a4a91b14f3a99010e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/Simple Modular Dungeon/Components/Materials/Book 008/Book Binding 008.mat using Guid(6553f6edf6f9a0a4a91b14f3a99010e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26c3dd286f99ced13916c2d8767d816a') in 0.017843 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Prefabs/Trees (Japanese)/JapaneseGardenPackage/Materials/brocco_jp_skybox.mat
+  artifactKey: Guid(ff22c4ed1f97dfe8c80195274bf1511a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Trees (Japanese)/JapaneseGardenPackage/Materials/brocco_jp_skybox.mat using Guid(ff22c4ed1f97dfe8c80195274bf1511a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95e4084b31fe5f493eace179dfd8046b') in 0.135777 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Useful Stuff/Simple Modular Dungeon/Components/Materials/Book 005/Book Binding 005.mat
+  artifactKey: Guid(83bda6833a1180c41b31ba06c93883b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/Simple Modular Dungeon/Components/Materials/Book 005/Book Binding 005.mat using Guid(83bda6833a1180c41b31ba06c93883b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e4fa05dfb3efa9cec453a867b217b0b') in 0.010100 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 176.677073 seconds.
+  path: Assets/Prefabs/NPC-MOBS/Materials/WizardDifFinal.mat
+  artifactKey: Guid(b46a4b6faf5d24f8c8f8a977b9e30d0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/Materials/WizardDifFinal.mat using Guid(b46a4b6faf5d24f8c8f8a977b9e30d0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c24fee64f6dfda9b27f00d66f904230b') in 0.062629 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 78.968329 seconds.
+  path: Assets/Prefabs/NPC-MOBS/Wizard Animations/die.fbx
+  artifactKey: Guid(d4731025a4fcf4b3c8c2e2c803c7f698) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/Wizard Animations/die.fbx using Guid(d4731025a4fcf4b3c8c2e2c803c7f698) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '286f4d440bd5e5ebefa888730518a0d9') in 0.025801 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000077 seconds.
+  path: Assets/Prefabs/NPC-MOBS/Wizard Animations/idle1.fbx
+  artifactKey: Guid(7867bf0c3f631478fb29a0d2e03614f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC-MOBS/Wizard Animations/idle1.fbx using Guid(7867bf0c3f631478fb29a0d2e03614f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41b9df5be3d1915291e5c2670b185e87') in 0.005926 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting

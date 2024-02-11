@@ -41,9 +41,11 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets/Scripts/SpeechBox.cs" />
     <Compile Include="Assets/Scripts/ItemPickUp.cs" />
     <Compile Include="Assets/Ground Textures/Free Stylized Textures/Scripts/GameBuffsInitializer.cs" />
     <Compile Include="Assets/Prefabs/Trees (Japanese)/Broccoli/Controller/BroccoTreeController_1_2_5.cs" />
+    <Compile Include="Assets/Scripts/DialogHandler.cs" />
     <Compile Include="Assets/Useful Stuff/Medieval_house_lite/Fire/LightFlickerEffect.cs" />
     <Compile Include="Assets/Scripts/InventoryItems.cs" />
     <Compile Include="Assets/Scripts/UiMessageHandler.cs" />
@@ -60,8 +62,7 @@
     <Compile Include="Assets/Scripts/Spawner.cs" />
     <Compile Include="Assets/Scripts/CustomCursor.cs" />
     <Compile Include="Assets/Scripts/RoofHandler.cs" />
-    <Compile Include="Assets/Scripts/SpeechBox.cs" />
-    <Compile Include="Assets/Scripts/DialogHandler.cs" />
+    <Compile Include="Assets/Scripts/QuestionsDatabase.cs" />
     <None Include="Assets/Useful Stuff/SineVFX/PostProcessingV2/Shaders/StdLib.hlsl" />
     <None Include="Assets/Useful Stuff/SineVFX/PostProcessingV2/Shaders/Debug/Waveform.shader" />
     <None Include="Assets/Useful Stuff/SineVFX/PostProcessingV2/Shaders/Builtins/MultiScaleVOUpsample.compute" />
