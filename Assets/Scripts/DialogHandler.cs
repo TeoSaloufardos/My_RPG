@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 public class DialogHandler: MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    [Range(1,5)] [SerializeField] private  int buttonId = 5; //Εδω δινεται η επιλογη να μπει το id του καθε button ετσι ωστε να γνωριζει το 
+    [Range(1,6)] [SerializeField] private  int buttonId = 5; //Εδω δινεται η επιλογη να μπει το id του καθε button ετσι ωστε να γνωριζει το 
     //script ποιο button εχει πατηθει. Μπορει να παρει τιμες 1,2,3,4 που αντιπροσωπευουν τα κουμπια των ερωτησεων και το 5 που ειναι τα 
     //απλα κουμπια αλληλεπιδρασης με το npc.
     [SerializeField] private Text buttonText;
@@ -18,6 +18,10 @@ public class DialogHandler: MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public static int correctAnswerId; //εδω θα στελνω απο το speechbox το id της σωστης απαντησης οταν προκειται για ερωτηση και για επικοινωνια.
     public static int rewardInCoins; //εδω θα στελνω παλι απο το speechbox το ποσα coins θα πρεπει να λαβει ο παικτης απο την σωστη του απαντηση.
     public static string correctAnswer; //εδω θα ερχεται η σωστη απαντηση και θα δινεται στον παικτη οταν δεν μπορει να απαντησει σωστα.
+    public static string action; //λαμβανει το action σαν απλο string απο το speechbox και αναλογα γινεται η διαδικασια για το τι action θα γινει. Δυστυχως
+    public static string alternativeMessage;
+    //το προβλημα με αυτην την λογικη ειναι πως σε περιπτωση επεκτασης του παιχνιδιου δεν δινεται η δυνατοτητα απλης προσθηκης νεου action το οποιο θα
+    //ενημερωσει ταυτοχρονα και το switch statement αλλα χρειαζεται παρεμβαση καποιου που μπορει να γραψει κωδικα.
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -51,6 +55,34 @@ public class DialogHandler: MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         }
         Time.timeScale = 1;
     }
+
+    public void doTheAction()
+    {
+        //Ειναι ενας ελεγχος που γινεται σε καθε περιπτωση action και ουσιαστικα εαν ο παικτης επιλεξει για παραδειγμα αντι στην αρχη να πατησει το
+        //να ανοιξει το καταστημα πρωτα, πατησει το να μιλησει με τον npc τοτε σε αυτην την περιπτωση θα εμφανιστει το μηνυμα που εχει προκαθωριστει. Εδω ο ελεγχος ελεγχει εαν
+        //πατηθει το κουμπι με το id 6 που αντιστοιχει στο κουμπι.
+        if (buttonId == 6)
+        {
+            greetingsAndQuestion.text = alternativeMessage;
+            return;
+        }
+        switch (action)
+        {
+            case "OpenShop":
+                Debug.Log("OpenTheShop");
+                break;
+            case "OpenBarShop":
+                Debug.Log("OpenBarShop");
+                break;
+            case "OpenWeaponsmith":
+                Debug.Log("OpenWeaponsmith");
+                break;
+            case "OpenWizardShop":
+                Debug.Log("OpenWizardShop");
+                break;
+        }
+    }
+    
     
     void Update()
     {
