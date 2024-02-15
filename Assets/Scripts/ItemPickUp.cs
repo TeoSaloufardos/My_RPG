@@ -61,6 +61,29 @@ public class ItemPickUp : MonoBehaviour
             Destroy(gameObject); //(ΑΦΟΡΑ ΤΟ Destroy σαν μεθοδο) Μετα απο τις παραπανω ενεργειες γινεται καταστροφη του αντικειμενου. +Βαζωντας Destroy(this) Καταστρεφεται το Script ΟΧΙ ΤΟ OBJECT.
         }
     }
+    
+    public bool addPurchasedItem(int passedItemID, bool stackable)
+    {
+        if (InventoryItems.hasFreeSpace == false)
+        {
+            return false;
+        }
+        if (stackable)
+        {
+            for (int i = 0; i < InventoryItems.ItemsQuantities.Count; i++)
+            {
+                if (passedItemID == i)
+                {
+                    if (InventoryItems.ItemsQuantities[i] == 0)
+                    {
+                        displayItem();
+                    }
+                    InventoryItems.ItemsQuantities[i] = InventoryItems.ItemsQuantities[i] + 1;
+                }
+            }
+        }
+        return true;
+    }
 
     public void displayItem()
     {

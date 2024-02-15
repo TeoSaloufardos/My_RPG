@@ -18,8 +18,8 @@ public class DialogHandler: MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public static int correctAnswerId; //εδω θα στελνω απο το speechbox το id της σωστης απαντησης οταν προκειται για ερωτηση και για επικοινωνια.
     public static int rewardInCoins; //εδω θα στελνω παλι απο το speechbox το ποσα coins θα πρεπει να λαβει ο παικτης απο την σωστη του απαντηση.
     public static string correctAnswer; //εδω θα ερχεται η σωστη απαντηση και θα δινεται στον παικτη οταν δεν μπορει να απαντησει σωστα.
-    public static string action; //λαμβανει το action σαν απλο string απο το speechbox και αναλογα γινεται η διαδικασια για το τι action θα γινει. Δυστυχως
     public static string alternativeMessage;
+    public static GameObject shopToOpen;
     //το προβλημα με αυτην την λογικη ειναι πως σε περιπτωση επεκτασης του παιχνιδιου δεν δινεται η δυνατοτητα απλης προσθηκης νεου action το οποιο θα
     //ενημερωσει ταυτοχρονα και το switch statement αλλα χρειαζεται παρεμβαση καποιου που μπορει να γραψει κωδικα.
 
@@ -66,21 +66,7 @@ public class DialogHandler: MonoBehaviour, IPointerEnterHandler, IPointerExitHan
             greetingsAndQuestion.text = alternativeMessage;
             return;
         }
-        switch (action)
-        {
-            case "OpenShop":
-                Debug.Log("OpenTheShop");
-                break;
-            case "OpenBarShop":
-                Debug.Log("OpenBarShop");
-                break;
-            case "OpenWeaponsmith":
-                Debug.Log("OpenWeaponsmith");
-                break;
-            case "OpenWizardShop":
-                Debug.Log("OpenWizardShop");
-                break;
-        }
+        shopToOpen.SetActive(true);
     }
     
     
