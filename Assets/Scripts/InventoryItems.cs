@@ -30,10 +30,11 @@ public class InventoryItems : MonoBehaviour
     public static int newIconID = 0; //Δεχεται το Item Id για να καταχωρηθει στον πινακα και να εμφανιστει στο Inventory
     public static bool hasFreeSpace = true;
     public static int totalCoins = 0; //Συνολο κερματων που εχει ο παικτης
-
-    //Προσωρινα
-    public static int desertMushrooms = 0;
-    public static int roots = 0;
+    
+    public static int removeItemWithID; //Στην περιπτωση πωλησης ενος αντικειμενου θα ερθει απο ενα αλλο script
+    // το id του ιτεμ το οποιο επιθυμει ο παικτης να πουλησει.
+    public static bool removeItem = false; //αυτη η μεταβλητη μπορει να αλλαξει απο αλλα script οπως ειναι τα 
+    //μαγαζια ετσι ωστε να γινει η διαδικασια αφαιρεσης του αντικειμενου απο το inventory του παικτη.
     
     void Start()
     {
@@ -54,11 +55,13 @@ public class InventoryItems : MonoBehaviour
             itemNames.Add(transferItemNames[i]);
         }
     }
-
-    // Update is called once per frame
     void Update()
     {
-        if (iconUpdate == true)
+        if (removeItem)
+        {
+            removeItemIconFromInventory();
+        }
+        if (iconUpdate)
         {
             for (int i = 0; i < maxSizeOfEmptySlots; i++)
             {
@@ -72,10 +75,12 @@ public class InventoryItems : MonoBehaviour
                     που βρηκαμε την κενη θεση.*/
                     emptySlots[i].sprite = icons[newIconID]; /*Μεσα απο τα δεδομενα στο πινακα icons μπορουμε με το id που λαμβανεται απο το itempickup script
                     να καταγραφει και εμφανιστει το νεο αντικειμενο που μαζεψε ο παικτης.*/
-
                     emptySlots[i].transform.gameObject.GetComponent<PopUpMessageHandler>().objectID = newIconID;
                 }
             }
+            iconUpdate = false; //Γυρναει σε κατασταση false το update μετα απο 1sec.
+            maxSizeOfEmptySlots = emptySlots.Count; /*Ξανα λαμβανει το maxSize του πινακα ετσι ωστε να μπορει να ξανα αρχισει η λουπα στο επομενο
+            true που θα δεχτει το iconUpdate*/
             StartCoroutine(Reset()); /*Το StartCoroutine ειναι μια μεθοδος που μου επιτρεπει να τρεξει μια μεθοδος με
             καθυστερηση. Για παραδειγμα εδω ξεκιναει να τρεξει η μεθοδος Reset της οποιας η υλοποιηση βρισκεται παρακατω.*/
         }
@@ -105,9 +110,22 @@ public class InventoryItems : MonoBehaviour
     IEnumerator Reset()
     {
         yield return new WaitForSeconds(0.1f);
-        iconUpdate = false; //Γυρναει σε κατασταση false το update μετα απο 1sec.
-        maxSizeOfEmptySlots = emptySlots.Count; /*Ξανα λαμβανει το maxSize του πινακα ετσι ωστε να μπορει να ξανα αρχισει η λουπα στο επομενο
-        true που θα δεχτει το iconUpdate*/
+        
+    }
+
+    //οταν θα δεχεται το itemRemove = true τοτε θα εκτελειται αυτη εδω η μεθοδος. Αυτη εδω η μεθοδος
+    // επιτρεπει την αφαιρεση ενος αντικειμενου απο το inventory του παικτη. Εαν για παραδειγμα το πουλησει.
+    public void removeItemIconFromInventory() 
+    {
+        for (int i = 0; i < maxSizeOfEmptySlots; i++)
+        {
+            if (emptySlots[i].sprite == icons[removeItemWithID])
+            {
+                emptySlots[i].sprite = theEmptySlot;
+                removeItem = false;
+                break;
+            }
+        }
     }
     
     public void constructItemsAndQuantities()
