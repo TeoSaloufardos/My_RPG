@@ -36,12 +36,16 @@ public class InventoryItems : MonoBehaviour
     public static bool removeItem = false; //αυτη η μεταβλητη μπορει να αλλαξει απο αλλα script οπως ειναι τα 
     //μαγαζια ετσι ωστε να γινει η διαδικασια αφαιρεσης του αντικειμενου απο το inventory του παικτη.
     
+    //Κουμπι που χρειαζεται για το ανοιγμα-κλεισιμο των magic recipes (potions)
+    [SerializeField] private GameObject magicBookRecipes;
+    
     void Start()
     {
         //desertMushrooms = 0;
         //roots = 0;
         
         itemNames.Clear();
+        magicBookRecipes.SetActive(false);
         inventoryMenu.SetActive(false);
         openBook.SetActive(false);
         ui.SetActive(true);
@@ -135,5 +139,14 @@ public class InventoryItems : MonoBehaviour
             ItemsQuantities.Add(0);
         }
     }
+
+    public void closeMagicRecipesBook()
+    {
+        magicBookRecipes.SetActive(false);
+    }
     
+    public void openMagicRecipesBook()
+    {
+        magicBookRecipes.SetActive(true);
+    }
 }

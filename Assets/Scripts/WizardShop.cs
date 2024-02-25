@@ -299,7 +299,7 @@ public class WizardShop : MonoBehaviour
         InventoryItems.ItemsQuantities[itemID] += 1;
     }
 
-    public void removeItemFromInventory(int itemID)//Εδω γινεται ελεγχος εαν υπαρχει μονο 1 απο αυτο το αντικειμενο σε ποσοτητα. Εαν υπαρχει μονο ενα τοτε γινεται αφαιρεση του εικονιδιου και αντικαθυσταται με το κενο. Η διαδικασια αντικαταστασης γινεται στο InventoryItems οπου υπαρχει σχετικη μεθοδος. Εαν δεν ειναι μονο ενα τοτε αυτο που γινεται ειναι να μειωθει κατα 1 το αντικειμενο σε ποσοτητα.
+    public void removeItemFromInventory(int itemID)//TavernShop
     {
         if (InventoryItems.ItemsQuantities[itemID] == 1)
         {
@@ -310,7 +310,10 @@ public class WizardShop : MonoBehaviour
         InventoryItems.ItemsQuantities[itemID] -= 1;
     }
 
-    public void consumeIngredient(int consumeAmount)
+    public void consumeIngredient(int consumeAmount)/*Οταν ο παικτης αγοραζει ενα φιλτρο τοτε αυτο που γινεται 
+    ειναι αναλογα με το φιλτρο που αγοραζει να μειωνονεται ενα ποσο απο τα υλικα. Για παραδειγμα
+    στην περιπτωση του green potion θα μειωθει τυχαια 3 φορες ενα τυχαιο υλικο. Στην περιπτωση που 
+    δεν υπαρχει καποιο υλικο δεν υπαρχει καποιος περιορισμος.*/
     {
         int index = UnityEngine.Random.Range(0, ingredientsIDs.Length);
         int selectedNumber = ingredientsIDs[index];
