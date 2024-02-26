@@ -5,20 +5,23 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class PopUpMessageHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class PopUpMessageHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     // Start is called before the first frame update
 
     [SerializeField] private GameObject textBox; //Το object (panel)
     [SerializeField] private Text message; //Πεδιο για το μηνυμα
     [SerializeField] private Text itemTitle; //Πεδιο για το ονομα του αντικειμενου
-    
     [NonSerialized] public int objectID = 0; //Το id του αντικειμενου μου ερχεται μεσω του inventoryItems
-    
-
     private bool overIcon = false;
     private bool displaying = true;
     private Vector3 screenPoint;
+    
+    //pπειδα που ειναι χρησιμα για την διαδικασια κατασκευης των magic  
+    [SerializeField] private Sprite basicCursor;
+    [SerializeField] private Sprite handCursor;
+    [SerializeField] private Image cursorImage;
+    [SerializeField] private GameObject theCanvas;
     
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -30,6 +33,7 @@ public class PopUpMessageHandler : MonoBehaviour, IPointerEnterHandler, IPointer
         overIcon = true;
         if (displaying)
         {
+            cursorImage.sprite = handCursor;
             textBox.SetActive(true);
             screenPoint.x = Input.mousePosition.x + 400;
             screenPoint.y = Input.mousePosition.y;
@@ -42,6 +46,7 @@ public class PopUpMessageHandler : MonoBehaviour, IPointerEnterHandler, IPointer
     public void OnPointerExit(PointerEventData eventData)
     {
         textBox.SetActive(false);
+        cursorImage.sprite = basicCursor;
     }
     void Start()
     {
@@ -107,6 +112,11 @@ public class PopUpMessageHandler : MonoBehaviour, IPointerEnterHandler, IPointer
             {
                 textBox.SetActive(false);
             }
-        
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        theCanvas.GetComponent<CreateMagic>().thisValue = objectID;
+        theCanvas.GetComponent<CreateMagic>().updateValues();
     }
 }
