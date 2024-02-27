@@ -10,8 +10,8 @@ public class MagicBook : MonoBehaviour
     [SerializeField] private Text magicName;
     [SerializeField] private Text description;
     [SerializeField] private List<Sprite> magicSprites;
-    [SerializeField] private List<String> names;
-    [SerializeField] private List<String> descriptions;
+    [SerializeField] public List<String> names;
+    [SerializeField] public List<String> descriptions;
     [SerializeField] private List<GameObject> iconSets;
     private int currentSet = 0;
     [SerializeField] private GameObject theCanvas;

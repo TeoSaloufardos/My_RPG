@@ -38,6 +38,7 @@ public class InventoryItems : MonoBehaviour
     
     //Κουμπι που χρειαζεται για το ανοιγμα-κλεισιμο των magic recipes (potions)
     [SerializeField] private GameObject magicBookRecipes;
+    [SerializeField] private GameObject canvas;
     
     void Start()
     {
@@ -143,6 +144,8 @@ public class InventoryItems : MonoBehaviour
     public void closeMagicRecipesBook()
     {
         magicBookRecipes.SetActive(false);
+        canvas.GetComponent<CreateMagic>().value = 0;
+        canvas.GetComponent<CreateMagic>().thisValue = 0;
     }
     
     public void openMagicRecipesBook()

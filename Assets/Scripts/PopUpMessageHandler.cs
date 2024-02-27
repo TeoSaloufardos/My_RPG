@@ -22,6 +22,9 @@ public class PopUpMessageHandler : MonoBehaviour, IPointerEnterHandler, IPointer
     [SerializeField] private Sprite handCursor;
     [SerializeField] private Image cursorImage;
     [SerializeField] private GameObject theCanvas;
+    [SerializeField] private bool isMagicType;
+    [SerializeField] private bool isSpellType;
+    [SerializeField] private GameObject magicBook;
     
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -100,15 +103,26 @@ public class PopUpMessageHandler : MonoBehaviour, IPointerEnterHandler, IPointer
                 message.text = "Έχεις 1 " + "x " + InventoryItems.itemNames[objectID];
             }*/
 
-            for (int i = 0; i < InventoryItems.ItemsQuantities.Count; i++)
+            // for (int i = 0; i < InventoryItems.ItemsQuantities.Count; i++)
+            // {
+                // if (i == objectID)
+                // {
+            if (isMagicType)
             {
-                if (i == objectID)
-                {
-                    itemTitle.text = InventoryItems.itemNames[objectID];
-                    message.text = "Έχεις " + InventoryItems.ItemsQuantities[i] + "x " + InventoryItems.itemNames[objectID];
-                }
+                itemTitle.text = magicBook.GetComponent<MagicBook>().names[objectID];
+                message.text = magicBook.GetComponent<MagicBook>().descriptions[objectID];
+                Debug.Log("magic");
+                Debug.Log(magicBook.GetComponent<MagicBook>().names[objectID]);
+                Debug.Log(magicBook.GetComponent<MagicBook>().descriptions[objectID]);
+            }else
+            {
+                Debug.Log("item");
+                itemTitle.text = InventoryItems.itemNames[objectID];
+                message.text = "Έχεις " + InventoryItems.ItemsQuantities[objectID] + "x " + InventoryItems.itemNames[objectID];
             }
-            if (objectID == 0)
+                // }
+            // }
+            if (objectID == 0 && !isMagicType && !isSpellType)
             {
                 textBox.SetActive(false);
             }

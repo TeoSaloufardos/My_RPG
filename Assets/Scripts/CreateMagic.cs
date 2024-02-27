@@ -34,6 +34,7 @@ public class CreateMagic : MonoBehaviour
                 {
                     max = i;
                     emptySlots[i].sprite = icons[itemID];
+                    emptySlots[i].transform.gameObject.GetComponent<PopUpMessageHandler>().objectID = itemID;
                     value = 0;
                     thisValue = 0;
                 }
@@ -57,7 +58,7 @@ public class CreateMagic : MonoBehaviour
                 InventoryItems.newIconID = 1;
                 InventoryItems.iconUpdate = true;
             }
-            InventoryItems.ItemsQuantities[6] += 1;
+            InventoryItems.ItemsQuantities[1] += 1;
         }
         if (Input.GetKeyDown(KeyCode.K))
         {
