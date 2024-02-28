@@ -86,8 +86,8 @@ public class InventoryItems : MonoBehaviour
             iconUpdate = false; //Γυρναει σε κατασταση false το update μετα απο 1sec.
             maxSizeOfEmptySlots = emptySlots.Count; /*Ξανα λαμβανει το maxSize του πινακα ετσι ωστε να μπορει να ξανα αρχισει η λουπα στο επομενο
             true που θα δεχτει το iconUpdate*/
-            StartCoroutine(Reset()); /*Το StartCoroutine ειναι μια μεθοδος που μου επιτρεπει να τρεξει μια μεθοδος με
-            καθυστερηση. Για παραδειγμα εδω ξεκιναει να τρεξει η μεθοδος Reset της οποιας η υλοποιηση βρισκεται παρακατω.*/
+            // StartCoroutine(Reset()); /*Το StartCoroutine ειναι μια μεθοδος που μου επιτρεπει να τρεξει μια μεθοδος με
+            // καθυστερηση. Για παραδειγμα εδω ξεκιναει να τρεξει η μεθοδος Reset της οποιας η υλοποιηση βρισκεται παρακατω.*/
         }
     }
 
@@ -127,7 +127,13 @@ public class InventoryItems : MonoBehaviour
             if (emptySlots[i].sprite == icons[removeItemWithID])
             {
                 emptySlots[i].sprite = theEmptySlot;
+                if (ItemsQuantities[removeItemWithID] == 0)
+                {
+                    emptySlots[i].transform.gameObject.GetComponent<PopUpMessageHandler>().objectID = 0;
+                }
                 removeItem = false;
+                Debug.Log("Removed item: " + removeItemWithID);
+                Debug.Log("Remaing: " + ItemsQuantities[removeItemWithID]);
                 break;
             }
         }

@@ -14,8 +14,8 @@ public class CreateMagic : MonoBehaviour
     [SerializeField] private Sprite emptyIcon;
     [HideInInspector] public int itemID;
     private int max;
-    [HideInInspector] public int thisValue; 
-    
+    [HideInInspector] public int thisValue;
+    [HideInInspector] public List<int> itemsIDForRemove;
     
     void Start()
     {

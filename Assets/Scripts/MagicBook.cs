@@ -14,7 +14,7 @@ public class MagicBook : MonoBehaviour
     [SerializeField] public List<String> descriptions;
     [SerializeField] private List<GameObject> iconSets;
     private int currentSet = 0;
-    [SerializeField] private GameObject theCanvas;
+    [SerializeField] public GameObject theCanvas;
     void Start()
     {
         magicIcon.sprite = magicSprites[0];
@@ -36,6 +36,7 @@ public class MagicBook : MonoBehaviour
             theCanvas.GetComponent<CreateMagic>().itemID++;
             theCanvas.GetComponent<CreateMagic>().value = 0;
             theCanvas.GetComponent<CreateMagic>().thisValue = 0;
+            // theCanvas.GetComponent<CreateMagic>().itemsIDForRemove.Clear();
         }
     }
     
@@ -49,9 +50,10 @@ public class MagicBook : MonoBehaviour
             description.text = descriptions[currentSet];
             switchOff();
             iconSets[currentSet].SetActive(true);
-            theCanvas.GetComponent<CreateMagic>().itemID++;
+            theCanvas.GetComponent<CreateMagic>().itemID--;
             theCanvas.GetComponent<CreateMagic>().value = 0;
             theCanvas.GetComponent<CreateMagic>().thisValue = 0;
+            // theCanvas.GetComponent<CreateMagic>().itemsIDForRemove.Clear();
         }
     }
 

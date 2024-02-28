@@ -132,5 +132,17 @@ public class PopUpMessageHandler : MonoBehaviour, IPointerEnterHandler, IPointer
     {
         theCanvas.GetComponent<CreateMagic>().thisValue = objectID;
         theCanvas.GetComponent<CreateMagic>().updateValues();
+        if (objectID == theCanvas.GetComponent<CreateMagic>().thisValue)
+        {
+            Debug.Log("removed");
+            if (InventoryItems.ItemsQuantities[objectID] == 1)
+            {
+                Debug.Log("Icon removed");
+                InventoryItems.removeItem = true;
+                InventoryItems.removeItemWithID = objectID;
+            }
+            InventoryItems.ItemsQuantities[objectID] -= 1;
+            Debug.Log("-1 removed");
+        }
     }
 }
