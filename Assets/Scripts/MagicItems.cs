@@ -14,6 +14,7 @@ public class MagicItems : MonoBehaviour
     [HideInInspector] public Color32 endColor = new Color32(255,255,255,255);
 
     [SerializeField] private GameObject inventory;
+    private bool check = true;
     private void Start()
     {
         thisImage = GetComponent<Image>();
@@ -24,9 +25,16 @@ public class MagicItems : MonoBehaviour
         if (theCanvas.GetComponent<CreateMagic>().thisValue == itemID)
         {
             thisImage.color = endColor;
+            if (check)
+            {
+                check = false;
+                inventory.GetComponent<InventoryItems>().currentID = itemID;
+                inventory.GetComponent<InventoryItems>().changeItemQuantities();
+            }
         }
         if (theCanvas.GetComponent<CreateMagic>().thisValue == 0)
         {
+            check = true;
             thisImage.color = startColor;
         }
         

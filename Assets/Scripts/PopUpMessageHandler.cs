@@ -25,6 +25,8 @@ public class PopUpMessageHandler : MonoBehaviour, IPointerEnterHandler, IPointer
     [SerializeField] private bool isMagicType;
     [SerializeField] private bool isSpellType;
     [SerializeField] private GameObject magicBook;
+
+    [SerializeField] private GameObject inventory;
     
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -68,6 +70,10 @@ public class PopUpMessageHandler : MonoBehaviour, IPointerEnterHandler, IPointer
             {
                 displaying = false;
                 textBox.SetActive(false);
+                if (isMagicType)
+                {
+                    inventory.GetComponent<InventoryItems>().selected = objectID;
+                }
             }
         }
         //ο ελεγχος εδω γινεται για να ειναι ανοιχτο το message καθως μπαινει στο object ο κερσορας
@@ -111,12 +117,8 @@ public class PopUpMessageHandler : MonoBehaviour, IPointerEnterHandler, IPointer
             {
                 itemTitle.text = magicBook.GetComponent<MagicBook>().names[objectID];
                 message.text = magicBook.GetComponent<MagicBook>().descriptions[objectID];
-                Debug.Log("magic");
-                Debug.Log(magicBook.GetComponent<MagicBook>().names[objectID]);
-                Debug.Log(magicBook.GetComponent<MagicBook>().descriptions[objectID]);
             }else
             {
-                Debug.Log("item");
                 itemTitle.text = InventoryItems.itemNames[objectID];
                 message.text = "Έχεις " + InventoryItems.ItemsQuantities[objectID] + "x " + InventoryItems.itemNames[objectID];
             }
@@ -132,17 +134,17 @@ public class PopUpMessageHandler : MonoBehaviour, IPointerEnterHandler, IPointer
     {
         theCanvas.GetComponent<CreateMagic>().thisValue = objectID;
         theCanvas.GetComponent<CreateMagic>().updateValues();
-        if (objectID == theCanvas.GetComponent<CreateMagic>().thisValue)
-        {
-            Debug.Log("removed");
-            if (InventoryItems.ItemsQuantities[objectID] == 1)
-            {
-                Debug.Log("Icon removed");
-                InventoryItems.removeItem = true;
-                InventoryItems.removeItemWithID = objectID;
-            }
-            InventoryItems.ItemsQuantities[objectID] -= 1;
-            Debug.Log("-1 removed");
-        }
+        // if (objectID == theCanvas.GetComponent<CreateMagic>().thisValue)
+        // {
+        //     Debug.Log("removed");
+        //     if (InventoryItems.ItemsQuantities[objectID] == 1)
+        //     {
+        //         Debug.Log("Icon removed");
+        //         InventoryItems.removeItem = true;
+        //         InventoryItems.removeItemWithID = objectID;
+        //     }
+        //     InventoryItems.ItemsQuantities[objectID] -= 1;
+        //     Debug.Log("-1 removed");
+        // }
     }
 }

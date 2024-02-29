@@ -39,6 +39,18 @@ public class InventoryItems : MonoBehaviour
     //Κουμπι που χρειαζεται για το ανοιγμα-κλεισιμο των magic recipes (potions)
     [SerializeField] private GameObject magicBookRecipes;
     [SerializeField] private GameObject canvas;
+    [HideInInspector] public int currentID = 0;
+    [HideInInspector] public int checkAmount = 0;
+    private int secondMax;
+    private int thirdMax;
+    
+    //Ui 
+    [SerializeField] private List<Image> UISlots;
+    [SerializeField] private List<Sprite> magicIcons;
+    [SerializeField] private List<KeyCode> keys;
+    private bool set = false;
+    [HideInInspector] public int selected = 0;
+    public List<int> magicAttacks;
     
     void Start()
     {
@@ -53,13 +65,50 @@ public class InventoryItems : MonoBehaviour
         maxSizeOfEmptySlots = emptySlots.Count;
         constructItemsAndQuantities();
         
+        
         //μεταφερω τα δεδομενα απο τον πινακα στο unity σε εναν static για να ειναι κοινος σε ολα τα scripts και
         //αμεταβλητος.
         for (int i = 0; i < transferItemNames.Count; i++) 
         {
             itemNames.Add(transferItemNames[i]);
         }
+        secondMax = itemNames.Count;
+        thirdMax = emptySlots.Count;
     }
+
+    public void changeItemQuantities()//auth h methodos kai h parakatw einai mia paramoia ulopoihsh apo autes pou exw kanei alla gia sigouria xrhsimopoihsa autes tis duo sthn diadikasia ths kataskeuhs magic.
+    {
+        for (int i = 0; i < secondMax; i++)
+        {
+            if (i == currentID)
+            {
+                secondMax = i;
+                checkAmount = ItemsQuantities[i];
+                checkAmount--;
+                if (checkAmount == 0)
+                {
+                    removeIcon(i);
+                }
+                ItemsQuantities[i]--;
+            }
+        }
+        secondMax = itemNames.Count;
+    }
+
+    public void removeIcon(int iconID)
+    {
+        for (int i = 0; i < thirdMax; i++)
+        {
+            if (emptySlots[i].sprite == icons[iconID])
+            {
+                thirdMax = i;
+                emptySlots[i].sprite = icons[0];
+                emptySlots[i].transform.gameObject.GetComponent<PopUpMessageHandler>().objectID = 0;
+            }
+        }
+        thirdMax = emptySlots.Count;
+    }
+    
     void Update()
     {
         if (removeItem)
@@ -88,7 +137,26 @@ public class InventoryItems : MonoBehaviour
             true που θα δεχτει το iconUpdate*/
             // StartCoroutine(Reset()); /*Το StartCoroutine ειναι μια μεθοδος που μου επιτρεπει να τρεξει μια μεθοδος με
             // καθυστερηση. Για παραδειγμα εδω ξεκιναει να τρεξει η μεθοδος Reset της οποιας η υλοποιηση βρισκεται παρακατω.*/
+            for (int j = 0; j < keys.Count; j++)
+            {
+                if (Input.GetKeyDown(keys[j]))
+                {
+                    for (int i = 0; i < UISlots.Count; i++)
+                    {
+                        print(Input.GetKeyDown(keys[i]));
+                        if (Input.GetKeyDown((keys[i])))
+                        {
+                            UISlots[i].sprite = magicIcons[selected];
+                            magicAttacks[i] = selected;
+                            print(Input.GetKeyDown(keys[i]));
+                            print("Magic attacks: " + magicAttacks[i]);
+                        }
+                    }
+                }
+            }
         }
+
+        StartCoroutine(Reset());
     }
 
     public void openMenu()
@@ -114,7 +182,7 @@ public class InventoryItems : MonoBehaviour
      αλλες λειτουργιες αλλα μονο αυτην που θελω εκεινη την στιγμη.*/
     IEnumerator Reset()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.3f);
         
     }
 
