@@ -137,26 +137,24 @@ public class InventoryItems : MonoBehaviour
             true που θα δεχτει το iconUpdate*/
             // StartCoroutine(Reset()); /*Το StartCoroutine ειναι μια μεθοδος που μου επιτρεπει να τρεξει μια μεθοδος με
             // καθυστερηση. Για παραδειγμα εδω ξεκιναει να τρεξει η μεθοδος Reset της οποιας η υλοποιηση βρισκεται παρακατω.*/
-            for (int j = 0; j < keys.Count; j++)
+        }
+        if (Input.anyKey)
+        {
+            set = true;
+        }
+
+        if (set)
+        {
+            set = false;
+            for (int i = 0; i < UISlots.Count; i++)
             {
-                if (Input.GetKeyDown(keys[j]))
+                if (Input.GetKeyDown((keys[i])))
                 {
-                    for (int i = 0; i < UISlots.Count; i++)
-                    {
-                        print(Input.GetKeyDown(keys[i]));
-                        if (Input.GetKeyDown((keys[i])))
-                        {
-                            UISlots[i].sprite = magicIcons[selected];
-                            magicAttacks[i] = selected;
-                            print(Input.GetKeyDown(keys[i]));
-                            print("Magic attacks: " + magicAttacks[i]);
-                        }
-                    }
+                    UISlots[i].sprite = magicIcons[selected];
+                    magicAttacks[i] = selected;
                 }
             }
         }
-
-        StartCoroutine(Reset());
     }
 
     public void openMenu()
@@ -182,7 +180,7 @@ public class InventoryItems : MonoBehaviour
      αλλες λειτουργιες αλλα μονο αυτην που θελω εκεινη την στιγμη.*/
     IEnumerator Reset()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.1f);
         
     }
 

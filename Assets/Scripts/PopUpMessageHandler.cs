@@ -51,6 +51,7 @@ public class PopUpMessageHandler : MonoBehaviour, IPointerEnterHandler, IPointer
     public void OnPointerExit(PointerEventData eventData)
     {
         textBox.SetActive(false);
+        overIcon = false;
         cursorImage.sprite = basicCursor;
     }
     void Start()
@@ -72,6 +73,7 @@ public class PopUpMessageHandler : MonoBehaviour, IPointerEnterHandler, IPointer
                 textBox.SetActive(false);
                 if (isMagicType)
                 {
+                    Debug.Log("Object id from pop up = " + objectID);
                     inventory.GetComponent<InventoryItems>().selected = objectID;
                 }
             }
