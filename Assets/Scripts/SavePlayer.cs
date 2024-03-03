@@ -6,10 +6,11 @@ public class SavePlayer : MonoBehaviour
 {
     public static int characterPositionData = 0;
     public static string playerName = "Player";
+    public static GameObject spawnPoint;
     
     void Start()
     {
-        DontDestroyOnLoad(this); //Με αυτο δηλωνω οτι ακόμα και σε μια αλλαγη σε ενα scene δεν θα καταστραφει το object αυτο. Με αυτόν τον τρόπο μπορώ και κρατάω δεδομένα και τα περνάω μεσα σε αλλα scenes.
+        DontDestroyOnLoad(this); 
     }
 
     // Update is called once per frame

@@ -13,18 +13,16 @@ public class CharacterMovement : MonoBehaviour
     private float velocity;
     private float xAxisVelocity;
     private float zAxisVelocity;
-    [SerializeField] private LayerMask moveArea; //Λυση στο προβλημα με τον παικτη και το roof handler.
-    //Επιλεγοντας το default layer μεσα απο το character ουσιαστικα καθωριζω οτι ο παικτης θα εχει ως raycast περιοχη
-    //μονο το default layer.
-    
-    
+    [SerializeField] private LayerMask moveArea;
+
+    public GameObject spawnPoint;
     
     // Start is called before the first frame update
     void Start()
     {
-        navMeshAgent = GetComponent<NavMeshAgent>(); //Παιρνει το NavMeshAgent Component του Charecter
+        navMeshAgent = GetComponent<NavMeshAgent>(); 
         characterAnimator = GetComponent<Animator>();
-
+        SavePlayer.spawnPoint = spawnPoint;
     }
 
     // Update is called once per frame
@@ -41,7 +39,7 @@ public class CharacterMovement : MonoBehaviour
                 navMeshAgent.destination = mouseHit.point;//Το παιρναει στο Destination του Character με το NavMeshAgent.
             }
         }
-
+        
 
         /*Αποθηκευει στις μεταβλητες x-zAxisVelocity το αριθμο που λαμβανει σαν x-z velocity το navigation του χαρακτηρα,
          εαν αυτα δυο προστεθουν μεταξυ τους και το συνολικο τους velocity ειναι 0 τοτε το running μπαινει σαν false που 

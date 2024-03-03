@@ -38,8 +38,15 @@ public class TavernShop : MonoBehaviour
     [SerializeField] private int meatAmount;
     [SerializeField] private int cheeseAmount;
     [SerializeField] private int breadAmount;
+    [SerializeField] private GameObject inventory;
+    [SerializeField] private AudioSource audioPlayer;
 
     private bool hasInitialised = false;
+
+    private void Start()
+    {
+        audioPlayer = inventory.GetComponent<AudioSource>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -84,6 +91,8 @@ public class TavernShop : MonoBehaviour
             InventoryItems.totalCoins -= breadPrice;
             breadPrice = (int)Math.Round(breadPrice * 1.17);
             breadAmount = breadAmount - 1;
+            audioPlayer.clip = inventory.GetComponent<InventoryItems>().buySound;
+            audioPlayer.Play();
             currency.text = (InventoryItems.totalCoins).ToString();
             breadAmountText.text = breadAmount.ToString();
             breadPriceText.text = breadPrice.ToString();
@@ -115,6 +124,8 @@ public class TavernShop : MonoBehaviour
             InventoryItems.totalCoins -= cheesePrice;
             cheesePrice = (int) Math.Round(cheesePrice * 1.17);
             cheeseAmount -= 1;
+            audioPlayer.clip = inventory.GetComponent<InventoryItems>().buySound;
+            audioPlayer.Play();
             currency.text = (InventoryItems.totalCoins).ToString(); 
             cheeseAmountText.text = cheeseAmount.ToString();
             cheesePriceText.text = cheesePrice.ToString();
@@ -146,6 +157,8 @@ public class TavernShop : MonoBehaviour
             InventoryItems.totalCoins -= meatPrice;
             meatPrice = (int) Math.Round(meatPrice * 1.17);
             meatAmount -= 1;
+            audioPlayer.clip = inventory.GetComponent<InventoryItems>().buySound;
+            audioPlayer.Play();
             currency.text = (InventoryItems.totalCoins).ToString(); 
             meatAmountText.text = meatAmount.ToString();
             meatPriceText.text = meatPrice.ToString();
@@ -170,6 +183,8 @@ public class TavernShop : MonoBehaviour
             InventoryItems.totalCoins += (int) Math.Round(breadPrice * 0.65);
             breadPrice = (int) Math.Round(breadPrice / 1.17);
             breadAmount += 1;
+            audioPlayer.clip = inventory.GetComponent<InventoryItems>().buySound;
+            audioPlayer.Play();
             currency.text = (InventoryItems.totalCoins).ToString(); 
             breadAmountText.text = breadAmount.ToString();
             breadPriceText.text = breadPrice.ToString();
@@ -189,6 +204,8 @@ public class TavernShop : MonoBehaviour
             InventoryItems.totalCoins += (int) Math.Round(cheesePrice * 0.65);
             cheesePrice = (int) Math.Round(cheesePrice / 1.17);
             cheeseAmount += 1;
+            audioPlayer.clip = inventory.GetComponent<InventoryItems>().buySound;
+            audioPlayer.Play();
             currency.text = (InventoryItems.totalCoins).ToString(); 
             cheeseAmountText.text = cheeseAmount.ToString();
             cheesePriceText.text = cheesePrice.ToString();
@@ -208,6 +225,8 @@ public class TavernShop : MonoBehaviour
             InventoryItems.totalCoins += (int) Math.Round(meatPrice * 0.65);
             meatPrice = (int) Math.Round(meatPrice / 1.17);
             meatAmount += 1;
+            audioPlayer.clip = inventory.GetComponent<InventoryItems>().buySound;
+            audioPlayer.Play();
             currency.text = (InventoryItems.totalCoins).ToString(); 
             meatAmountText.text = meatAmount.ToString();
             meatPriceText.text = meatPrice.ToString();

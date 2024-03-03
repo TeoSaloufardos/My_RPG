@@ -12,6 +12,14 @@ public class InventoryItems : MonoBehaviour
     [SerializeField] private GameObject closedBook;
     [SerializeField] private GameObject openBook;
     [SerializeField] private GameObject ui;
+    
+    //Hxoi / Audio
+    [SerializeField] private AudioClip bookOpenSound;
+    [SerializeField] public AudioClip selectSound;
+    [HideInInspector] public AudioSource audioPlayer;
+    [SerializeField] public AudioClip buySound;
+    [SerializeField] public AudioClip createMagicSound;
+    [SerializeField] public AudioClip pickUpSound;
 
     //Πεδια που αφορουν την καταχωρηση αντικειμενων στο inventory 
     [SerializeField] private List<Image> emptySlots; //Πινακας που περιεχει καθε emptySlot (διαθεσιμο slot)
@@ -48,9 +56,15 @@ public class InventoryItems : MonoBehaviour
     [SerializeField] private List<Image> UISlots;
     [SerializeField] private List<Sprite> magicIcons;
     [SerializeField] private List<KeyCode> keys;
-    private bool set = false;
+    [HideInInspector] public bool set = false;
     [HideInInspector] public int selected = 0;
     public List<int> magicAttacks;
+    [SerializeField] private List<Sprite> spellIcons;
+    [HideInInspector] public bool setTwo = false;
+
+    [SerializeField] private GameObject magicParticle;
+    
+    
     
     void Start()
     {
@@ -64,6 +78,7 @@ public class InventoryItems : MonoBehaviour
         ui.SetActive(true);
         maxSizeOfEmptySlots = emptySlots.Count;
         constructItemsAndQuantities();
+        audioPlayer = GetComponent<AudioSource>();
         
         
         //μεταφερω τα δεδομενα απο τον πινακα στο unity σε εναν static για να ειναι κοινος σε ολα τα scripts και
@@ -138,22 +153,36 @@ public class InventoryItems : MonoBehaviour
             // StartCoroutine(Reset()); /*Το StartCoroutine ειναι μια μεθοδος που μου επιτρεπει να τρεξει μια μεθοδος με
             // καθυστερηση. Για παραδειγμα εδω ξεκιναει να τρεξει η μεθοδος Reset της οποιας η υλοποιηση βρισκεται παρακατω.*/
         }
-        if (Input.anyKey)
+        if (set && selected != 0)
         {
-            set = true;
-        }
-
-        if (set)
-        {
-            set = false;
             for (int i = 0; i < UISlots.Count; i++)
             {
                 if (Input.GetKeyDown((keys[i])))
                 {
+                    set = false;
                     UISlots[i].sprite = magicIcons[selected];
                     magicAttacks[i] = selected;
+                    canvas.GetComponent<CreateMagic>().removed(selected - 1);
                 }
             }
+        }
+        if (setTwo && selected != 0)
+        {
+            for (int i = 0; i < UISlots.Count; i++)
+            {
+                if (Input.GetKeyDown((keys[i])))
+                {
+                    setTwo = false;
+                    UISlots[i].sprite = spellIcons[selected];
+                    magicAttacks[i] = selected + 5;
+                }
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            Instantiate(magicParticle, SavePlayer.spawnPoint.transform.position,
+                SavePlayer.spawnPoint.transform.rotation);
         }
     }
 
@@ -163,6 +192,8 @@ public class InventoryItems : MonoBehaviour
         openBook.SetActive(true);
         closedBook.SetActive(false);
         ui.SetActive(false);
+        audioPlayer.clip = bookOpenSound;
+        audioPlayer.Play();
         Time.timeScale = 0; //κανω pause τον χρονο για να μπει ο παικτης με την ησυχια του μεσα στο menu
     }
     
@@ -172,6 +203,8 @@ public class InventoryItems : MonoBehaviour
         openBook.SetActive(false);
         closedBook.SetActive(true);
         ui.SetActive(true);
+        audioPlayer.clip = bookOpenSound;
+        audioPlayer.Play();
         Time.timeScale = 1; //συνεχιζω το παιχνιδι
     }
 

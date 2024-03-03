@@ -13,26 +13,26 @@ public class MagicBook : MonoBehaviour
     [SerializeField] public List<String> names;
     [SerializeField] public List<String> descriptions;
     [SerializeField] private List<GameObject> iconSets;
-    private int currentSet = 0;
+    private int currentSet = 1;
     [SerializeField] public GameObject theCanvas;
     void Start()
     {
-        magicIcon.sprite = magicSprites[0];
-        magicName.text = names[0];
-        description.text = descriptions[0];
+        magicIcon.sprite = magicSprites[1];
+        magicName.text = names[1];
+        description.text = descriptions[1];
         iconSets[0].SetActive(true);
     }
 
     public void next()
     {
-        if (currentSet < magicSprites.Count - 1)
+        if (currentSet  < magicSprites.Count - 1)
         {
             currentSet++;
             magicIcon.sprite = magicSprites[currentSet];
             magicName.text = names[currentSet];
             description.text = descriptions[currentSet];
             switchOff();
-            iconSets[currentSet].SetActive(true);
+            iconSets[currentSet - 1].SetActive(true);
             theCanvas.GetComponent<CreateMagic>().itemID++;
             theCanvas.GetComponent<CreateMagic>().value = 0;
             theCanvas.GetComponent<CreateMagic>().thisValue = 0;
@@ -42,14 +42,14 @@ public class MagicBook : MonoBehaviour
     
     public void back()
     {
-        if (currentSet > 0)
+        if (currentSet > 1)
         {
             currentSet--;
             magicIcon.sprite = magicSprites[currentSet];
             magicName.text = names[currentSet];
             description.text = descriptions[currentSet];
             switchOff();
-            iconSets[currentSet].SetActive(true);
+            iconSets[currentSet - 1].SetActive(true);
             theCanvas.GetComponent<CreateMagic>().itemID--;
             theCanvas.GetComponent<CreateMagic>().value = 0;
             theCanvas.GetComponent<CreateMagic>().thisValue = 0;

@@ -12,7 +12,7 @@ public class PopUpMessageHandler : MonoBehaviour, IPointerEnterHandler, IPointer
     [SerializeField] private GameObject textBox; //Το object (panel)
     [SerializeField] private Text message; //Πεδιο για το μηνυμα
     [SerializeField] private Text itemTitle; //Πεδιο για το ονομα του αντικειμενου
-    [NonSerialized] public int objectID = 0; //Το id του αντικειμενου μου ερχεται μεσω του inventoryItems
+    [SerializeField] public int objectID = 0; //Το id του αντικειμενου μου ερχεται μεσω του inventoryItems
     private bool overIcon = false;
     private bool displaying = true;
     private Vector3 screenPoint;
@@ -27,6 +27,10 @@ public class PopUpMessageHandler : MonoBehaviour, IPointerEnterHandler, IPointer
     [SerializeField] private GameObject magicBook;
 
     [SerializeField] private GameObject inventory;
+    [SerializeField] private bool left = true;
+
+    private AudioSource audioPlayer;
+    
     
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -39,8 +43,15 @@ public class PopUpMessageHandler : MonoBehaviour, IPointerEnterHandler, IPointer
         if (displaying)
         {
             cursorImage.sprite = handCursor;
+            if (left)
+            {
+                screenPoint.x = Input.mousePosition.x + 400;
+            }
+            else
+            {
+                screenPoint.x = Input.mousePosition.x - 400;
+            }
             textBox.SetActive(true);
-            screenPoint.x = Input.mousePosition.x + 400;
             screenPoint.y = Input.mousePosition.y;
             screenPoint.z = 1f;
             textBox.transform.position = Camera.main.ScreenToWorldPoint(screenPoint);
@@ -57,6 +68,7 @@ public class PopUpMessageHandler : MonoBehaviour, IPointerEnterHandler, IPointer
     void Start()
     {
         textBox.SetActive(false);
+        audioPlayer = inventory.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -69,12 +81,19 @@ public class PopUpMessageHandler : MonoBehaviour, IPointerEnterHandler, IPointer
         {
             if (Input.GetMouseButtonDown(0))
             {
+                audioPlayer.clip = inventory.GetComponent<InventoryItems>().selectSound;
+                audioPlayer.Play();
                 displaying = false;
                 textBox.SetActive(false);
                 if (isMagicType)
                 {
-                    Debug.Log("Object id from pop up = " + objectID);
                     inventory.GetComponent<InventoryItems>().selected = objectID;
+                    inventory.GetComponent<InventoryItems>().set = true;
+                }
+                if (isSpellType)
+                {
+                    inventory.GetComponent<InventoryItems>().selected = objectID;
+                    inventory.GetComponent<InventoryItems>().setTwo = true;
                 }
             }
         }
@@ -126,7 +145,7 @@ public class PopUpMessageHandler : MonoBehaviour, IPointerEnterHandler, IPointer
             }
                 // }
             // }
-            if (objectID == 0 && !isMagicType && !isSpellType)
+            if (objectID == 0)
             {
                 textBox.SetActive(false);
             }
@@ -134,8 +153,11 @@ public class PopUpMessageHandler : MonoBehaviour, IPointerEnterHandler, IPointer
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        theCanvas.GetComponent<CreateMagic>().thisValue = objectID;
-        theCanvas.GetComponent<CreateMagic>().updateValues();
+        if (!isMagicType && !isSpellType)
+        {
+            theCanvas.GetComponent<CreateMagic>().thisValue = objectID;
+            theCanvas.GetComponent<CreateMagic>().updateValues();
+        }
         // if (objectID == theCanvas.GetComponent<CreateMagic>().thisValue)
         // {
         //     Debug.Log("removed");

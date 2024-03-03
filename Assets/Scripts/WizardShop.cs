@@ -35,6 +35,9 @@ public class WizardShop : MonoBehaviour
     [SerializeField] private Text pinkEggAmountText;
     [SerializeField] private Text rootsAmountText;
     [SerializeField] private Text leafAmountText;
+    
+    [SerializeField] private GameObject inventory;
+    [SerializeField] private AudioSource audioPlayer;
 
     [Header("Define the prices and amounts down below.")]
     private int redPrice = 45;
@@ -296,6 +299,8 @@ public class WizardShop : MonoBehaviour
             InventoryItems.newIconID = itemID; 
             InventoryItems.iconUpdate = true;
         }
+        audioPlayer.clip = inventory.GetComponent<InventoryItems>().buySound;
+        audioPlayer.Play();
         InventoryItems.ItemsQuantities[itemID] += 1;
     }
 
@@ -306,7 +311,8 @@ public class WizardShop : MonoBehaviour
             InventoryItems.removeItem = true;
             InventoryItems.removeItemWithID = itemID;
         }
-
+        audioPlayer.clip = inventory.GetComponent<InventoryItems>().buySound;
+        audioPlayer.Play();
         InventoryItems.ItemsQuantities[itemID] -= 1;
     }
 
@@ -338,23 +344,9 @@ public class WizardShop : MonoBehaviour
         }
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    // Start is called before the first frame update
     void Start()
     {
-        
+        audioPlayer = inventory.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame

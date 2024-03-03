@@ -15,17 +15,25 @@ public class CreateMagic : MonoBehaviour
     [HideInInspector] public int itemID;
     private int max;
     [HideInInspector] public int thisValue;
-    [HideInInspector] public List<int> itemsIDForRemove;
+    private int maxTwo;
+
+    [SerializeField]
+    private GameObject inventory;
+
+    [SerializeField] private AudioSource audioPlayer;
     
     void Start()
     {
-        expectedValue = values[0];
+        expectedValue = values[1];
         max = emptySlots.Count;
+        maxTwo = emptySlots.Count;
+        audioPlayer = inventory.GetComponent<AudioSource>();
         create();
     }
 
     public void create()
     {
+        Debug.Log("Expected value: " + expectedValue + " value: " + value);
         if (expectedValue == value)
         {
             for (int i = 0; i < max; i++)
@@ -34,7 +42,9 @@ public class CreateMagic : MonoBehaviour
                 {
                     max = i;
                     emptySlots[i].sprite = icons[itemID];
-                    emptySlots[i].transform.gameObject.GetComponent<PopUpMessageHandler>().objectID = itemID;
+                    audioPlayer.clip = inventory.GetComponent<InventoryItems>().createMagicSound;
+                    audioPlayer.Play();
+                    emptySlots[i].transform.gameObject.GetComponent<PopUpMessageHandler>().objectID = itemID + 1;
                     value = 0;
                     thisValue = 0;
                 }
@@ -43,10 +53,28 @@ public class CreateMagic : MonoBehaviour
         max = emptySlots.Count;
     }
 
+    public void removed(int index)
+    {
+        for (int i = 0; i < maxTwo; i++)
+        {
+            if (emptySlots[i].sprite == icons[index])
+            {
+                maxTwo = i;
+                emptySlots[i].sprite = emptyIcon;
+                emptySlots[i].transform.gameObject.GetComponent<PopUpMessageHandler>().objectID = 0;
+            }
+        }
+
+        maxTwo = emptySlots.Count;
+    }
+
     public void updateValues()
     {
         value += thisValue;
         expectedValue = values[itemID];
+        Debug.Log("value: " + value);
+        Debug.Log("Expected Value: " + expectedValue);
+        Debug.Log("ItemId: " + itemID);
     }
 
     private void Update()
@@ -77,6 +105,11 @@ public class CreateMagic : MonoBehaviour
                 InventoryItems.iconUpdate = true;
             }
             InventoryItems.ItemsQuantities[10] += 1;
+        }
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            value = expectedValue;
         }
     }
 }
