@@ -16,6 +16,7 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private LayerMask moveArea;
 
     public GameObject spawnPoint;
+    private WaitForSeconds approachEnemy = new WaitForSeconds(0.3f);
     
     // Start is called before the first frame update
     void Start()
@@ -36,7 +37,19 @@ public class CharacterMovement : MonoBehaviour
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);//λαμβανει το position που στοχευει το ποντικι συμφωνα με την οπτικη της main καμερας
             if (Physics.Raycast(ray, out mouseHit,300, moveArea))
             {
-                navMeshAgent.destination = mouseHit.point;//Το παιρναει στο Destination του Character με το NavMeshAgent.
+                if (mouseHit.transform.gameObject.CompareTag("enemy"))
+                {
+                    navMeshAgent.isStopped = false;
+                    SavePlayer.theTarget = mouseHit.transform.gameObject;
+                    navMeshAgent.destination = mouseHit.point;//Το παιρναει στο Destination του Character με το NavMeshAgent.
+                    StartCoroutine(MoveTo());
+                }
+                else
+                {
+                    SavePlayer.theTarget = null;
+                    navMeshAgent.destination = mouseHit.point;//Το παιρναει στο Destination του Character με το NavMeshAgent.
+                    navMeshAgent.isStopped = false;
+                }
             }
         }
         
@@ -55,5 +68,11 @@ public class CharacterMovement : MonoBehaviour
         {
             characterAnimator.SetBool("running", false);    
         }
+    }
+
+    IEnumerator MoveTo()
+    {
+        yield return approachEnemy;
+        navMeshAgent.isStopped = true;
     }
 }

@@ -7,6 +7,7 @@ public class SavePlayer : MonoBehaviour
     public static int characterPositionData = 0;
     public static string playerName = "Player";
     public static GameObject spawnPoint;
+    public static GameObject theTarget;
     
     void Start()
     {
