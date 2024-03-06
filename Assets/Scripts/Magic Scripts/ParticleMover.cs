@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ParticleMover : MonoBehaviour
@@ -11,10 +12,14 @@ public class ParticleMover : MonoBehaviour
     [SerializeField] private bool enemySeeker = false;
     [SerializeField] private bool nonMoving = false;
     private GameObject targetSave;
+    [SerializeField] private bool followPlayer = false;
+    private GameObject playerObject;
+    [SerializeField] private float manaCost = 0.05f;
     
     void Start()
     {
         targetSave = SavePlayer.theTarget;
+        playerObject = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -22,7 +27,8 @@ public class ParticleMover : MonoBehaviour
     {
         if (target != null)
         {
-            transform.position = Vector3.LerpUnclamped(transform.position, target.transform.position, speed * Time.deltaTime);
+            transform.position =
+                Vector3.LerpUnclamped(transform.position, target.transform.position, speed * Time.deltaTime);
         }
 
         if (enemySeeker)
@@ -49,6 +55,18 @@ public class ParticleMover : MonoBehaviour
                 Destroy(obj);
             }
         }
+
+        if (followPlayer)
+        {
+            transform.position = playerObject.transform.position;
+            lifeTime = 100;
+            if (SavePlayer.manaAmount <= 0.03)//katastrofh tou antikeimenou molis teleiwsei to mana
+            {
+                Destroy(obj);
+            }
+        }
+
+        SavePlayer.manaAmount -= manaCost * Time.deltaTime;//afairei to mana oso xrhsimopoieitai
         Destroy(obj, lifeTime);
     }
 }

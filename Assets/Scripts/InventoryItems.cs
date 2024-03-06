@@ -54,6 +54,7 @@ public class InventoryItems : MonoBehaviour
     
     //Ui 
     [SerializeField] private List<Image> UISlots;
+    [SerializeField] private List<Sprite> UIEmptySlots; 
     [SerializeField] private List<Sprite> magicIcons;
     [SerializeField] private List<KeyCode> keys;
     [HideInInspector] public bool set = false;
@@ -61,8 +62,8 @@ public class InventoryItems : MonoBehaviour
     public List<int> magicAttacks;
     [SerializeField] private List<Sprite> spellIcons;
     [HideInInspector] public bool setTwo = false;
-
-    [SerializeField] private GameObject magicParticle;
+    [SerializeField] private GameObject[] magicParticles;
+    [SerializeField] private Image manaBar;
     
     
     
@@ -174,16 +175,43 @@ public class InventoryItems : MonoBehaviour
                 {
                     setTwo = false;
                     UISlots[i].sprite = spellIcons[selected];
-                    magicAttacks[i] = selected + 5;
+                    magicAttacks[i] = selected + 6;
                 }
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.anyKey && Time.timeScale == 1)
         {
-            Instantiate(magicParticle, SavePlayer.spawnPoint.transform.position,
-                SavePlayer.spawnPoint.transform.rotation);
+            for (int i = 0; i < UISlots.Count; i++)
+            {
+                if (Input.GetKeyDown(keys[i]))
+                {
+                    if (magicAttacks[i] != 0)
+                    {
+                        if (SavePlayer.manaAmount > 0.1f)
+                        {
+                            Instantiate(magicParticles[magicAttacks[i]-1], SavePlayer.spawnPoint.transform.position, SavePlayer.spawnPoint.transform.rotation);
+                        }
+
+                        if (magicAttacks[i] < 7 && SavePlayer.manaAmount > 0.1)//ean isxuei kati apo auta katastrefei, afairei to icon giati einai magic oxi monimo spell.
+                        {
+                            UISlots[i].sprite = UIEmptySlots[i];
+                        }
+                    }
+                }
+            }
         }
+        
+        if (SavePlayer.manaAmount < 1.0)
+        {
+            SavePlayer.manaAmount += 0.03f * Time.deltaTime; //gemizei ton eauto tou otan paei katw apo to 100% san regen.
+        }
+        if (SavePlayer.manaAmount <= 0)
+        {
+            SavePlayer.manaAmount = 0;
+        }
+
+        manaBar.fillAmount = SavePlayer.manaAmount;
     }
 
     public void openMenu()
@@ -194,6 +222,7 @@ public class InventoryItems : MonoBehaviour
         ui.SetActive(false);
         audioPlayer.clip = bookOpenSound;
         audioPlayer.Play();
+        SavePlayer.theTarget = null;//na mhn emfanizetai to outline tou enemy otan eimaste sto inventory
         Time.timeScale = 0; //κανω pause τον χρονο για να μπει ο παικτης με την ησυχια του μεσα στο menu
     }
     
