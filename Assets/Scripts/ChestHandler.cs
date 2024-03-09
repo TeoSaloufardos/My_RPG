@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ChestHandler : MonoBehaviour
 {
@@ -10,10 +11,21 @@ public class ChestHandler : MonoBehaviour
     private bool notOpened = true; //Αυτο το βαζω για να μην επαναλαμβανει το animation, οταν ο παικτης εχει ηδη ανοιξει το κουτι.
     private bool hasClosed = false;
     [SerializeField] private int giveCoins = 25; //Το default θα ειναι να δινει 25 coins καθε chest, μπορει ομως να αλλαχτει αναλογα με την περιπτωση.
+    [SerializeField] private GameObject particleEffect;
+    [SerializeField] private GameObject spawnPoint;
+    [SerializeField] private GameObject canvasText;
+    [SerializeField] private Text goldAmount;
+    [SerializeField] private float speed = 1.0f;
+    [SerializeField] private GameObject mainCam;
+    private int goldDisplay;
+    [SerializeField] private GameObject inventory;
+    [SerializeField] private AudioClip openChest;
     
     void Start()
     {
         objectAnimator = GetComponent<Animator>();
+        canvasText.SetActive(false);
+        goldDisplay = giveCoins;
 
     }
 
@@ -35,6 +47,8 @@ public class ChestHandler : MonoBehaviour
                                                       InventoryItems.totalCoins + " νομίσματα.");
                     giveCoins = 0;
                     notOpened = false;
+                    inventory.GetComponent<AudioSource>().clip = openChest;
+                    inventory.GetComponent<AudioSource>().Play();
                 }
                 else
                 {
@@ -62,9 +76,21 @@ public class ChestHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (canvasText.activeSelf)
+        {
+            canvasText.transform.Translate(Vector3.up * speed * Time.deltaTime);
+            goldAmount.text = goldDisplay.ToString();
+            canvasText.transform.LookAt(mainCam.transform.position);
+        }
         if (Input.GetKeyDown(KeyCode.L))
         {
             InventoryItems.ItemsQuantities[16] = InventoryItems.ItemsQuantities[16] + 1; //Cheat code.
         }
+    }
+
+    public void particles()
+    {
+        Instantiate(particleEffect, spawnPoint.transform.position, spawnPoint.transform.rotation);
+        canvasText.SetActive(true);
     }
 }

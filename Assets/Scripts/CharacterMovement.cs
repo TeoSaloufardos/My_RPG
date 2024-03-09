@@ -17,6 +17,8 @@ public class CharacterMovement : MonoBehaviour
 
     public GameObject spawnPoint;
     private WaitForSeconds approachEnemy = new WaitForSeconds(0.3f);
+
+    [SerializeField] private GameObject[] playerObjs; // krataei ta kommati tou xarakthra head, legs etc.
     
     // Start is called before the first frame update
     void Start()
@@ -49,6 +51,27 @@ public class CharacterMovement : MonoBehaviour
                     SavePlayer.theTarget = null;
                     navMeshAgent.destination = mouseHit.point;//Το παιρναει στο Destination του Character με το NavMeshAgent.
                     navMeshAgent.isStopped = false;
+                }
+            }
+
+            if (playerObjs[0].activeSelf)// elegxei ean einai anoixto to prwto object px legs.
+            {
+                if (SavePlayer.invisible)
+                {
+                    for (int i = 0; i < playerObjs.Length; i++)
+                    {
+                        playerObjs[i].SetActive(false); //kanei ton paikth aorato otan exei to invsisibility
+                    }
+                }
+            }
+            if (playerObjs[0].activeSelf == false)// elegxei ean einai anoixto to prwto object px legs.
+            {
+                if (SavePlayer.invisible == false)
+                {
+                    for (int i = 0; i < playerObjs.Length; i++)
+                    {
+                        playerObjs[i].SetActive(true); //kanei ton paikth ksana orato
+                    }
                 }
             }
         }

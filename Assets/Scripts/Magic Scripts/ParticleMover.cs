@@ -15,11 +15,16 @@ public class ParticleMover : MonoBehaviour
     [SerializeField] private bool followPlayer = false;
     private GameObject playerObject;
     [SerializeField] private float manaCost = 0.05f;
+    [SerializeField] private bool invisibility = false;
     
     void Start()
     {
         targetSave = SavePlayer.theTarget;
         playerObject = GameObject.FindGameObjectWithTag("Player");
+        if (invisibility)
+        {
+            SavePlayer.invisible = true;
+        }
     }
 
     // Update is called once per frame

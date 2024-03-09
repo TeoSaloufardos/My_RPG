@@ -63,7 +63,15 @@ public class InventoryItems : MonoBehaviour
     [SerializeField] private List<Sprite> spellIcons;
     [HideInInspector] public bool setTwo = false;
     [SerializeField] private GameObject[] magicParticles;
+    [SerializeField] private AudioClip[] magicSFX;
     [SerializeField] private Image manaBar;
+    
+    //attack animation
+    private GameObject playerObj;
+    private Animator playerAnimator;
+    private float weightAmount = 1.0f; //einai to poio layer (baruthta tou layer) tha epikrathsei kai se ti pososto. Gia paradeigma by default to layer magicAttack einai 0 kai me 1 (100%) einai to kanoniko layer pou exei to sprint(walk) idle tou paikth.
+    private bool changeWeight = false;
+    private AnimatorStateInfo playerInfo;
     
     
     
@@ -80,6 +88,8 @@ public class InventoryItems : MonoBehaviour
         maxSizeOfEmptySlots = emptySlots.Count;
         constructItemsAndQuantities();
         audioPlayer = GetComponent<AudioSource>();
+        playerObj = GameObject.FindGameObjectWithTag("Player");
+        playerAnimator = playerObj.GetComponent<Animator>();
         
         
         //μεταφερω τα δεδομενα απο τον πινακα στο unity σε εναν static για να ειναι κοινος σε ολα τα scripts και
@@ -127,6 +137,8 @@ public class InventoryItems : MonoBehaviour
     
     void Update()
     {
+        playerInfo = playerAnimator.GetCurrentAnimatorStateInfo(1);
+        
         if (removeItem)
         {
             removeItemIconFromInventory();
@@ -191,6 +203,11 @@ public class InventoryItems : MonoBehaviour
                         if (SavePlayer.manaAmount > 0.1f)
                         {
                             Instantiate(magicParticles[magicAttacks[i]-1], SavePlayer.spawnPoint.transform.position, SavePlayer.spawnPoint.transform.rotation);
+                            audioPlayer.clip = magicSFX[magicAttacks[i] - 1];//einai kai edw kai panw -1 giati hthela to 0 na einai to keno kai oxi kapoio spell/magic epishs edw ginetai to display kai to audio effect tou kathe spell/magic analoga me to koumpi pou exei pathsei o paikths. proupothetei na uparxei sto ui bar.
+                            audioPlayer.Play();
+                            playerAnimator.SetTrigger("magicAttack");
+                            playerAnimator.SetLayerWeight(1,1);//kathorizei thn barurthta tou layer 1 pou einai to attack animation gia na ginei execute afou pio prin exei ginei katallhlh diadikasia gia na uparksei h prosbash se auta ta objects.
+                            weightAmount = 1;
                         }
 
                         if (magicAttacks[i] < 7 && SavePlayer.manaAmount > 0.1)//ean isxuei kati apo auta katastrefei, afairei to icon giati einai magic oxi monimo spell.
@@ -204,14 +221,32 @@ public class InventoryItems : MonoBehaviour
         
         if (SavePlayer.manaAmount < 1.0)
         {
-            SavePlayer.manaAmount += 0.03f * Time.deltaTime; //gemizei ton eauto tou otan paei katw apo to 100% san regen.
+            SavePlayer.manaAmount += 0.04f * Time.deltaTime; //gemizei ton eauto tou otan paei katw apo to 100% san regen.
         }
         if (SavePlayer.manaAmount <= 0)
         {
             SavePlayer.manaAmount = 0;
         }
+        if (SavePlayer.manaAmount < 0.03)
+        {
+            SavePlayer.invisible = false;
+        }
 
         manaBar.fillAmount = SavePlayer.manaAmount;
+        if (playerInfo.IsTag("magic"))
+        {
+            changeWeight = true;
+        }
+
+        if (changeWeight)
+        {
+            weightAmount -= 0.04f * Time.deltaTime;
+            playerAnimator.SetLayerWeight(1, weightAmount);
+            if (weightAmount <= 0)
+            {
+                changeWeight = false;
+            }
+        }
     }
 
     public void openMenu()
