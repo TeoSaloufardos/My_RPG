@@ -10,6 +10,12 @@ public class SavePlayer : MonoBehaviour
     public static GameObject theTarget;
     public static float manaAmount = 1.0f;
     public static bool invisible = false;
+    public static float strenghtAmountDisplay = 0.1f;
+    public static float manaAmountDisplay = 0.1f;
+    public static float staminaAmountDisplay = 0.1f;
+    public static int killsAmount = 0;
+    public static int weaponChoice = 0;
+    public static bool weaponChange = true;
     
     void Start()
     {

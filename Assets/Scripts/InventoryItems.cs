@@ -65,6 +65,9 @@ public class InventoryItems : MonoBehaviour
     [SerializeField] private GameObject[] magicParticles;
     [SerializeField] private AudioClip[] magicSFX;
     [SerializeField] private Image manaBar;
+    [SerializeField] private GameObject inventoryScreen;
+    [SerializeField] private GameObject statsScreen;
+    [SerializeField] private GameObject characterDisplay;
     
     //attack animation
     private GameObject playerObj;
@@ -72,8 +75,6 @@ public class InventoryItems : MonoBehaviour
     private float weightAmount = 1.0f; //einai to poio layer (baruthta tou layer) tha epikrathsei kai se ti pososto. Gia paradeigma by default to layer magicAttack einai 0 kai me 1 (100%) einai to kanoniko layer pou exei to sprint(walk) idle tou paikth.
     private bool changeWeight = false;
     private AnimatorStateInfo playerInfo;
-    
-    
     
     void Start()
     {
@@ -257,6 +258,7 @@ public class InventoryItems : MonoBehaviour
         ui.SetActive(false);
         audioPlayer.clip = bookOpenSound;
         audioPlayer.Play();
+        openInventoryScreen();
         SavePlayer.theTarget = null;//na mhn emfanizetai to outline tou enemy otan eimaste sto inventory
         Time.timeScale = 0; //κανω pause τον χρονο για να μπει ο παικτης με την ησυχια του μεσα στο menu
     }
@@ -267,9 +269,24 @@ public class InventoryItems : MonoBehaviour
         openBook.SetActive(false);
         closedBook.SetActive(true);
         ui.SetActive(true);
+        characterDisplay.SetActive(false);
         audioPlayer.clip = bookOpenSound;
         audioPlayer.Play();
         Time.timeScale = 1; //συνεχιζω το παιχνιδι
+    }
+
+    public void openInventoryScreen()
+    {
+        statsScreen.SetActive(false);
+        characterDisplay.SetActive(false);
+        inventoryScreen.SetActive(true);
+    }
+    
+    public void openStatsScreen()
+    {
+        inventoryScreen.SetActive(false);
+        statsScreen.SetActive(true);
+        characterDisplay.SetActive(true);
     }
 
     /*Εδω ειναι η μεθοδος Reset που χρησιμοποιειται για να δημιουργησει delay μεταξυ των λειτουργιων της.

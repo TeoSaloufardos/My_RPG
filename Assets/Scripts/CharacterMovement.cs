@@ -19,6 +19,7 @@ public class CharacterMovement : MonoBehaviour
     private WaitForSeconds approachEnemy = new WaitForSeconds(0.3f);
 
     [SerializeField] private GameObject[] playerObjs; // krataei ta kommati tou xarakthra head, legs etc.
+    [SerializeField] private GameObject[] weapons;
     
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,10 @@ public class CharacterMovement : MonoBehaviour
         navMeshAgent = GetComponent<NavMeshAgent>(); 
         characterAnimator = GetComponent<Animator>();
         SavePlayer.spawnPoint = spawnPoint;
+        for (int i = 0; i < weapons.Length; i++)
+        {
+            weapons[i].SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -90,6 +95,16 @@ public class CharacterMovement : MonoBehaviour
         }else if (velocity == 0)
         {
             characterAnimator.SetBool("running", false);    
+        }
+
+        if (SavePlayer.weaponChange)
+        {
+            SavePlayer.weaponChange = false;
+            for (int i = 0; i < weapons.Length; i++)
+            {
+                weapons[i].SetActive(false);
+            }
+            weapons[SavePlayer.weaponChoice].SetActive(true);
         }
     }
 
