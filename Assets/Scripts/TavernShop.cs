@@ -268,7 +268,6 @@ public class TavernShop : MonoBehaviour
             InventoryItems.removeItem = true;
             InventoryItems.removeItemWithID = itemID;
         }
-
         InventoryItems.ItemsQuantities[itemID] -= 1;
     }
     

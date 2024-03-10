@@ -15,6 +15,7 @@ public class BookCollect : MonoBehaviour
     [SerializeField] private GameObject gameObjectToRemove;
     [SerializeField] private Button openMagicBookButton;
     [SerializeField] private Button openSpellsBookButton;
+    [SerializeField] private GameObject particle;
     
     private void Start()
     {
@@ -35,6 +36,7 @@ public class BookCollect : MonoBehaviour
                 magicHasCollected = true;
                 gameObjectToRemove.SetActive(false);
                 UiMessageHandler.passedMessage = "Συγχαρητήρια, μόλις απέκτησες το magic book";
+                Destroy(particle);
             }else if (bookForSpells && !spellsHasCollected)
             {
                 spells.SetActive(true);
@@ -42,6 +44,7 @@ public class BookCollect : MonoBehaviour
                 spellsHasCollected = true;
                 UiMessageHandler.passedMessage = "Συγχαρητήρια, μόλις απέκτησες το spells book";
                 gameObjectToRemove.SetActive(false);
+                Destroy(particle);
             }
         }
     }

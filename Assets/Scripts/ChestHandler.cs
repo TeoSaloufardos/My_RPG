@@ -39,7 +39,6 @@ public class ChestHandler : MonoBehaviour
                 εδω ελεγχω εαν ο παικτης εχει κλειδι διαθεσιμο ελεγχοντας τον πινακα που κραταει τις ποσοτητες
                 των αντικειμενων.*/
                 {
-                    InventoryItems.ItemsQuantities[16] = InventoryItems.ItemsQuantities[16] - 1; //εαν υπαρχει αφαιρει 1
                     InventoryItems.totalCoins += giveCoins;
                     
                     objectAnimator.SetTrigger("open");
@@ -47,6 +46,12 @@ public class ChestHandler : MonoBehaviour
                                                       InventoryItems.totalCoins + " νομίσματα.");
                     giveCoins = 0;
                     notOpened = false;
+                    if (InventoryItems.ItemsQuantities[16] == 1)
+                    {
+                        InventoryItems.removeItem = true;
+                        InventoryItems.removeItemWithID = 16;
+                    }
+                    InventoryItems.ItemsQuantities[16] -= 1;
                     inventory.GetComponent<AudioSource>().clip = openChest;
                     inventory.GetComponent<AudioSource>().Play();
                 }
@@ -92,5 +97,15 @@ public class ChestHandler : MonoBehaviour
     {
         Instantiate(particleEffect, spawnPoint.transform.position, spawnPoint.transform.rotation);
         canvasText.SetActive(true);
+    }
+    
+    public void removeItemFromInventory(int itemID)//idio me tou tavernShop
+    {
+        if (InventoryItems.ItemsQuantities[itemID] == 1)
+        {
+            InventoryItems.removeItem = true;
+            InventoryItems.removeItemWithID = itemID;
+        }
+        InventoryItems.ItemsQuantities[itemID] -= 1;
     }
 }
