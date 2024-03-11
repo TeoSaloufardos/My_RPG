@@ -76,6 +76,9 @@ public class InventoryItems : MonoBehaviour
     private bool changeWeight = false;
     private AnimatorStateInfo playerInfo;
     
+    //weaponsmith
+    [SerializeField] public List<bool> weapons;
+    
     void Start()
     {
         //desertMushrooms = 0;
@@ -287,6 +290,7 @@ public class InventoryItems : MonoBehaviour
         inventoryScreen.SetActive(false);
         statsScreen.SetActive(true);
         characterDisplay.SetActive(true);
+        statsScreen.GetComponent<StatsUpdate>().updateWeapons = true;
     }
 
     /*Εδω ειναι η μεθοδος Reset που χρησιμοποιειται για να δημιουργησει delay μεταξυ των λειτουργιων της.

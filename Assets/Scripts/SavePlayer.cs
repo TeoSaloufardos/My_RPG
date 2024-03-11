@@ -15,7 +15,8 @@ public class SavePlayer : MonoBehaviour
     public static float staminaAmountDisplay = 0.1f;
     public static int killsAmount = 0;
     public static int weaponChoice = 0;
-    public static bool weaponChange = true;
+    public static bool weaponChange = false;
+    public static bool carringWeapon = false;
     
     void Start()
     {

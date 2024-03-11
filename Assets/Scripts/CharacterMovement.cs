@@ -91,7 +91,16 @@ public class CharacterMovement : MonoBehaviour
         
         if(velocity != 0)
         {
-            characterAnimator.SetBool("running", true);
+            if (SavePlayer.carringWeapon == false)
+            {
+                characterAnimator.SetBool("running", true);
+                characterAnimator.SetBool("carryWeapon", false);
+            }
+            if (SavePlayer.carringWeapon)
+            {
+                characterAnimator.SetBool("running", true);
+                characterAnimator.SetBool("carryWeapon", true);
+            }
         }else if (velocity == 0)
         {
             characterAnimator.SetBool("running", false);    
