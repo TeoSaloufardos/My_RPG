@@ -20,6 +20,11 @@ public class CharacterMovement : MonoBehaviour
 
     [SerializeField] private GameObject[] playerObjs; // krataei ta kommati tou xarakthra head, legs etc.
     [SerializeField] private GameObject[] weapons;
+    [SerializeField] private GameObject[] armourTorso;
+    [SerializeField] private GameObject[] armourLegs; //ta set pou exei o kathe xarakthras sto foler tou 7,8,9. Apo to ligotero kalo pros to kalutero.
+    [SerializeField] private string[] attacks; //pinakas me ta onoma twn trigger gia na ginetai trigger to katallhlo animation.
+    [SerializeField] private AudioSource audioPlayer;
+    [SerializeField] private AudioClip[] weaponSounds;
     
     // Start is called before the first frame update
     void Start()
@@ -69,15 +74,31 @@ public class CharacterMovement : MonoBehaviour
                     }
                 }
             }
-            if (playerObjs[0].activeSelf == false)// elegxei ean einai anoixto to prwto object px legs.
+            if (SavePlayer.manaAmount <= 0.1)// elegxei to mana gia na ektelesei thn energopoihsh tou inv.
             {
                 if (SavePlayer.invisible == false)
                 {
                     for (int i = 0; i < playerObjs.Length; i++)
                     {
                         playerObjs[i].SetActive(true); //kanei ton paikth ksana orato
+                        SavePlayer.changeArmour = true; 
                     }
                 }
+            }
+
+            if (SavePlayer.changeArmour)
+            {
+                for (int i = 0; i < armourTorso.Length; i++)
+                {
+                    armourTorso[i].SetActive(false);
+                }
+                armourTorso[SavePlayer.armour].SetActive(true);
+                for (int i = 0; i < armourLegs.Length; i++)
+                {
+                    armourLegs[i].SetActive(false);
+                }
+                armourLegs[SavePlayer.armour].SetActive(true);
+                SavePlayer.changeArmour = false;
             }
         }
         
@@ -115,8 +136,17 @@ public class CharacterMovement : MonoBehaviour
             }
             weapons[SavePlayer.weaponChoice].SetActive(true);
         }
-    }
 
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            if (SavePlayer.carringWeapon)
+            {
+                characterAnimator.SetTrigger(attacks[SavePlayer.weaponChoice]);
+                audioPlayer.clip = weaponSounds[SavePlayer.weaponChoice];
+                audioPlayer.Play();
+            }
+        }
+    }
     IEnumerator MoveTo()
     {
         yield return approachEnemy;

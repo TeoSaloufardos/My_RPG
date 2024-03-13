@@ -9,6 +9,7 @@ public class BuyWeapon : MonoBehaviour
     [SerializeField] private int cost;
     [SerializeField] private Text currencyText;
     [SerializeField] private GameObject inventoryObject;
+    [SerializeField] private int armourNumber;
     private AudioSource audioPlayer;
     
     void Start()
@@ -23,6 +24,19 @@ public class BuyWeapon : MonoBehaviour
         {
             InventoryItems.totalCoins -= cost;
             inventoryObject.GetComponent<InventoryItems>().weapons[weaponNumber] = true;
+            currencyText.text = InventoryItems.totalCoins.ToString();
+            audioPlayer.clip = inventoryObject.GetComponent<InventoryItems>().buySound;
+            audioPlayer.Play();
+        }
+    }
+
+    public void buyArmour()
+    {
+        if (InventoryItems.totalCoins >= cost)
+        {
+            InventoryItems.totalCoins -= cost;
+            SavePlayer.armour = armourNumber;
+            SavePlayer.changeArmour = true;
             currencyText.text = InventoryItems.totalCoins.ToString();
             audioPlayer.clip = inventoryObject.GetComponent<InventoryItems>().buySound;
             audioPlayer.Play();

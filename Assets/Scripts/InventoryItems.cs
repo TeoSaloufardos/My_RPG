@@ -74,7 +74,7 @@ public class InventoryItems : MonoBehaviour
     private Animator playerAnimator;
     private float weightAmount = 1.0f; //einai to poio layer (baruthta tou layer) tha epikrathsei kai se ti pososto. Gia paradeigma by default to layer magicAttack einai 0 kai me 1 (100%) einai to kanoniko layer pou exei to sprint(walk) idle tou paikth.
     private bool changeWeight = false;
-    private AnimatorStateInfo playerInfo;
+    private AnimatorStateInfo playerInfo; //lambanetai to status tou animation dhladh ean ekteleitai kapoio animation ktl 
     
     //weaponsmith
     [SerializeField] public List<bool> weapons;

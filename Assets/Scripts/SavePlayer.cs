@@ -17,6 +17,8 @@ public class SavePlayer : MonoBehaviour
     public static int weaponChoice = 0;
     public static bool weaponChange = false;
     public static bool carringWeapon = false;
+    public static int armour = 0;
+    public static bool changeArmour = false;
     
     void Start()
     {
