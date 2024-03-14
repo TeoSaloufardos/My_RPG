@@ -25,6 +25,8 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private string[] attacks; //pinakas me ta onoma twn trigger gia na ginetai trigger to katallhlo animation.
     [SerializeField] private AudioSource audioPlayer;
     [SerializeField] private AudioClip[] weaponSounds;
+    private GameObject trailObject;
+    private WaitForSeconds trailOffTime = new WaitForSeconds(0.1f);
     
     // Start is called before the first frame update
     void Start()
@@ -135,6 +137,7 @@ public class CharacterMovement : MonoBehaviour
                 weapons[i].SetActive(false);
             }
             weapons[SavePlayer.weaponChoice].SetActive(true);
+            StartCoroutine(TurnOffTrail());
         }
 
         if (Input.GetKeyDown(KeyCode.Z))
@@ -146,6 +149,26 @@ public class CharacterMovement : MonoBehaviour
                 audioPlayer.Play();
             }
         }
+        
+    }
+
+    public void trailOn()
+    {
+        trailObject.GetComponent<Renderer>().enabled = true;
+        
+    }
+    
+    public void trailOff()
+    {
+        trailObject.GetComponent<Renderer>().enabled = false;
+        
+    }
+
+    IEnumerator TurnOffTrail()
+    {
+        yield return trailOffTime;
+        trailObject = GameObject.Find("Trail");
+        trailObject.GetComponent<Renderer>().enabled = false;
     }
     IEnumerator MoveTo()
     {

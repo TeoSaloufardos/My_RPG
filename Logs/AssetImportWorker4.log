@@ -1,0 +1,497 @@
+Unity Editor version:    2021.3.25f1 (68ef2c4f8861)
+Branch:                  2021.3/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 14.0 (Build 23A339)
+Darwin version:          23.0.0
+Architecture:            arm64
+Running under Rosetta:   NO
+Available memory:        8192 MB
+Using pre-set license
+Pro License: YES
+
+COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker4
+-projectPath
+/Users/teotataris/Documents/GitHub/My_RPG
+-logFile
+Logs/AssetImportWorker4.log
+-srvPort
+49498
+Successfully changed project path to: /Users/teotataris/Documents/GitHub/My_RPG
+/Users/teotataris/Documents/GitHub/My_RPG
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [8121488128] Host "[IP] 192.168.8.141 [Port] 0 [Flags] 2 [Guid] 363902956 [EditorId] 363902956 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air-Teo) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [8121488128] Host "[IP] 192.168.8.141 [Port] 0 [Flags] 2 [Guid] 363902956 [EditorId] 363902956 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air-Teo) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 158.16 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.25f1 (68ef2c4f8861)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/teotataris/Documents/GitHub/My_RPG/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+ preferred device: Apple M1 (high power)
+Metal devices available: 1
+0: Apple M1 (high power)
+Using device Apple M1 (high power)
+Initializing Metal device caps: Apple M1
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
+Mono config path = '/Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56492
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.003380 seconds.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 174.94 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.728 seconds
+Domain Reload Profiling:
+	ReloadAssembly (729ms)
+		BeginReloadAssembly (141ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (512ms)
+			LoadAssemblies (142ms)
+			RebuildTransferFunctionScriptingTraits (3ms)
+			SetupTypeCache (107ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (37ms)
+			SetupLoadedEditorAssemblies (324ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (175ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (96ms)
+				ProcessInitializeOnLoadMethodAttributes (47ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.020069 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/teotataris/Documents/GitHub/My_RPG/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/teotataris/Documents/GitHub/My_RPG/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 143.00 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.219 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1220ms)
+		BeginReloadAssembly (96ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (17ms)
+		EndReloadAssembly (1060ms)
+			LoadAssemblies (107ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (219ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (51ms)
+			SetupLoadedEditorAssemblies (686ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (2ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (143ms)
+				BeforeProcessingInitializeOnLoad (86ms)
+				ProcessInitializeOnLoadAttributes (418ms)
+				ProcessInitializeOnLoadMethodAttributes (36ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (3ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launching external process: /Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.27 seconds
+Refreshing native plugins compatible for Editor in 0.98 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6050 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 86 unused Assets / (3.7 MB). Loaded Objects now: 6525.
+Memory consumption went from 413.7 MB to 410.0 MB.
+Total: 4.200709 ms (FindLiveObjects: 0.281708 ms CreateObjectMapping: 0.118916 ms MarkObjects: 3.131459 ms  DeleteObjects: 0.667750 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 375760.625516 seconds.
+  path: Assets/Useful Stuff/Cartoon Heroes/Female/3D/Animation Skeleton/Animations/Female Sword Attack 1.anim
+  artifactKey: Guid(76d98494da71c47508953e7965badd66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/Cartoon Heroes/Female/3D/Animation Skeleton/Animations/Female Sword Attack 1.anim using Guid(76d98494da71c47508953e7965badd66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c0805b1529c93f85ef50ced8cb26827') in 0.133820 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 49.990613 seconds.
+  path: Assets/Useful Stuff/Cartoon Heroes/Weapons/Sword_2/3D/Sword_2_Long.FBX
+  artifactKey: Guid(33d713fc22667954ba9af3f9422003f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/Cartoon Heroes/Weapons/Sword_2/3D/Sword_2_Long.FBX using Guid(33d713fc22667954ba9af3f9422003f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1ffbdf8f16a57e5b13cd488e26dece3') in 0.129288 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 28.668900 seconds.
+  path: Assets/Weapons/Bow and Hammer Sound Effects/Hammer
+  artifactKey: Guid(17e49a73eaecceb4197d08d225044a68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons/Bow and Hammer Sound Effects/Hammer using Guid(17e49a73eaecceb4197d08d225044a68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a39c71abe43b16c0e202e7c4effc764') in 0.001374 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.053150 seconds.
+  path: Assets/Weapons/Bow and Hammer Sound Effects/Hammer/Battleaxe1.wav
+  artifactKey: Guid(6cdf2b6afcdf03c4fb959f056819ba48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons/Bow and Hammer Sound Effects/Hammer/Battleaxe1.wav using Guid(6cdf2b6afcdf03c4fb959f056819ba48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3750a6797c0ef60648b3177c59f26e7b') in 0.470523 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000091 seconds.
+  path: Assets/Weapons/Bow and Hammer Sound Effects/Hammer/HammerImpact8.wav
+  artifactKey: Guid(80bd9d4bd8318a14485df52d305370ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons/Bow and Hammer Sound Effects/Hammer/HammerImpact8.wav using Guid(80bd9d4bd8318a14485df52d305370ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59b85ad837788ca1f41ab5a87ee10264') in 0.009897 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000095 seconds.
+  path: Assets/Weapons/Bow and Hammer Sound Effects/Hammer/HammerImpact4.wav
+  artifactKey: Guid(f72a112b8aedd154887e21eb1e70c0f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons/Bow and Hammer Sound Effects/Hammer/HammerImpact4.wav using Guid(f72a112b8aedd154887e21eb1e70c0f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82156cbc49644fcb86f1e898fdd7fe88') in 0.007020 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000079 seconds.
+  path: Assets/Weapons/Bow and Hammer Sound Effects/Hammer/HammerImpact12.wav
+  artifactKey: Guid(662368c20c74f1347bfe72d20c30a417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons/Bow and Hammer Sound Effects/Hammer/HammerImpact12.wav using Guid(662368c20c74f1347bfe72d20c30a417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a7670a57075e4b5340aca8599126367') in 0.006065 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000093 seconds.
+  path: Assets/Weapons/Bow and Hammer Sound Effects/Hammer/HammerFlesh4.wav
+  artifactKey: Guid(d4bebb49f2606a84ab636a6ffc5d3379) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons/Bow and Hammer Sound Effects/Hammer/HammerFlesh4.wav using Guid(d4bebb49f2606a84ab636a6ffc5d3379) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a898d73602fe8617feb5aa4386459dc6') in 0.005909 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/Weapons/Bow and Hammer Sound Effects/Hammer/HammerFlesh1.wav
+  artifactKey: Guid(cdaaf73197bb7a74bb085cd94afccfba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons/Bow and Hammer Sound Effects/Hammer/HammerFlesh1.wav using Guid(cdaaf73197bb7a74bb085cd94afccfba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c06b35dc89d6dbd09f0eef861f3d6aad') in 0.009059 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000093 seconds.
+  path: Assets/Weapons/Bow and Hammer Sound Effects/Hammer/HammerImpact10.wav
+  artifactKey: Guid(4827fbf98a5198d45a996fbc8ff7bbbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons/Bow and Hammer Sound Effects/Hammer/HammerImpact10.wav using Guid(4827fbf98a5198d45a996fbc8ff7bbbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41b4638d70ab910d40632b5e095b91c4') in 0.007407 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000092 seconds.
+  path: Assets/Weapons/Bow and Hammer Sound Effects/Hammer/HammerImpact1.wav
+  artifactKey: Guid(d3b11b80263d8a145ad7641f5e978ff4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons/Bow and Hammer Sound Effects/Hammer/HammerImpact1.wav using Guid(d3b11b80263d8a145ad7641f5e978ff4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4dafa23200be59ea1a3902962808a7f8') in 0.006260 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000122 seconds.
+  path: Assets/Weapons/Bow and Hammer Sound Effects/Hammer/HammerFlesh2.wav
+  artifactKey: Guid(22eab4df0bfb76b439118c30d20e43b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons/Bow and Hammer Sound Effects/Hammer/HammerFlesh2.wav using Guid(22eab4df0bfb76b439118c30d20e43b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '786bdf0a836bfcf9bd66e70e4b708fc0') in 0.006164 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000072 seconds.
+  path: Assets/Weapons/Bow and Hammer Sound Effects/Hammer/HammerImpact13.wav
+  artifactKey: Guid(96228358d940aef4c8f99ed7bb4f3488) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons/Bow and Hammer Sound Effects/Hammer/HammerImpact13.wav using Guid(96228358d940aef4c8f99ed7bb4f3488) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5962fe860990473a50e009473a407d87') in 0.005758 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000073 seconds.
+  path: Assets/Weapons/Bow and Hammer Sound Effects/Hammer/HammerImpact5.wav
+  artifactKey: Guid(918f83b22a83106499b56f98ef8934cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons/Bow and Hammer Sound Effects/Hammer/HammerImpact5.wav using Guid(918f83b22a83106499b56f98ef8934cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fe80f33179cef33452b5bd78391d235') in 0.007223 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000109 seconds.
+  path: Assets/Weapons/Bow and Hammer Sound Effects/Hammer/Battleaxe5.wav
+  artifactKey: Guid(64052350e1c642c46ae3f682ec7fabc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons/Bow and Hammer Sound Effects/Hammer/Battleaxe5.wav using Guid(64052350e1c642c46ae3f682ec7fabc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f92ed1e814442450e7483890b167392f') in 0.006908 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000075 seconds.
+  path: Assets/Weapons/Bow and Hammer Sound Effects/Hammer/HammerImpact11.wav
+  artifactKey: Guid(1674e1d30004b9b46b597f21c3ffdfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons/Bow and Hammer Sound Effects/Hammer/HammerImpact11.wav using Guid(1674e1d30004b9b46b597f21c3ffdfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adcac8126c3110a8c6ecc2aa4038c756') in 0.006236 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.694393 seconds.
+  path: Assets/Weapons/MeleeWeaponTrail
+  artifactKey: Guid(2db389ac7f72045f784ab644adbf9b21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons/MeleeWeaponTrail using Guid(2db389ac7f72045f784ab644adbf9b21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f55edb085c7687bd721ade69e60c799') in 0.000755 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.806794 seconds.
+  path: Assets/Weapons/MeleeWeaponTrail/Example
+  artifactKey: Guid(59abb001dfbd6434a951ea29e9edbc05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons/MeleeWeaponTrail/Example using Guid(59abb001dfbd6434a951ea29e9edbc05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a790f9f04e1144f45c96113afa96761e') in 0.002323 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.303410 seconds.
+  path: Assets/Weapons/MeleeWeaponTrail/Example/Prefabs
+  artifactKey: Guid(45f04085a31724b31b222dd9fce2614d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons/MeleeWeaponTrail/Example/Prefabs using Guid(45f04085a31724b31b222dd9fce2614d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca2ffeb0744e7dd2512396a34594398f') in 0.001277 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.028828 seconds.
+  path: Assets/Weapons/MeleeWeaponTrail/Example/Prefabs/SmoothOrbitCam.prefab
+  artifactKey: Guid(bbd3d1aa1bee2b344b4c57b92351c0b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons/MeleeWeaponTrail/Example/Prefabs/SmoothOrbitCam.prefab using Guid(bbd3d1aa1bee2b344b4c57b92351c0b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00916f333e5c0e689610072092f51b42') in 0.053048 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000150 seconds.
+  path: Assets/Weapons/MeleeWeaponTrail/Example/Prefabs/SwooshStandard.prefab
+  artifactKey: Guid(40f3eeb212d927044991e72ad10fc353) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons/MeleeWeaponTrail/Example/Prefabs/SwooshStandard.prefab using Guid(40f3eeb212d927044991e72ad10fc353) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74393a244de190b315e5f24f13c23f74') in 0.199539 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.603743 seconds.
+  path: Assets/ExplosiveLLC/Warrior Pack Bundle 2 FREE/Archer Warrior Mecanim Animation Pack
+  artifactKey: Guid(e52019a4620271f4b8f9bd819eff78e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExplosiveLLC/Warrior Pack Bundle 2 FREE/Archer Warrior Mecanim Animation Pack using Guid(e52019a4620271f4b8f9bd819eff78e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20af0a1775de9f87f77732be1a7707b8') in 0.002300 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.827448 seconds.
+  path: Assets/ExplosiveLLC/Warrior Pack Bundle 2 FREE/Knight Warrior Mecanim Animation Pack/Animation Controller
+  artifactKey: Guid(48327f4ec0ff5f4418e4b05954f73b4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExplosiveLLC/Warrior Pack Bundle 2 FREE/Knight Warrior Mecanim Animation Pack/Animation Controller using Guid(48327f4ec0ff5f4418e4b05954f73b4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '002775d7e90d381b2a3645cd2d689fb0') in 0.001264 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.846684 seconds.
+  path: Assets/ExplosiveLLC/Warrior Pack Bundle 2 FREE/Knight Warrior Mecanim Animation Pack/Animation Controller/Knight Warrior Animation Controller.controller
+  artifactKey: Guid(5fbed9cae3571aa4f8273283e531893a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExplosiveLLC/Warrior Pack Bundle 2 FREE/Knight Warrior Mecanim Animation Pack/Animation Controller/Knight Warrior Animation Controller.controller using Guid(5fbed9cae3571aa4f8273283e531893a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1180f99ae1d214c0d3326b5bb72795dc') in 0.057058 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.788473 seconds.
+  path: Assets/ExplosiveLLC/Warrior Pack Bundle 3 FREE/Spearman Warrior Mecanim Animation Pack
+  artifactKey: Guid(2642863940676ab45b5c2d537df6e4cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExplosiveLLC/Warrior Pack Bundle 3 FREE/Spearman Warrior Mecanim Animation Pack using Guid(2642863940676ab45b5c2d537df6e4cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22b6e51a54a1574346ab7d01e5460e81') in 0.001446 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.514852 seconds.
+  path: Assets/ExplosiveLLC/Warrior Pack Bundle 3 FREE/Swordsman Warrior Mecanim Animation Pack
+  artifactKey: Guid(ae88b44d51006304eaf53b2c8fbde5ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExplosiveLLC/Warrior Pack Bundle 3 FREE/Swordsman Warrior Mecanim Animation Pack using Guid(ae88b44d51006304eaf53b2c8fbde5ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f41515a2187f6cd4874b3cd4b98ab8c') in 0.001953 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.624282 seconds.
+  path: Assets/ExplosiveLLC/Warrior Pack Bundle 3 FREE/Swordsman Warrior Mecanim Animation Pack/Animations
+  artifactKey: Guid(45f878794069e094a920d7e8884c5d53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExplosiveLLC/Warrior Pack Bundle 3 FREE/Swordsman Warrior Mecanim Animation Pack/Animations using Guid(45f878794069e094a920d7e8884c5d53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bbac75f48986db7ca4615d994133360') in 0.000907 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.744276 seconds.
+  path: Assets/ExplosiveLLC/Warrior Pack Bundle 3 FREE/Swordsman Warrior Mecanim Animation Pack/Animation Controller
+  artifactKey: Guid(910312696ec67d44bba8fe1fda9de9de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExplosiveLLC/Warrior Pack Bundle 3 FREE/Swordsman Warrior Mecanim Animation Pack/Animation Controller using Guid(910312696ec67d44bba8fe1fda9de9de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '144516e96d1add633c5661f473c74a9e') in 0.000944 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.956092 seconds.
+  path: Assets/ExplosiveLLC/Warrior Pack Bundle 3 FREE/Swordsman Warrior Mecanim Animation Pack/Animations/Swordsman@Attack1.FBX
+  artifactKey: Guid(388866d801cf0f34daa7a600517209b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExplosiveLLC/Warrior Pack Bundle 3 FREE/Swordsman Warrior Mecanim Animation Pack/Animations/Swordsman@Attack1.FBX using Guid(388866d801cf0f34daa7a600517209b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4c3c33fb2b6449465ceef91eb74e5d7') in 0.015332 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/ExplosiveLLC/Warrior Pack Bundle 3 FREE/Swordsman Warrior Mecanim Animation Pack/Animations/Swordsman@Jump.FBX
+  artifactKey: Guid(37a7fb7f208613048afcfc713dc0a4e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExplosiveLLC/Warrior Pack Bundle 3 FREE/Swordsman Warrior Mecanim Animation Pack/Animations/Swordsman@Jump.FBX using Guid(37a7fb7f208613048afcfc713dc0a4e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11d95d02a452c924494d03d651f8549d') in 0.005803 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/ExplosiveLLC/Warrior Pack Bundle 3 FREE/Swordsman Warrior Mecanim Animation Pack/Animations/Swordsman@WalkSlow.FBX
+  artifactKey: Guid(ab03966efca191f46ba77126b6a03230) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExplosiveLLC/Warrior Pack Bundle 3 FREE/Swordsman Warrior Mecanim Animation Pack/Animations/Swordsman@WalkSlow.FBX using Guid(ab03966efca191f46ba77126b6a03230) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34c37ea27c18717490ad8e3e77ab2ae0') in 0.010692 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000340 seconds.
+  path: Assets/ExplosiveLLC/Warrior Pack Bundle 3 FREE/Swordsman Warrior Mecanim Animation Pack/Animations/Swordsman@Walk.FBX
+  artifactKey: Guid(1222763b677cd78418c968c8707c94bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExplosiveLLC/Warrior Pack Bundle 3 FREE/Swordsman Warrior Mecanim Animation Pack/Animations/Swordsman@Walk.FBX using Guid(1222763b677cd78418c968c8707c94bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '849f51a1585a91cf8d6433c3dcb8eb0d') in 0.009285 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/ExplosiveLLC/Warrior Pack Bundle 3 FREE/Swordsman Warrior Mecanim Animation Pack/Animations/Swordsman@Run.FBX
+  artifactKey: Guid(0626e44600709ab4788de7419c037a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExplosiveLLC/Warrior Pack Bundle 3 FREE/Swordsman Warrior Mecanim Animation Pack/Animations/Swordsman@Run.FBX using Guid(0626e44600709ab4788de7419c037a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6c8997ed2c6399d4351268fd3aae00b') in 0.005853 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.657899 seconds.
+  path: Assets/ExplosiveLLC/Warrior Pack Bundle 3 FREE/Crossbow Warrior Mecanim Animation Pack
+  artifactKey: Guid(fa9dc33e4d41f99409565eebff4c23dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExplosiveLLC/Warrior Pack Bundle 3 FREE/Crossbow Warrior Mecanim Animation Pack using Guid(fa9dc33e4d41f99409565eebff4c23dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45c8020ce6006251ab97d8fa71cd2eca') in 0.002306 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.914435 seconds.
+  path: Assets/ExplosiveLLC/Warrior Pack Bundle 3 FREE/Hammer Warrior Mecanim Animation Pack/Animation Controller
+  artifactKey: Guid(0646a5977b0af3f45b6251db4c02a3ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExplosiveLLC/Warrior Pack Bundle 3 FREE/Hammer Warrior Mecanim Animation Pack/Animation Controller using Guid(0646a5977b0af3f45b6251db4c02a3ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f357553bbc01dc1f4f3e40e141c5bfce') in 0.001835 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.554662 seconds.
+  path: Assets/ExplosiveLLC/Warrior Pack Bundle 3 FREE/Hammer Warrior Mecanim Animation Pack/Animations/Hammer@Fall.FBX
+  artifactKey: Guid(ab6ee2be9ec8f214dbffb850794b6452) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExplosiveLLC/Warrior Pack Bundle 3 FREE/Hammer Warrior Mecanim Animation Pack/Animations/Hammer@Fall.FBX using Guid(ab6ee2be9ec8f214dbffb850794b6452) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f818b8acaa10f66fcb93763cc41014b') in 0.017124 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000072 seconds.
+  path: Assets/ExplosiveLLC/Warrior Pack Bundle 3 FREE/Hammer Warrior Mecanim Animation Pack/Animations/Hammer@Walk.FBX
+  artifactKey: Guid(a7e9e09fb42e7f1409ea58cb1940ac6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExplosiveLLC/Warrior Pack Bundle 3 FREE/Hammer Warrior Mecanim Animation Pack/Animations/Hammer@Walk.FBX using Guid(a7e9e09fb42e7f1409ea58cb1940ac6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2908ea64a5f0398619cccacceae996b1') in 0.006457 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000111 seconds.
+  path: Assets/ExplosiveLLC/Warrior Pack Bundle 3 FREE/Hammer Warrior Mecanim Animation Pack/Animations/Hammer@WalkSlow.FBX
+  artifactKey: Guid(ffcc998be29f5a748895b0f56284e3ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExplosiveLLC/Warrior Pack Bundle 3 FREE/Hammer Warrior Mecanim Animation Pack/Animations/Hammer@WalkSlow.FBX using Guid(ffcc998be29f5a748895b0f56284e3ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd95a61cfd635841a0629a707eb7a50f9') in 0.006781 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000116 seconds.
+  path: Assets/ExplosiveLLC/Warrior Pack Bundle 3 FREE/Hammer Warrior Mecanim Animation Pack/Animations/Hammer@Run.FBX
+  artifactKey: Guid(797b4b83a521be345bf4f0ed61bd19a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExplosiveLLC/Warrior Pack Bundle 3 FREE/Hammer Warrior Mecanim Animation Pack/Animations/Hammer@Run.FBX using Guid(797b4b83a521be345bf4f0ed61bd19a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70dc387f54376c5125c4af87c0ec3302') in 0.011280 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.199832 seconds.
+  path: Assets/Useful Stuff/MOBS/Elemental Animations/Models/Elemental01/Arms/Hands/Fingers/01.Ring01.L.fbx
+  artifactKey: Guid(d789caf636877544ab7b8ec40bec817e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/MOBS/Elemental Animations/Models/Elemental01/Arms/Hands/Fingers/01.Ring01.L.fbx using Guid(d789caf636877544ab7b8ec40bec817e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b54f48b04d2bad21d8f0a58c87f17a06') in 0.127937 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000117 seconds.
+  path: Assets/Useful Stuff/MOBS/Elemental Animations/Models/Elemental02/Arms/Hands/Fingers/02.Ring03.L.fbx
+  artifactKey: Guid(cec26bdf1982298449faf82f71572ba7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/MOBS/Elemental Animations/Models/Elemental02/Arms/Hands/Fingers/02.Ring03.L.fbx using Guid(cec26bdf1982298449faf82f71572ba7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d4855dcf3d0238141134e985910229d') in 0.009800 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.337689 seconds.
+  path: Assets/ExplosiveLLC/Warrior Pack Bundle 2 FREE/2 Handed Warrior Mecanim Animation Pack/Animations/2Handed@WalkSlow.FBX
+  artifactKey: Guid(7c64bd10551274d4aa48072bca44bfce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExplosiveLLC/Warrior Pack Bundle 2 FREE/2 Handed Warrior Mecanim Animation Pack/Animations/2Handed@WalkSlow.FBX using Guid(7c64bd10551274d4aa48072bca44bfce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87c8e106ffc4b0ad4ce84c41206ff987') in 0.006925 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Packages/com.unity.terrain-tools/Shaders/NoiseLib/Strata/Billow.hlsl
+  artifactKey: Guid(9cba8ab2aa61a3249be761abf66fad35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.terrain-tools/Shaders/NoiseLib/Strata/Billow.hlsl using Guid(9cba8ab2aa61a3249be761abf66fad35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f35ca9e6dd9e640a6d533dd1ac6bae44') in 0.054063 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Useful Stuff/YughuesFreeBushes2018/Meshes/Bush02.FBX
+  artifactKey: Guid(41212a0a5585e0243b25926856a1c30c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/YughuesFreeBushes2018/Meshes/Bush02.FBX using Guid(41212a0a5585e0243b25926856a1c30c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b11dda23835e7d4c03a6e8b10b745ee6') in 0.050427 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Weapons/Blink/Art/Weapons/LowPoly/FreeRPGWeapons/Axes/Axe_2H_Textures/Axe2H_Epic_BaseColor.png
+  artifactKey: Guid(c6c6818b7984aa042b866fa0f581e3b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons/Blink/Art/Weapons/LowPoly/FreeRPGWeapons/Axes/Axe_2H_Textures/Axe2H_Epic_BaseColor.png using Guid(c6c6818b7984aa042b866fa0f581e3b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06f70bcad25a7f544c5df930858aaf6f') in 0.272494 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Useful Stuff/YughuesFreeBushes2018/Meshes/Bush01.FBX
+  artifactKey: Guid(c93a5fb30f5956343a31433f79f362af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/YughuesFreeBushes2018/Meshes/Bush01.FBX using Guid(c93a5fb30f5956343a31433f79f362af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2be488251d37ad41c72d5c210a376a6a') in 0.033427 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Weapons/Blink/Art/Weapons/LowPoly/FreeRPGWeapons/Axes/Axe_1H_Textures/Axe1H_Medium_BaseColor.png
+  artifactKey: Guid(dc385569b22b069408c516bdbba017d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons/Blink/Art/Weapons/LowPoly/FreeRPGWeapons/Axes/Axe_1H_Textures/Axe1H_Medium_BaseColor.png using Guid(dc385569b22b069408c516bdbba017d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '847f065b900dc020c7cf528fd0556130') in 0.008266 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Useful Stuff/YughuesFreeBushes2018/Meshes/Bush03.FBX
+  artifactKey: Guid(3d529691bc8baa249a469045aae25cf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/YughuesFreeBushes2018/Meshes/Bush03.FBX using Guid(3d529691bc8baa249a469045aae25cf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31ac7fcacb00370527143ee072e86ce0') in 0.074878 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000117 seconds.
+  path: Assets/Weapons/Blink/Art/Weapons/LowPoly/FreeRPGWeapons/Bow/Bow_Textures/Bow_Basic_BaseColor.png
+  artifactKey: Guid(ed6b97bb258cb554ca49c8d32d07025d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons/Blink/Art/Weapons/LowPoly/FreeRPGWeapons/Bow/Bow_Textures/Bow_Basic_BaseColor.png using Guid(ed6b97bb258cb554ca49c8d32d07025d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fe9d170aba07b176ff589b1501bd316') in 0.013842 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 42.728253 seconds.
+  path: Assets/Useful Stuff/Cartoon Heroes/Female/3D/Animation Skeleton/Animations/Female Sword Attack 2.anim
+  artifactKey: Guid(b6a0145d29f3d43d59825f1c38daf71e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/Cartoon Heroes/Female/3D/Animation Skeleton/Animations/Female Sword Attack 2.anim using Guid(b6a0145d29f3d43d59825f1c38daf71e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d81e57e22a3be9fc79c8cab0d09ba67') in 0.017608 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 23.947329 seconds.
+  path: Assets/ExplosiveLLC/Long Sword attack.anim
+  artifactKey: Guid(b6a0145d29f3d43d59825f1c38daf71e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExplosiveLLC/Long Sword attack.anim using Guid(b6a0145d29f3d43d59825f1c38daf71e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e2602c344580ee76e5042d69eea5afb') in 0.012603 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 103.364189 seconds.
+  path: Assets/PlayerCharacters/PlayerFemale1.prefab
+  artifactKey: Guid(24862ec0143f1224887be3a87c869364) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerCharacters/PlayerFemale1.prefab using Guid(24862ec0143f1224887be3a87c869364) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67e73ff1b3109ef17351882fab65d221') in 0.619150 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000097 seconds.
+  path: Assets/PlayerCharacters/PlayerMale1.prefab
+  artifactKey: Guid(633deedf02bc29743954d4020c29f9ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerCharacters/PlayerMale1.prefab using Guid(633deedf02bc29743954d4020c29f9ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b7f346f939c6d46a52b1ddb928f0079') in 0.444253 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000093 seconds.
+  path: Assets/PlayerCharacters/PlayerMale3.prefab
+  artifactKey: Guid(f4dd9b82f23273642b8e319b668efaf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerCharacters/PlayerMale3.prefab using Guid(f4dd9b82f23273642b8e319b668efaf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97dcf33c75ae114522b5a6a753e699f1') in 0.248721 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting

@@ -8,6 +8,8 @@ public class AudioHandler : MonoBehaviour
     [SerializeField] private AudioClip mainLoop;
     [SerializeField] private AudioClip tavernLoop;
     [SerializeField] private AudioClip battleLoop;
+    [SerializeField] private AudioClip weaponSmithLoop;
+    [SerializeField] private AudioClip wizzardLoop;
     [HideInInspector] public int musicState = 1;
     [HideInInspector] public bool canPlay = true;
     
@@ -32,6 +34,14 @@ public class AudioHandler : MonoBehaviour
             }else if (musicState == 3)
             {
                 audioPlayer.clip = battleLoop;
+                audioPlayer.Play();
+            }else if (musicState == 4)
+            {
+                audioPlayer.clip = weaponSmithLoop;
+                audioPlayer.Play();
+            }else if (musicState == 5)
+            {
+                audioPlayer.clip = wizzardLoop;
                 audioPlayer.Play();
             }
         }

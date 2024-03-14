@@ -9,6 +9,8 @@ public class RoofHandler : MonoBehaviour
     [SerializeField] private GameObject furniture;
     [SerializeField] private GameObject myCamera;
     [SerializeField] private bool tavern = true;
+    [SerializeField] private bool wizzard = false;
+    [SerializeField] private bool weaponSmith = false;
     
     void Start()
     {
@@ -26,6 +28,16 @@ public class RoofHandler : MonoBehaviour
                 myCamera.GetComponent<AudioHandler>().musicState = 2;
                 myCamera.GetComponent<AudioHandler>().canPlay = true;
             }
+            if (weaponSmith)
+            {
+                myCamera.GetComponent<AudioHandler>().musicState = 4;
+                myCamera.GetComponent<AudioHandler>().canPlay = true;
+            }
+            if (wizzard)
+            {
+                myCamera.GetComponent<AudioHandler>().musicState = 5;
+                myCamera.GetComponent<AudioHandler>().canPlay = true;
+            }
             furniture.SetActive(true);
         }
     }
@@ -36,11 +48,8 @@ public class RoofHandler : MonoBehaviour
         {
             roof.SetActive(true);
             furniture.SetActive(false);
-            if (tavern)
-            {
-                myCamera.GetComponent<AudioHandler>().musicState = 1;
-                myCamera.GetComponent<AudioHandler>().canPlay = true; 
-            }
+            myCamera.GetComponent<AudioHandler>().musicState = 1;
+            myCamera.GetComponent<AudioHandler>().canPlay = true; 
         }
     }
 
