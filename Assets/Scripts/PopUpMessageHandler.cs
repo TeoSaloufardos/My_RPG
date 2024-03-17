@@ -45,11 +45,11 @@ public class PopUpMessageHandler : MonoBehaviour, IPointerEnterHandler, IPointer
             cursorImage.sprite = handCursor;
             if (left)
             {
-                screenPoint.x = Input.mousePosition.x + 400;
+                screenPoint.x = Input.mousePosition.x + Screen.width / 2.5f;
             }
             else
             {
-                screenPoint.x = Input.mousePosition.x - 400;
+                screenPoint.x = Input.mousePosition.x - Screen.width / 2.5f;
             }
             textBox.SetActive(true);
             screenPoint.y = Input.mousePosition.y;
