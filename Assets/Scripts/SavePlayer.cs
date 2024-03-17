@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,6 +20,7 @@ public class SavePlayer : MonoBehaviour
     public static bool carringWeapon = false;
     public static int armour = 0;
     public static bool changeArmour = false;
+    public static float staminaAmount = 1.0f;
     
     void Start()
     {
@@ -40,4 +42,25 @@ public class SavePlayer : MonoBehaviour
     //         manaAmount = 0;
     //     }
     // }
+
+    public void Update()
+    {
+        if (manaAmount < 1.0)
+        {
+            manaAmount += 0.045f * Time.deltaTime; //gemizei ton eauto tou otan paei katw apo to 100% san regen.
+        }
+        if (manaAmount <= 0)
+        {
+            manaAmount = 0;
+        }
+        if (staminaAmount < 1.0)
+        {
+            staminaAmount += 0.045f * Time.deltaTime;
+        }
+
+        if (staminaAmount <= 0)
+        {
+            staminaAmount = 0;
+        }
+    }
 }

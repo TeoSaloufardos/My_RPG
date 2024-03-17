@@ -37,7 +37,7 @@ public class InventoryItems : MonoBehaviour
     private int maxSizeOfEmptySlots; //Κραταει το maxSize των διαθεσιμων slots
     public static int newIconID = 0; //Δεχεται το Item Id για να καταχωρηθει στον πινακα και να εμφανιστει στο Inventory
     public static bool hasFreeSpace = true;
-    public static int totalCoins = 0; //Συνολο κερματων που εχει ο παικτης
+    public static int totalCoins = 1000; //Συνολο κερματων που εχει ο παικτης
     
     public static int removeItemWithID; //Στην περιπτωση πωλησης ενος αντικειμενου θα ερθει απο ενα αλλο script
     // το id του ιτεμ το οποιο επιθυμει ο παικτης να πουλησει.
@@ -68,6 +68,7 @@ public class InventoryItems : MonoBehaviour
     [SerializeField] private GameObject inventoryScreen;
     [SerializeField] private GameObject statsScreen;
     [SerializeField] private GameObject characterDisplay;
+    [SerializeField] private Image staminaBar;
     
     //attack animation
     private GameObject playerObj;
@@ -206,30 +207,27 @@ public class InventoryItems : MonoBehaviour
                     {
                         if (SavePlayer.manaAmount > 0.1f)
                         {
-                            Instantiate(magicParticles[magicAttacks[i]-1], SavePlayer.spawnPoint.transform.position, SavePlayer.spawnPoint.transform.rotation);
-                            audioPlayer.clip = magicSFX[magicAttacks[i] - 1];//einai kai edw kai panw -1 giati hthela to 0 na einai to keno kai oxi kapoio spell/magic epishs edw ginetai to display kai to audio effect tou kathe spell/magic analoga me to koumpi pou exei pathsei o paikths. proupothetei na uparxei sto ui bar.
+                            Instantiate(magicParticles[magicAttacks[i] - 1], SavePlayer.spawnPoint.transform.position,
+                                SavePlayer.spawnPoint.transform.rotation);
+                            audioPlayer.clip =
+                                magicSFX
+                                    [magicAttacks[i] - 1]; //einai kai edw kai panw -1 giati hthela to 0 na einai to keno kai oxi kapoio spell/magic epishs edw ginetai to display kai to audio effect tou kathe spell/magic analoga me to koumpi pou exei pathsei o paikths. proupothetei na uparxei sto ui bar.
                             audioPlayer.Play();
                             playerAnimator.SetTrigger("magicAttack");
-                            playerAnimator.SetLayerWeight(1,1);//kathorizei thn barurthta tou layer 1 pou einai to attack animation gia na ginei execute afou pio prin exei ginei katallhlh diadikasia gia na uparksei h prosbash se auta ta objects.
+                            playerAnimator.SetLayerWeight(1,
+                                1); //kathorizei thn barurthta tou layer 1 pou einai to attack animation gia na ginei execute afou pio prin exei ginei katallhlh diadikasia gia na uparksei h prosbash se auta ta objects.
                             weightAmount = 1;
                         }
 
-                        if (magicAttacks[i] < 7 && SavePlayer.manaAmount > 0.1)//ean isxuei kati apo auta katastrefei, afairei to icon giati einai magic oxi monimo spell.
+                        if (magicAttacks[i] < 7 &&
+                            SavePlayer.manaAmount >
+                            0.1) //ean isxuei kati apo auta katastrefei, afairei to icon giati einai magic oxi monimo spell.
                         {
                             UISlots[i].sprite = UIEmptySlots[i];
                         }
                     }
                 }
             }
-        }
-        
-        if (SavePlayer.manaAmount < 1.0)
-        {
-            SavePlayer.manaAmount += 0.04f * Time.deltaTime; //gemizei ton eauto tou otan paei katw apo to 100% san regen.
-        }
-        if (SavePlayer.manaAmount <= 0)
-        {
-            SavePlayer.manaAmount = 0;
         }
         if (SavePlayer.manaAmount < 0.03)
         {
@@ -250,6 +248,11 @@ public class InventoryItems : MonoBehaviour
             {
                 changeWeight = false;
             }
+        }
+
+        if (SavePlayer.staminaAmount != staminaBar.fillAmount)
+        {
+            staminaBar.fillAmount = Mathf.Lerp(staminaBar.fillAmount, SavePlayer.staminaAmount, 2 * Time.deltaTime); //delta time einai real time dependency anti gia fps dependency
         }
     }
 

@@ -27,6 +27,7 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private AudioClip[] weaponSounds;
     private GameObject trailObject;
     private WaitForSeconds trailOffTime = new WaitForSeconds(0.1f);
+    public float[] staminaCost;
     
     // Start is called before the first frame update
     void Start()
@@ -142,11 +143,12 @@ public class CharacterMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            if (SavePlayer.carringWeapon)
+            if (SavePlayer.carringWeapon && SavePlayer.staminaAmount > 0.2)
             {
                 characterAnimator.SetTrigger(attacks[SavePlayer.weaponChoice]);
                 audioPlayer.clip = weaponSounds[SavePlayer.weaponChoice];
                 audioPlayer.Play();
+                SavePlayer.staminaAmount -= staminaCost[SavePlayer.weaponChoice];
             }
         }
         

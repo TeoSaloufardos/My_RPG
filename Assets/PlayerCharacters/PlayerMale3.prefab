@@ -4756,7 +4756,7 @@ GameObject:
   - component: {fileID: 252252218303450465}
   - component: {fileID: 7640773207739560802}
   m_Layer: 0
-  m_Name: Sword_1_Short (5)
+  m_Name: Sword_1_Short
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6229,7 +6229,7 @@ GameObject:
   - component: {fileID: 4454253478578906393}
   - component: {fileID: 4204684019654062771}
   m_Layer: 0
-  m_Name: Spear2H_Medium (5)
+  m_Name: Spear2H_Medium
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6555,6 +6555,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8331543374399962447}
+  - component: {fileID: 6472755471027763526}
+  - component: {fileID: 882338644453656962}
+  - component: {fileID: 4976517912993606657}
   m_Layer: 0
   m_Name: Sword long tip
   m_TagString: Untagged
@@ -6577,6 +6580,48 @@ Transform:
   m_Father: {fileID: 5290673270278742796}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &6472755471027763526
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3214373950322842604}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &882338644453656962
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3214373950322842604}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4976517912993606657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3214373950322842604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2adfc19676bd7485896b15564310159c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 60
 --- !u!1 &3254693046731323379
 GameObject:
   m_ObjectHideFlags: 0
@@ -10380,6 +10425,13 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a31d3d19acf252a4989e16e695393b1e, type: 3}
   - {fileID: 8300000, guid: f9cfc0e6ef7909a4fa3f8663ac5f3034, type: 3}
   - {fileID: 8300000, guid: 1d8cc3c188ec572489b65bbcf098ddd1, type: 3}
+  staminaCost:
+  - 0.2
+  - 0.3
+  - 0.3
+  - 0.5
+  - 0.6
+  - 0.3
 --- !u!195 &2225143071711384427
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -11313,7 +11365,7 @@ GameObject:
   - component: {fileID: 2453734665247703333}
   - component: {fileID: 1132569266747295710}
   m_Layer: 0
-  m_Name: Axe2H_Basic (5)
+  m_Name: Axe2H_Basic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11550,7 +11602,7 @@ GameObject:
   - component: {fileID: 2624902317168560164}
   - component: {fileID: 9058273579398009898}
   m_Layer: 0
-  m_Name: Axe1H_Basic (5)
+  m_Name: Axe1H_Basic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11911,7 +11963,7 @@ GameObject:
   - component: {fileID: 6717180695758967985}
   - component: {fileID: 6515192848376334296}
   m_Layer: 0
-  m_Name: Mace2H_Medium (5)
+  m_Name: Mace2H_Medium
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12086,7 +12138,7 @@ GameObject:
   - component: {fileID: 5290673270280643052}
   - component: {fileID: 7465595020823718424}
   m_Layer: 0
-  m_Name: Sword_2_Long (5)
+  m_Name: Sword_2_Long
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12288,6 +12340,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5370903947297325863}
+  - component: {fileID: 53528926287429564}
+  - component: {fileID: 2864336668374207435}
+  - component: {fileID: 5926684210680083975}
   m_Layer: 0
   m_Name: Spear tip
   m_TagString: Untagged
@@ -12310,6 +12365,48 @@ Transform:
   m_Father: {fileID: 3286364581422800502}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &53528926287429564
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5492001802510922190}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &2864336668374207435
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5492001802510922190}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5926684210680083975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5492001802510922190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2adfc19676bd7485896b15564310159c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 45
 --- !u!1 &5510760348228468773
 GameObject:
   m_ObjectHideFlags: 0
@@ -12738,6 +12835,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7374610586372191882}
+  - component: {fileID: 2508997871394317392}
+  - component: {fileID: 9215266519176012569}
+  - component: {fileID: 3960454031208755359}
   m_Layer: 0
   m_Name: Sword short tip
   m_TagString: Untagged
@@ -12760,6 +12860,48 @@ Transform:
   m_Father: {fileID: 252252218305875841}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &2508997871394317392
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5914946405531297689}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &9215266519176012569
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5914946405531297689}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3960454031208755359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5914946405531297689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2adfc19676bd7485896b15564310159c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 30
 --- !u!1 &5918661896791637636
 GameObject:
   m_ObjectHideFlags: 0
@@ -12862,6 +13004,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7559805046125865430}
+  - component: {fileID: 3391132156550392384}
+  - component: {fileID: 9072022727901793539}
+  - component: {fileID: 2901427063280241384}
   m_Layer: 0
   m_Name: Axe long tip
   m_TagString: Untagged
@@ -12884,6 +13029,48 @@ Transform:
   m_Father: {fileID: 3622660405089352266}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &3391132156550392384
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6078594823879764488}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &9072022727901793539
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6078594823879764488}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2901427063280241384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6078594823879764488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2adfc19676bd7485896b15564310159c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 75
 --- !u!1 &6084424079680287268
 GameObject:
   m_ObjectHideFlags: 0
@@ -15258,6 +15445,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 983182696113787049}
+  - component: {fileID: 2827738478693953109}
+  - component: {fileID: 4083986310016635509}
+  - component: {fileID: 7663147073129336753}
   m_Layer: 0
   m_Name: Axe short tip
   m_TagString: Untagged
@@ -15280,6 +15470,48 @@ Transform:
   m_Father: {fileID: 3757877979090350923}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &2827738478693953109
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7106668116756212784}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &4083986310016635509
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7106668116756212784}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7663147073129336753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7106668116756212784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2adfc19676bd7485896b15564310159c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 40
 --- !u!1 &7115004836441970039
 GameObject:
   m_ObjectHideFlags: 0
@@ -15444,6 +15676,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9075636934631257620}
+  - component: {fileID: 4324224569506658563}
+  - component: {fileID: 7649793598878505181}
+  - component: {fileID: 6612442988549524039}
   m_Layer: 0
   m_Name: Hammer tip
   m_TagString: Untagged
@@ -15466,6 +15701,48 @@ Transform:
   m_Father: {fileID: 5580827024610357214}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &4324224569506658563
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7357312978946634023}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &7649793598878505181
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7357312978946634023}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6612442988549524039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7357312978946634023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2adfc19676bd7485896b15564310159c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 55
 --- !u!1 &7380366328336185886
 GameObject:
   m_ObjectHideFlags: 0
