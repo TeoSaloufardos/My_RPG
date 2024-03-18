@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 public class ItemPickUp : MonoBehaviour
 {
@@ -10,30 +11,40 @@ public class ItemPickUp : MonoBehaviour
     [SerializeField] private bool isStackable = true;
     [SerializeField] private GameObject inventory;
     [SerializeField] private AudioSource audioPlayer;
+    [SerializeField] private bool areCoins;
 
     private void Start()
     {
         inventory = GameObject.Find("InventoryCanvas");
         audioPlayer = inventory.GetComponent<AudioSource>();
+        if (areCoins)
+        {
+            Destroy(gameObject, 5);
+        }
     }
 
     public void OnTriggerEnter(Collider player)
     {
         if (player.CompareTag("Player"))
         {
-            if (InventoryItems.hasFreeSpace == false)
+            if (InventoryItems.hasFreeSpace == false && areCoins == false)
             {
                 UiMessageHandler.passedMessage = "To inventory σου είναι γεμάτο !!!";
                 UiMessageHandler.desiredDelay = 3f;
                 return;
             }
-            if (isStackable) //εαν το αντικειμενο που ακουμπαει ο παικτης ειναι stackable
+            if (isStackable && areCoins == false) //εαν το αντικειμενο που ακουμπαει ο παικτης ειναι stackable 
             {
                 if (InventoryItems.ItemsQuantities[itemID] == 0)
                 {
                     displayItem();
                 }
                 InventoryItems.ItemsQuantities[itemID] = InventoryItems.ItemsQuantities[itemID] + 1;
+                Destroy(gameObject);
+            }
+            if (areCoins)
+            {
+                InventoryItems.totalCoins += Random.Range(5, 40);
                 Destroy(gameObject);
             }
             audioPlayer.clip = inventory.GetComponent<InventoryItems>().pickUpSound;

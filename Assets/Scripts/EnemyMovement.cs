@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -22,7 +23,12 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float runRange = 12.0f;
     public int enemyHp = 100;
     private int currectHp;
-    private bool isAlive = true; 
+    private bool isAlive = true;
+    private AudioSource audioPlayer;
+    [SerializeField] private Image healthBar;
+    private float fillHealth;
+    [SerializeField] private GameObject mainCam;
+    [SerializeField] private GameObject coinsPickUp;
     
     void Start()
     {
@@ -32,11 +38,13 @@ public class EnemyMovement : MonoBehaviour
         nav.avoidancePriority = Random.Range(5, 60);//dhmioyrgei random priority gia na 
         //mhn uparxei thema otan mazeuontai polla enemies mazi.
         currectHp = enemyHp;
+        audioPlayer = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        healthBar.transform.LookAt(mainCam.transform.position);//na einai to hp bar sumfwna me thn camera.
         if (isAlive)
         {
             if (!outLineOn)
@@ -110,6 +118,10 @@ public class EnemyMovement : MonoBehaviour
             {
                 anim.SetTrigger("hit");
                 currectHp = enemyHp;
+                audioPlayer.Play();
+                fillHealth = enemyHp;
+                fillHealth /= 100.0f;
+                healthBar.fillAmount = fillHealth;
             }
         }
 
@@ -121,6 +133,14 @@ public class EnemyMovement : MonoBehaviour
             thisEnemy.GetComponent<Outline>().enabled = false;
             outLineOn = false;
             nav.avoidancePriority = 0; //na mhn mporei na skountiksei to death enemy o player.
+            StartCoroutine(IsDead());
         }
+    }
+
+    IEnumerator IsDead()
+    {
+        yield return new WaitForSeconds(1);
+        Instantiate(coinsPickUp, transform.position, transform.rotation);
+        Destroy(gameObject, 0.2f);
     }
 }
