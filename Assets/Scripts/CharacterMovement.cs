@@ -57,6 +57,7 @@ public class CharacterMovement : MonoBehaviour
                     navMeshAgent.isStopped = false;
                     SavePlayer.theTarget = mouseHit.transform.gameObject;
                     navMeshAgent.destination = mouseHit.point;//Το παιρναει στο Destination του Character με το NavMeshAgent.
+                    transform.LookAt(SavePlayer.theTarget.transform);
                     StartCoroutine(MoveTo());
                 }
                 else

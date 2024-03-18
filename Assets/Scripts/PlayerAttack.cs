@@ -7,6 +7,8 @@ public class PlayerAttack : MonoBehaviour
 {
     private GameObject objtodestroy;
     [SerializeField] private int damageAmount;
+    private bool canDamage = true;
+    private WaitForSeconds damagePause = new WaitForSeconds(0.5f);
     void Start()
     {
         
@@ -28,6 +30,13 @@ public class PlayerAttack : MonoBehaviour
             // Destroy(other.transform.gameObject);
             // StartCoroutine(WaitForDestroy());
         }
+
+        if (other.CompareTag("enemy") && canDamage )
+        {
+            canDamage = false;
+            other.transform.gameObject.GetComponent<EnemyMovement>().enemyHp -= damageAmount;
+            StartCoroutine(ResetDamage());
+        }
     }
 
     // IEnumerator WaitForDestroy()
@@ -35,4 +44,9 @@ public class PlayerAttack : MonoBehaviour
     //     yield return new WaitForSeconds(3);
     //     Destroy(objtodestroy);
     // }
+    IEnumerator ResetDamage()
+    {
+        yield return damagePause;
+        canDamage = true;
+    }
 }

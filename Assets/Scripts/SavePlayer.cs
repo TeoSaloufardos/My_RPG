@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class SavePlayer : MonoBehaviour
 {
-    public static int characterPositionData = 0;
+    public static int characterPositionData = 3;
     public static string playerName = "Player";
     public static GameObject spawnPoint;
     public static GameObject theTarget;
