@@ -21,6 +21,9 @@ public class SavePlayer : MonoBehaviour
     public static int armour = 0;
     public static bool changeArmour = false;
     public static float staminaAmount = 1.0f;
+    private int checkAmount = 1;
+    public static float playerLevel = 0.1f;
+    public static int weaponIncrease;
     
     void Start()
     {
@@ -47,7 +50,7 @@ public class SavePlayer : MonoBehaviour
     {
         if (manaAmount < 1.0)
         {
-            manaAmount += 0.045f * Time.deltaTime; //gemizei ton eauto tou otan paei katw apo to 100% san regen.
+            manaAmount += ( manaAmountDisplay/10 + 0.040f ) * Time.deltaTime; //gemizei ton eauto tou otan paei katw apo to 100% san regen.
         }
         if (manaAmount <= 0)
         {
@@ -55,12 +58,21 @@ public class SavePlayer : MonoBehaviour
         }
         if (staminaAmount < 1.0)
         {
-            staminaAmount += 0.045f * Time.deltaTime;
+            staminaAmount += (staminaAmountDisplay/10 + 0.040f) * Time.deltaTime;
         }
-
         if (staminaAmount <= 0)
         {
             staminaAmount = 0;
+        }
+
+        if (killsAmount == checkAmount)
+        {
+            playerLevel += 0.1f;
+            checkAmount = killsAmount + 2;
+            strenghtAmountDisplay = playerLevel;
+            manaAmountDisplay = playerLevel;
+            staminaAmountDisplay = playerLevel;
+            weaponIncrease = System.Convert.ToInt32(strenghtAmountDisplay * 90);
         }
     }
 }

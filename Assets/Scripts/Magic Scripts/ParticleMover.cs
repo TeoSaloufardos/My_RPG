@@ -16,6 +16,8 @@ public class ParticleMover : MonoBehaviour
     private GameObject playerObject;
     [SerializeField] private float manaCost = 0.05f;
     [SerializeField] private bool invisibility = false;
+    [SerializeField] private int damageAmount = 30;
+    [SerializeField] private GameObject lastObj;
     
     void Start()
     {
@@ -73,5 +75,13 @@ public class ParticleMover : MonoBehaviour
 
         SavePlayer.manaAmount -= manaCost * Time.deltaTime;//afairei to mana oso xrhsimopoieitai
         Destroy(obj, lifeTime);
+    }
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("enemy") && other.transform.gameObject != lastObj)//elegxei ektos tou oti ean einai enemy ean einai kai to idio object me prin.
+        {
+            other.transform.gameObject.GetComponent<EnemyMovement>().enemyHp -= damageAmount;
+            lastObj = other.transform.gameObject;
+        }
     }
 }

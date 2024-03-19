@@ -9712,6 +9712,9 @@ MonoBehaviour:
   nonMoving: 0
   followPlayer: 0
   manaCost: 0.03
+  invisibility: 0
+  damageAmount: 30
+  lastObj: {fileID: 0}
 --- !u!1 &754418454842441246
 GameObject:
   m_ObjectHideFlags: 0
@@ -9725,6 +9728,7 @@ GameObject:
   - component: {fileID: 7114807821293986424}
   - component: {fileID: 5819473490189731764}
   - component: {fileID: 8626281290812046413}
+  - component: {fileID: 8092178337414130982}
   m_Layer: 0
   m_Name: TargetPoint1
   m_TagString: Untagged
@@ -9805,10 +9809,10 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 754418454842441246}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 5, y: 5, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8626281290812046413
 MonoBehaviour:
@@ -9825,6 +9829,24 @@ MonoBehaviour:
   speed: 5
   rotator: 0
   particleTarget: 1
+  damageAmount: 50
+  lastObj: {fileID: 0}
+--- !u!54 &8092178337414130982
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754418454842441246}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &886167250901472943
 GameObject:
   m_ObjectHideFlags: 0
@@ -9880,6 +9902,9 @@ MonoBehaviour:
   nonMoving: 0
   followPlayer: 0
   manaCost: 0.03
+  invisibility: 0
+  damageAmount: 30
+  lastObj: {fileID: 0}
 --- !u!1 &1197253459958756110
 GameObject:
   m_ObjectHideFlags: 0
@@ -9893,6 +9918,7 @@ GameObject:
   - component: {fileID: 9013143912818676172}
   - component: {fileID: 6746171870437327624}
   - component: {fileID: 2203303380779290799}
+  - component: {fileID: 4334862590372105009}
   m_Layer: 0
   m_Name: TargetPoint3
   m_TagString: Untagged
@@ -9973,10 +9999,10 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1197253459958756110}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 5, y: 5, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2203303380779290799
 MonoBehaviour:
@@ -9993,6 +10019,24 @@ MonoBehaviour:
   speed: 5
   rotator: 0
   particleTarget: 1
+  damageAmount: 50
+  lastObj: {fileID: 0}
+--- !u!54 &4334862590372105009
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197253459958756110}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1213195128184983097
 GameObject:
   m_ObjectHideFlags: 0
@@ -10006,6 +10050,7 @@ GameObject:
   - component: {fileID: 8759857424368844335}
   - component: {fileID: 4998190177807686643}
   - component: {fileID: 5183432652148436380}
+  - component: {fileID: 8347897568997860562}
   m_Layer: 0
   m_Name: TargetPoint2
   m_TagString: Untagged
@@ -10086,10 +10131,10 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1213195128184983097}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 5, y: 5, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5183432652148436380
 MonoBehaviour:
@@ -10106,6 +10151,24 @@ MonoBehaviour:
   speed: 5
   rotator: 0
   particleTarget: 1
+  damageAmount: 50
+  lastObj: {fileID: 0}
+--- !u!54 &8347897568997860562
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213195128184983097}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1960927169276398592
 GameObject:
   m_ObjectHideFlags: 0
@@ -10161,6 +10224,9 @@ MonoBehaviour:
   nonMoving: 0
   followPlayer: 0
   manaCost: 0.03
+  invisibility: 0
+  damageAmount: 30
+  lastObj: {fileID: 0}
 --- !u!1 &2193370978491039801
 GameObject:
   m_ObjectHideFlags: 0
@@ -19864,6 +19930,9 @@ MonoBehaviour:
   nonMoving: 0
   followPlayer: 0
   manaCost: 0.03
+  invisibility: 0
+  damageAmount: 30
+  lastObj: {fileID: 0}
 --- !u!1 &3885191526611097484
 GameObject:
   m_ObjectHideFlags: 0
@@ -53812,6 +53881,9 @@ MonoBehaviour:
   nonMoving: 0
   followPlayer: 0
   manaCost: 0.03
+  invisibility: 0
+  damageAmount: 30
+  lastObj: {fileID: 0}
 --- !u!1 &6502346818257205171
 GameObject:
   m_ObjectHideFlags: 0
@@ -68315,6 +68387,7 @@ GameObject:
   - component: {fileID: 4493313782837503358}
   - component: {fileID: 2615854870951072799}
   - component: {fileID: 3032535802073740695}
+  - component: {fileID: 3432100073681679751}
   m_Layer: 0
   m_Name: TargetPoint4
   m_TagString: Untagged
@@ -68395,10 +68468,10 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7765293597943196945}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 5, y: 5, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3032535802073740695
 MonoBehaviour:
@@ -68415,6 +68488,24 @@ MonoBehaviour:
   speed: 5
   rotator: 0
   particleTarget: 1
+  damageAmount: 50
+  lastObj: {fileID: 0}
+--- !u!54 &3432100073681679751
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7765293597943196945}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8380965103988733217
 GameObject:
   m_ObjectHideFlags: 0
@@ -73252,6 +73343,7 @@ GameObject:
   - component: {fileID: 2642022059012201795}
   - component: {fileID: 524700559142388542}
   - component: {fileID: 2248745178370208371}
+  - component: {fileID: 5010131830026752024}
   m_Layer: 0
   m_Name: TargetPoint5
   m_TagString: Untagged
@@ -73332,10 +73424,10 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8994099192962069881}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 5, y: 5, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2248745178370208371
 MonoBehaviour:
@@ -73352,3 +73444,21 @@ MonoBehaviour:
   speed: 5
   rotator: 0
   particleTarget: 1
+  damageAmount: 50
+  lastObj: {fileID: 0}
+--- !u!54 &5010131830026752024
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8994099192962069881}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

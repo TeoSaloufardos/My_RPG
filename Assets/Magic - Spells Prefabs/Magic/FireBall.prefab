@@ -4843,6 +4843,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6396976718824944431}
   - component: {fileID: 185829729668377565}
+  - component: {fileID: 7609077599930343440}
+  - component: {fileID: 8643891486316216443}
   m_Layer: 0
   m_Name: Fire_A 2
   m_TagString: Untagged
@@ -4888,6 +4890,38 @@ MonoBehaviour:
   nonMoving: 0
   followPlayer: 0
   manaCost: 0.04
+  invisibility: 0
+  damageAmount: 30
+  lastObj: {fileID: 0}
+--- !u!65 &7609077599930343440
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251182474121545760}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &8643891486316216443
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251182474121545760}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &922641650961884465
 GameObject:
   m_ObjectHideFlags: 0
@@ -9722,6 +9756,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1449010871118641433}
   - component: {fileID: 5118114093945108329}
+  - component: {fileID: 4733121183450808038}
+  - component: {fileID: 9219614454378874082}
   m_Layer: 0
   m_Name: Fire_A 3
   m_TagString: Untagged
@@ -9767,6 +9803,38 @@ MonoBehaviour:
   nonMoving: 0
   followPlayer: 0
   manaCost: 0.04
+  invisibility: 0
+  damageAmount: 30
+  lastObj: {fileID: 0}
+--- !u!65 &4733121183450808038
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3122275490146083756}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &9219614454378874082
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3122275490146083756}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3595466510306918929
 GameObject:
   m_ObjectHideFlags: 0
@@ -29082,6 +29150,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4794192403260105021}
   - component: {fileID: 1085610338405271598}
+  - component: {fileID: 629862199335237053}
+  - component: {fileID: 5256122679316095254}
   m_Layer: 0
   m_Name: Fire_A 1
   m_TagString: Untagged
@@ -29127,6 +29197,38 @@ MonoBehaviour:
   nonMoving: 0
   followPlayer: 0
   manaCost: 0.04
+  invisibility: 0
+  damageAmount: 30
+  lastObj: {fileID: 0}
+--- !u!54 &629862199335237053
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4799748735444559271}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &5256122679316095254
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4799748735444559271}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5275730860526381306
 GameObject:
   m_ObjectHideFlags: 0
