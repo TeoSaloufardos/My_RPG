@@ -16,6 +16,9 @@ public class ParticleMover : MonoBehaviour
     private GameObject playerObject;
     [SerializeField] private float manaCost = 0.05f;
     [SerializeField] private bool invisibility = false;
+    [SerializeField] private bool superShield = false;
+    [SerializeField] private bool healing = false;
+    [SerializeField] private bool encouragment = false;
     [SerializeField] private int damageAmount = 30;
     [SerializeField] private GameObject lastObj;
     
@@ -26,6 +29,20 @@ public class ParticleMover : MonoBehaviour
         if (invisibility)
         {
             SavePlayer.invisible = true;
+        }
+        if (superShield)
+        {
+            SavePlayer.invulnarable = true;
+        }
+
+        if (healing)
+        {
+            SavePlayer.playerHleath = 1.0f;
+        }
+
+        if (encouragment)
+        {
+            SavePlayer.encouragmentIncrease = 1;
         }
     }
 

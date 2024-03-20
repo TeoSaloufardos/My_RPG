@@ -110,8 +110,11 @@ public class EnemyMovement : MonoBehaviour
             }
             else
             {
-                nav.isStopped = false;
-                nav.destination = player.transform.position;
+                if (SavePlayer.invisible == false)
+                {
+                    nav.isStopped = false;
+                    nav.destination = player.transform.position;
+                }
             }
 
             if (currectHp > enemyHp)

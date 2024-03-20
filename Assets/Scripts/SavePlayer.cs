@@ -11,6 +11,7 @@ public class SavePlayer : MonoBehaviour
     public static GameObject theTarget;
     public static float manaAmount = 1.0f;
     public static bool invisible = false;
+    public static bool invulnarable = false; //ean einai h oxi active to super shield
     public static float strenghtAmountDisplay = 0.1f;
     public static float manaAmountDisplay = 0.1f;
     public static float staminaAmountDisplay = 0.1f;
@@ -24,6 +25,8 @@ public class SavePlayer : MonoBehaviour
     private int checkAmount = 1;
     public static float playerLevel = 0.1f;
     public static int weaponIncrease;
+    public static float playerHleath = 1.0f;
+    public static int encouragmentIncrease = 0;
     
     void Start()
     {
@@ -63,6 +66,12 @@ public class SavePlayer : MonoBehaviour
         if (staminaAmount <= 0)
         {
             staminaAmount = 0;
+        }
+        if (SavePlayer.manaAmount < 0.03)
+        {
+            SavePlayer.invisible = false;
+            invulnarable = false;
+            encouragmentIncrease = 0;
         }
 
         if (killsAmount == checkAmount)

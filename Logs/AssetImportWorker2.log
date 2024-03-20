@@ -22,7 +22,7 @@ AssetImportWorker2
 -logFile
 Logs/AssetImportWorker2.log
 -srvPort
-55118
+58758
 Successfully changed project path to: /Users/teotataris/Documents/GitHub/My_RPG
 /Users/teotataris/Documents/GitHub/My_RPG
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -54,11 +54,11 @@ Successfully changed project path to: /Users/teotataris/Documents/GitHub/My_RPG
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [8121488128] Host "[IP] 10.4.22.29 [Port] 0 [Flags] 2 [Guid] 4200124294 [EditorId] 4200124294 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air-Teo.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [8121488128] Host "[IP] 10.4.22.29 [Port] 0 [Flags] 2 [Guid] 4040654677 [EditorId] 4040654677 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air-Teo.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [8121488128] Host "[IP] 10.4.22.29 [Port] 0 [Flags] 2 [Guid] 4200124294 [EditorId] 4200124294 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air-Teo.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [8121488128] Host "[IP] 10.4.22.29 [Port] 0 [Flags] 2 [Guid] 4040654677 [EditorId] 4040654677 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air-Teo.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 172.45 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 205.44 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.25f1 (68ef2c4f8861)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/Resources/UnitySubsystems
@@ -73,90 +73,508 @@ Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
 Mono config path = '/Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56896
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56934
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.002919 seconds.
+Registered in 0.001227 seconds.
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 181.49 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 143.05 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.815 seconds
+- Completed reload, in  0.529 seconds
 Domain Reload Profiling:
-	ReloadAssembly (816ms)
-		BeginReloadAssembly (136ms)
-			ExecutionOrderSort (1ms)
+	ReloadAssembly (529ms)
+		BeginReloadAssembly (83ms)
+			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (2ms)
-		EndReloadAssembly (585ms)
-			LoadAssemblies (133ms)
-			RebuildTransferFunctionScriptingTraits (1ms)
-			SetupTypeCache (113ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (386ms)
+			LoadAssemblies (83ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (74ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (34ms)
-			SetupLoadedEditorAssemblies (400ms)
+			RebuildScriptCaches (20ms)
+			SetupLoadedEditorAssemblies (262ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (182ms)
-				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (154ms)
-				ProcessInitializeOnLoadMethodAttributes (58ms)
+				RefreshPlugins (143ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (87ms)
+				ProcessInitializeOnLoadMethodAttributes (28ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002205 seconds.
+Registered in 0.006641 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image /Users/teotataris/Documents/GitHub/My_RPG/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image /Users/teotataris/Documents/GitHub/My_RPG/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 207.05 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 149.72 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.445 seconds
+- Completed reload, in  1.381 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2446ms)
-		BeginReloadAssembly (201ms)
+	ReloadAssembly (1381ms)
+		BeginReloadAssembly (84ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (17ms)
+			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (63ms)
-		EndReloadAssembly (2110ms)
-			LoadAssemblies (152ms)
+			CreateAndSetChildDomain (17ms)
+		EndReloadAssembly (1232ms)
+			LoadAssemblies (101ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (537ms)
-			ReleaseScriptCaches (57ms)
-			RebuildScriptCaches (121ms)
-			SetupLoadedEditorAssemblies (1199ms)
+			SetupTypeCache (226ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (52ms)
+			SetupLoadedEditorAssemblies (848ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (2ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (207ms)
-				BeforeProcessingInitializeOnLoad (171ms)
-				ProcessInitializeOnLoadAttributes (742ms)
-				ProcessInitializeOnLoadMethodAttributes (75ms)
+				RefreshPlugins (150ms)
+				BeforeProcessingInitializeOnLoad (89ms)
+				ProcessInitializeOnLoadAttributes (570ms)
+				ProcessInitializeOnLoadMethodAttributes (36ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launching external process: /Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.28 seconds
+Refreshing native plugins compatible for Editor in 1.63 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6053 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 86 unused Assets / (3.4 MB). Loaded Objects now: 6528.
+Memory consumption went from 413.7 MB to 410.3 MB.
+Total: 5.315667 ms (FindLiveObjects: 0.335458 ms CreateObjectMapping: 0.151750 ms MarkObjects: 3.740375 ms  DeleteObjects: 1.087500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 509363.911941 seconds.
+  path: Assets/Useful Stuff/MOBS/Elemental Animations/Models/Elemental03/Head/03.Head.fbx
+  artifactKey: Guid(2d4922b3510de5449ba037c5324e0154) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/MOBS/Elemental Animations/Models/Elemental03/Head/03.Head.fbx using Guid(2d4922b3510de5449ba037c5324e0154) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e71baf807047be66dc835e28089dc87') in 0.249465 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000096 seconds.
+  path: Assets/Useful Stuff/Cartoon Heroes/Female/Textures/Heads/Head_2/Female_Head_2.tga
+  artifactKey: Guid(7be22a6aabf5a8c4ebc6f53c132810cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/Cartoon Heroes/Female/Textures/Heads/Head_2/Female_Head_2.tga using Guid(7be22a6aabf5a8c4ebc6f53c132810cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b2471388344b019aea5936990573a7a') in 0.737663 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000646 seconds.
+  path: Assets/Useful Stuff/Cartoon Heroes/Male/Textures/Heads/Head_1/Male_Head_1_Normals.tga
+  artifactKey: Guid(31af09c97e325f84b9de44d709249e59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/Cartoon Heroes/Male/Textures/Heads/Head_1/Male_Head_1_Normals.tga using Guid(31af09c97e325f84b9de44d709249e59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '641be8091b9b7adf325a085d11b0925b') in 0.019353 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Useful Stuff/Cartoon Heroes/Female/Textures/Heads/Head_3/Female_Head_3.tga
+  artifactKey: Guid(32963c8796b41144e879a85cb79b2119) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/Cartoon Heroes/Female/Textures/Heads/Head_3/Female_Head_3.tga using Guid(32963c8796b41144e879a85cb79b2119) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f346e93f37561cbce02f6f0e5c22207e') in 0.009269 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Useful Stuff/Cartoon Heroes/Female/Textures/Heads/Head_2/Female_Head_2_Normals.tga
+  artifactKey: Guid(e08c4158e9f33e24fabb65e0630748c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/Cartoon Heroes/Female/Textures/Heads/Head_2/Female_Head_2_Normals.tga using Guid(e08c4158e9f33e24fabb65e0630748c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66ef338e193b3a004831b73c6574dd4a') in 0.009102 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001468 seconds.
+  path: Assets/Useful Stuff/Cartoon Heroes/Female/3D/Heads/Head 3/Materials/Female_Head_3.mat
+  artifactKey: Guid(ebfbf2cc34f268047a75db150f7ce610) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/Cartoon Heroes/Female/3D/Heads/Head 3/Materials/Female_Head_3.mat using Guid(ebfbf2cc34f268047a75db150f7ce610) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4529f18e14a5077ab2f0d31c0250096d') in 0.117958 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000111 seconds.
+  path: Assets/Useful Stuff/Cartoon Heroes/Male/3D/Heads/Head_1/Materials/Male_Head_1.mat
+  artifactKey: Guid(25e381a33d04932429a8bd13baaefaee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/Cartoon Heroes/Male/3D/Heads/Head_1/Materials/Male_Head_1.mat using Guid(25e381a33d04932429a8bd13baaefaee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c33f50cafe8359be183a6c4292ff2a14') in 0.010213 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000087 seconds.
+  path: Assets/Useful Stuff/Cartoon Heroes/Female/3D/Heads/Head 2/Materials/Female_Head_2.mat
+  artifactKey: Guid(58907ac205715e746900f3204949981e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/Cartoon Heroes/Female/3D/Heads/Head 2/Materials/Female_Head_2.mat using Guid(58907ac205715e746900f3204949981e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55b63c41a3b53207e24a69db74dc73dd') in 0.012457 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000095 seconds.
+  path: Assets/Useful Stuff/Cartoon Heroes/Male/Textures/Heads/Head_1/Male_Head_1.tga
+  artifactKey: Guid(b6db225e4f5cca14f9cc339287ee95b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/Cartoon Heroes/Male/Textures/Heads/Head_1/Male_Head_1.tga using Guid(b6db225e4f5cca14f9cc339287ee95b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '787317fb113ce83a5b00c6482b76346b') in 0.011957 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Useful Stuff/Cartoon Heroes/Female/Textures/Heads/Head_1/Female_Head_1_Normals.tga
+  artifactKey: Guid(3db5bacef9acf3e448c765822f50dd33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/Cartoon Heroes/Female/Textures/Heads/Head_1/Female_Head_1_Normals.tga using Guid(3db5bacef9acf3e448c765822f50dd33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd48fa6bd44f4d491b96708eccdadc101') in 0.010312 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/Useful Stuff/Cartoon Heroes/Female/3D/Heads/Head 1/Female_Head_1.FBX
+  artifactKey: Guid(f778d65360c43c3488f0f6aee8c4fd8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/Cartoon Heroes/Female/3D/Heads/Head 1/Female_Head_1.FBX using Guid(f778d65360c43c3488f0f6aee8c4fd8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '117f4db2ae774dc71fe3f26f63b560f2') in 0.086112 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 27.167596 seconds.
+  path: Assets/Particles-Magic/KTK_Effect_Samples/Prefab/Eff_Heal_2_loop 1.prefab
+  artifactKey: Guid(2bfddcd3c3c9246d5a5fd8cd7ac34f6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles-Magic/KTK_Effect_Samples/Prefab/Eff_Heal_2_loop 1.prefab using Guid(2bfddcd3c3c9246d5a5fd8cd7ac34f6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f4484740f15a6fb623795b2d0b421aa') in 0.070215 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 50.265057 seconds.
+  path: Assets/Particles-Magic/KTK_Effect_Samples/Prefab/Eff_Heal_2_loop 1.prefab
+  artifactKey: Guid(ac6380c1930b345509b140baa9face8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles-Magic/KTK_Effect_Samples/Prefab/Eff_Heal_2_loop 1.prefab using Guid(ac6380c1930b345509b140baa9face8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8410d236437d726248efca7129c26772') in 0.035880 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.307396 seconds.
+  path: Assets/Particles-Magic/KTK_Effect_Samples/Prefab/Heal Magic Variant.prefab
+  artifactKey: Guid(ac6380c1930b345509b140baa9face8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles-Magic/KTK_Effect_Samples/Prefab/Heal Magic Variant.prefab using Guid(ac6380c1930b345509b140baa9face8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63d4b17f8a7c1bae2462ccfd25f77a1e') in 0.008130 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 55.864089 seconds.
+  path: Assets/Particles-Magic/KTK_Effect_Samples/Prefab/Heal Magic Variant.prefab
+  artifactKey: Guid(ac6380c1930b345509b140baa9face8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles-Magic/KTK_Effect_Samples/Prefab/Heal Magic Variant.prefab using Guid(ac6380c1930b345509b140baa9face8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2f0ca51413a45808c39b04c699db1ca') in 0.023444 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 121.166765 seconds.
+  path: Assets/Magic - Spells Prefabs/Spells/Encouragment.prefab
+  artifactKey: Guid(2130e246f7c4f40b1a43aa14c053c8b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Magic - Spells Prefabs/Spells/Encouragment.prefab using Guid(2130e246f7c4f40b1a43aa14c053c8b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11718759c861afa296e22a56dcec1fe9') in 0.078927 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/Magic - Spells Prefabs/Spells/SuperShield.prefab
+  artifactKey: Guid(fb2a827f4e5b2453da7cfe8110d1b4ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Magic - Spells Prefabs/Spells/SuperShield.prefab using Guid(fb2a827f4e5b2453da7cfe8110d1b4ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf72b5e0a9991a52c1d9c6cf6baac877') in 0.028333 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Magic - Spells Prefabs/Spells/Invisibility.prefab
+  artifactKey: Guid(83388c888cd764e6a9895469ba9b1183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Magic - Spells Prefabs/Spells/Invisibility.prefab using Guid(83388c888cd764e6a9895469ba9b1183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a55cb1d64b78fda95b5cbbb9b0d9f026') in 0.010881 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 22.471577 seconds.
+  path: Assets/Magic - Spells Prefabs/Spells/Encouragment.prefab
+  artifactKey: Guid(2130e246f7c4f40b1a43aa14c053c8b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Magic - Spells Prefabs/Spells/Encouragment.prefab using Guid(2130e246f7c4f40b1a43aa14c053c8b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aaf659b4633a5fbf321bb3b97ec15410') in 0.076854 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000096 seconds.
+  path: Assets/Magic - Spells Prefabs/Spells/SuperShield.prefab
+  artifactKey: Guid(fb2a827f4e5b2453da7cfe8110d1b4ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Magic - Spells Prefabs/Spells/SuperShield.prefab using Guid(fb2a827f4e5b2453da7cfe8110d1b4ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76fa38744c030128f60ee0aa8d8b0bb4') in 0.023312 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002096 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x2ad187000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/teotataris/Documents/GitHub/My_RPG/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/teotataris/Documents/GitHub/My_RPG/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.90 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.221 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1222ms)
+		BeginReloadAssembly (285ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (1ms)
+			CreateAndSetChildDomain (116ms)
+		EndReloadAssembly (880ms)
+			LoadAssemblies (146ms)
+			RebuildTransferFunctionScriptingTraits (1ms)
+			SetupTypeCache (286ms)
+			ReleaseScriptCaches (23ms)
+			RebuildScriptCaches (45ms)
+			SetupLoadedEditorAssemblies (396ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (2ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (63ms)
+				ProcessInitializeOnLoadAttributes (294ms)
+				ProcessInitializeOnLoadMethodAttributes (33ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.62 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5867 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 57 unused Assets / (3.4 MB). Loaded Objects now: 6595.
+Memory consumption went from 429.4 MB to 426.0 MB.
+Total: 31.509875 ms (FindLiveObjects: 0.702667 ms CreateObjectMapping: 0.197750 ms MarkObjects: 23.545792 ms  DeleteObjects: 7.061958 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 14.118000 seconds.
+  path: Assets/Magic - Spells Prefabs/Spells/SuperShield.prefab
+  artifactKey: Guid(fb2a827f4e5b2453da7cfe8110d1b4ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Magic - Spells Prefabs/Spells/SuperShield.prefab using Guid(fb2a827f4e5b2453da7cfe8110d1b4ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76fa38744c030128f60ee0aa8d8b0bb4') in 0.083729 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000100 seconds.
+  path: Assets/Magic - Spells Prefabs/Spells/Heal Magic Variant.prefab
+  artifactKey: Guid(ac6380c1930b345509b140baa9face8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Magic - Spells Prefabs/Spells/Heal Magic Variant.prefab using Guid(ac6380c1930b345509b140baa9face8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a9477265279ab82712768f5bacdf451') in 0.018764 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.317328 seconds.
+  path: Assets/Magic - Spells Prefabs/Spells/Encouragment.prefab
+  artifactKey: Guid(2130e246f7c4f40b1a43aa14c053c8b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Magic - Spells Prefabs/Spells/Encouragment.prefab using Guid(2130e246f7c4f40b1a43aa14c053c8b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de6ce15bc278a7996d471845e5f78c53') in 0.125176 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003598 seconds.
+  path: Assets/Magic - Spells Prefabs/Spells/Invisibility.prefab
+  artifactKey: Guid(83388c888cd764e6a9895469ba9b1183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Magic - Spells Prefabs/Spells/Invisibility.prefab using Guid(83388c888cd764e6a9895469ba9b1183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81bb625bd6dbc41b761c5a6819c6504f') in 0.028410 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002684 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x28af5f000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/teotataris/Documents/GitHub/My_RPG/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/teotataris/Documents/GitHub/My_RPG/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.53 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.964 seconds
+Domain Reload Profiling:
+	ReloadAssembly (965ms)
+		BeginReloadAssembly (162ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (75ms)
+		EndReloadAssembly (748ms)
+			LoadAssemblies (59ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (249ms)
+			ReleaseScriptCaches (5ms)
+			RebuildScriptCaches (40ms)
+			SetupLoadedEditorAssemblies (379ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (2ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (66ms)
+				ProcessInitializeOnLoadAttributes (274ms)
+				ProcessInitializeOnLoadMethodAttributes (35ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (3ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.59 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5867 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 57 unused Assets / (3.4 MB). Loaded Objects now: 6611.
+Memory consumption went from 429.5 MB to 426.1 MB.
+Total: 4.039458 ms (FindLiveObjects: 0.253084 ms CreateObjectMapping: 0.099791 ms MarkObjects: 3.119125 ms  DeleteObjects: 0.566666 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 54.609181 seconds.
+  path: Assets/Magic - Spells Prefabs/Spells/Encouragment.prefab
+  artifactKey: Guid(2130e246f7c4f40b1a43aa14c053c8b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Magic - Spells Prefabs/Spells/Encouragment.prefab using Guid(2130e246f7c4f40b1a43aa14c053c8b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de6ce15bc278a7996d471845e5f78c53') in 0.229004 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Assets/Magic - Spells Prefabs/Spells/Invisibility.prefab
+  artifactKey: Guid(83388c888cd764e6a9895469ba9b1183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Magic - Spells Prefabs/Spells/Invisibility.prefab using Guid(83388c888cd764e6a9895469ba9b1183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4e509be1098f4b31f1192831e0c122e') in 0.009974 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007776 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16f49f000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/teotataris/Documents/GitHub/My_RPG/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/teotataris/Documents/GitHub/My_RPG/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 3.02 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.621 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1623ms)
+		BeginReloadAssembly (521ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (10ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (193ms)
+		EndReloadAssembly (1022ms)
+			LoadAssemblies (291ms)
+			RebuildTransferFunctionScriptingTraits (2ms)
+			SetupTypeCache (305ms)
+			ReleaseScriptCaches (50ms)
+			RebuildScriptCaches (57ms)
+			SetupLoadedEditorAssemblies (436ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (2ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (72ms)
+				ProcessInitializeOnLoadAttributes (314ms)
+				ProcessInitializeOnLoadMethodAttributes (44ms)
 				AfterProcessingInitializeOnLoad (1ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
-========================================================================
-Worker process is ready to serve import requests
-Launching external process: /Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/Tools/UnityShaderCompiler
-Launched and connected shader compiler UnityShaderCompiler after 0.32 seconds
-Refreshing native plugins compatible for Editor in 3.51 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 2.50 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6052 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 86 unused Assets / (3.3 MB). Loaded Objects now: 6527.
-Memory consumption went from 413.7 MB to 410.4 MB.
-Total: 75.175666 ms (FindLiveObjects: 4.325042 ms CreateObjectMapping: 0.807000 ms MarkObjects: 65.651250 ms  DeleteObjects: 4.390125 ms)
+Unloading 5867 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 57 unused Assets / (3.4 MB). Loaded Objects now: 6627.
+Memory consumption went from 429.5 MB to 426.1 MB.
+Total: 27.088166 ms (FindLiveObjects: 0.419250 ms CreateObjectMapping: 0.116542 ms MarkObjects: 24.305333 ms  DeleteObjects: 2.244666 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 15.792765 seconds.
+  path: Assets/Magic - Spells Prefabs/Spells/SuperShield.prefab
+  artifactKey: Guid(fb2a827f4e5b2453da7cfe8110d1b4ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Magic - Spells Prefabs/Spells/SuperShield.prefab using Guid(fb2a827f4e5b2453da7cfe8110d1b4ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd62024d259aed6ffb37312919d1c8c47') in 0.081391 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/Magic - Spells Prefabs/Spells/Heal Magic Variant.prefab
+  artifactKey: Guid(ac6380c1930b345509b140baa9face8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Magic - Spells Prefabs/Spells/Heal Magic Variant.prefab using Guid(ac6380c1930b345509b140baa9face8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ab4ed2130acc3bb1c92f7e03b0e5084') in 0.010726 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 32.169975 seconds.
+  path: Assets/Magic - Spells Prefabs/Spells/Encouragment.prefab
+  artifactKey: Guid(2130e246f7c4f40b1a43aa14c053c8b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Magic - Spells Prefabs/Spells/Encouragment.prefab using Guid(2130e246f7c4f40b1a43aa14c053c8b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3213fe007fb41a7ba763ccf0af4388d7') in 0.128962 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002530 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16ee9b000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/teotataris/Documents/GitHub/My_RPG/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/teotataris/Documents/GitHub/My_RPG/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 2.19 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.JsonUtility.FromJson[T] (System.String json) [0x00001] in /Users/bokken/build/output/unity/unity/Modules/JSONSerialize/Public/JsonUtility.bindings.cs:30 
+  at UnityEditor.StateCache`1[T].GetState (UnityEngine.Hash128 key, T defaultValue) [0x00067] in /Users/bokken/build/output/unity/unity/Editor/Mono/Utils/StateCache.cs:88 
+  at UnityEditor.Tools.OnEnable () [0x0003a] in /Users/bokken/build/output/unity/unity/Editor/Mono/GUI/Tools/Tools.cs:389 
+UnityEngine.ScriptableObject:CreateScriptableObjectInstanceFromType(Type, Boolean)
+UnityEngine.ScriptableObject:CreateInstance(Type) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/ScriptableObject.bindings.cs:35)
+UnityEngine.ScriptableObject:CreateInstance() (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/ScriptableObject.bindings.cs:41)
+UnityEditor.Tools:get_get() (at /Users/bokken/build/output/unity/unity/Editor/Mono/GUI/Tools/Tools.cs:50)
+UnityEditor.Tools:get_visibleLayers() (at /Users/bokken/build/output/unity/unity/Editor/Mono/GUI/Tools/Tools.cs:357)
+UnityEditor.Animations.Rigging.BoneRendererUtils:.cctor() (at Library/PackageCache/com.unity.animation.rigging@1.1.1/Editor/Utils/BoneRendererUtils.cs:121)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor(IntPtr)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor(RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes(Type[]) (at /Users/bokken/build/output/unity/unity/Editor/Mono/EditorAssemblies.cs:126)
+
+(Filename: /Users/bokken/build/output/unity/unity/Editor/Mono/GUI/Tools/Tools.cs Line: 389)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.321 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1323ms)
+		BeginReloadAssembly (320ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (145ms)
+		EndReloadAssembly (917ms)
+			LoadAssemblies (181ms)
+			RebuildTransferFunctionScriptingTraits (1ms)
+			SetupTypeCache (280ms)
+			ReleaseScriptCaches (31ms)
+			RebuildScriptCaches (50ms)
+			SetupLoadedEditorAssemblies (413ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (65ms)
+				ProcessInitializeOnLoadAttributes (308ms)
+				ProcessInitializeOnLoadMethodAttributes (34ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.05 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5867 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 57 unused Assets / (3.4 MB). Loaded Objects now: 6643.
+Memory consumption went from 429.6 MB to 426.3 MB.
+Total: 34.296375 ms (FindLiveObjects: 0.748750 ms CreateObjectMapping: 0.822875 ms MarkObjects: 22.601125 ms  DeleteObjects: 10.117542 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -171,49 +589,49 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.004700 seconds.
+Registered in 0.004441 seconds.
 Begin MonoManager ReloadAssembly
-Thread 0x2c4e87000 may have been prematurely finalized
+Thread 0x16ee9b000 may have been prematurely finalized
 Symbol file LoadedFromMemory doesn't match image /Users/teotataris/Documents/GitHub/My_RPG/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image /Users/teotataris/Documents/GitHub/My_RPG/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 1.89 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 8.98 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.335 seconds
+- Completed reload, in  1.443 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1337ms)
-		BeginReloadAssembly (285ms)
+	ReloadAssembly (1445ms)
+		BeginReloadAssembly (266ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (8ms)
+			DisableScriptedObjects (12ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (110ms)
-		EndReloadAssembly (927ms)
-			LoadAssemblies (147ms)
-			RebuildTransferFunctionScriptingTraits (1ms)
-			SetupTypeCache (304ms)
-			ReleaseScriptCaches (21ms)
-			RebuildScriptCaches (59ms)
-			SetupLoadedEditorAssemblies (429ms)
+			CreateAndSetChildDomain (129ms)
+		EndReloadAssembly (1099ms)
+			LoadAssemblies (84ms)
+			RebuildTransferFunctionScriptingTraits (2ms)
+			SetupTypeCache (417ms)
+			ReleaseScriptCaches (94ms)
+			RebuildScriptCaches (71ms)
+			SetupLoadedEditorAssemblies (407ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (2ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (68ms)
-				ProcessInitializeOnLoadAttributes (313ms)
-				ProcessInitializeOnLoadMethodAttributes (43ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (9ms)
+				BeforeProcessingInitializeOnLoad (70ms)
+				ProcessInitializeOnLoadAttributes (288ms)
+				ProcessInitializeOnLoadMethodAttributes (33ms)
 				AfterProcessingInitializeOnLoad (1ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (3ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.65 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 4.46 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5866 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 57 unused Assets / (3.4 MB). Loaded Objects now: 6543.
-Memory consumption went from 393.7 MB to 390.4 MB.
-Total: 14.417458 ms (FindLiveObjects: 0.562625 ms CreateObjectMapping: 0.205125 ms MarkObjects: 12.772000 ms  DeleteObjects: 0.876708 ms)
+Unloading 5867 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 57 unused Assets / (3.4 MB). Loaded Objects now: 6659.
+Memory consumption went from 429.7 MB to 426.3 MB.
+Total: 46.252583 ms (FindLiveObjects: 0.702750 ms CreateObjectMapping: 0.286459 ms MarkObjects: 33.725833 ms  DeleteObjects: 11.535250 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -227,16 +645,175 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 484847.855554 seconds.
-  path: Assets/PlayerCharacters/PlayerFemale1.prefab
-  artifactKey: Guid(24862ec0143f1224887be3a87c869364) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PlayerCharacters/PlayerFemale1.prefab using Guid(24862ec0143f1224887be3a87c869364) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '151f7a61bf051b0d40832cdcae3a5020') in 2.533253 seconds 
+  Time since last request: 38.619541 seconds.
+  path: Assets/Magic - Spells Prefabs/Spells/Encouragment.prefab
+  artifactKey: Guid(2130e246f7c4f40b1a43aa14c053c8b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Magic - Spells Prefabs/Spells/Encouragment.prefab using Guid(2130e246f7c4f40b1a43aa14c053c8b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3213fe007fb41a7ba763ccf0af4388d7') in 0.377169 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000165 seconds.
-  path: Assets/PlayerCharacters/PlayerFemale3 1.prefab
-  artifactKey: Guid(a7c352d813e70df4eaf8f26a0e1a6603) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PlayerCharacters/PlayerFemale3 1.prefab using Guid(a7c352d813e70df4eaf8f26a0e1a6603) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fe69ed1165242192e5d4a3b9b89c2fd') in 0.839067 seconds 
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorker is now disconnected from the server
-Process exiting
+  Time since last request: 0.000136 seconds.
+  path: Assets/Magic - Spells Prefabs/Spells/Invisibility.prefab
+  artifactKey: Guid(83388c888cd764e6a9895469ba9b1183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Magic - Spells Prefabs/Spells/Invisibility.prefab using Guid(83388c888cd764e6a9895469ba9b1183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c6b77a6b043cec12220db3e4af05092') in 0.030796 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.357922 seconds.
+  path: Assets/Magic - Spells Prefabs/Spells/Encouragment.prefab
+  artifactKey: Guid(2130e246f7c4f40b1a43aa14c053c8b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Magic - Spells Prefabs/Spells/Encouragment.prefab using Guid(2130e246f7c4f40b1a43aa14c053c8b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efaf26ba50c363611b35c9b1a5f131a0') in 0.125607 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003581 seconds.
+  path: Assets/Magic - Spells Prefabs/Spells/SuperShield.prefab
+  artifactKey: Guid(fb2a827f4e5b2453da7cfe8110d1b4ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Magic - Spells Prefabs/Spells/SuperShield.prefab using Guid(fb2a827f4e5b2453da7cfe8110d1b4ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bad78b538aeb10512525c5151a2c236a') in 0.036311 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002401 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16ee9b000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/teotataris/Documents/GitHub/My_RPG/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/teotataris/Documents/GitHub/My_RPG/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 4.45 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.519 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1520ms)
+		BeginReloadAssembly (285ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (146ms)
+		EndReloadAssembly (1129ms)
+			LoadAssemblies (121ms)
+			RebuildTransferFunctionScriptingTraits (1ms)
+			SetupTypeCache (294ms)
+			ReleaseScriptCaches (30ms)
+			RebuildScriptCaches (117ms)
+			SetupLoadedEditorAssemblies (554ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (5ms)
+				BeforeProcessingInitializeOnLoad (129ms)
+				ProcessInitializeOnLoadAttributes (377ms)
+				ProcessInitializeOnLoadMethodAttributes (36ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.59 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5867 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 57 unused Assets / (3.4 MB). Loaded Objects now: 6675.
+Memory consumption went from 429.7 MB to 426.3 MB.
+Total: 17.572834 ms (FindLiveObjects: 0.467333 ms CreateObjectMapping: 0.537791 ms MarkObjects: 15.409334 ms  DeleteObjects: 1.157417 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 66.447401 seconds.
+  path: Assets/Magic - Spells Prefabs/Spells/Encouragment.prefab
+  artifactKey: Guid(2130e246f7c4f40b1a43aa14c053c8b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Magic - Spells Prefabs/Spells/Encouragment.prefab using Guid(2130e246f7c4f40b1a43aa14c053c8b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efaf26ba50c363611b35c9b1a5f131a0') in 0.287649 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000095 seconds.
+  path: Assets/Magic - Spells Prefabs/Spells/SuperShield.prefab
+  artifactKey: Guid(fb2a827f4e5b2453da7cfe8110d1b4ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Magic - Spells Prefabs/Spells/SuperShield.prefab using Guid(fb2a827f4e5b2453da7cfe8110d1b4ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50f396530d3be7b88ae2dceb198a2b1f') in 0.011842 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002803 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16ee9b000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/teotataris/Documents/GitHub/My_RPG/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/teotataris/Documents/GitHub/My_RPG/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 2.03 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.003 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1004ms)
+		BeginReloadAssembly (172ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (84ms)
+		EndReloadAssembly (767ms)
+			LoadAssemblies (73ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (218ms)
+			ReleaseScriptCaches (25ms)
+			RebuildScriptCaches (45ms)
+			SetupLoadedEditorAssemblies (388ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (2ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (63ms)
+				ProcessInitializeOnLoadAttributes (286ms)
+				ProcessInitializeOnLoadMethodAttributes (34ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (3ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5867 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 57 unused Assets / (3.4 MB). Loaded Objects now: 6691.
+Memory consumption went from 429.7 MB to 426.3 MB.
+Total: 5.308750 ms (FindLiveObjects: 0.311666 ms CreateObjectMapping: 0.156667 ms MarkObjects: 4.194208 ms  DeleteObjects: 0.645167 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 8.925594 seconds.
+  path: Assets/Magic - Spells Prefabs/Spells/Encouragment.prefab
+  artifactKey: Guid(2130e246f7c4f40b1a43aa14c053c8b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Magic - Spells Prefabs/Spells/Encouragment.prefab using Guid(2130e246f7c4f40b1a43aa14c053c8b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52364a6bd023c2a2f14a1b2c6c9a117e') in 0.048055 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.031416 seconds.
+  path: Assets/Magic - Spells Prefabs/Spells/Heal Magic Variant.prefab
+  artifactKey: Guid(ac6380c1930b345509b140baa9face8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Magic - Spells Prefabs/Spells/Heal Magic Variant.prefab using Guid(ac6380c1930b345509b140baa9face8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '603a0f1f3fb32d6f69072b8c2c19b971') in 0.026701 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 18.668868 seconds.
+  path: Assets/Magic - Spells Prefabs/Spells/Encouragment.prefab
+  artifactKey: Guid(2130e246f7c4f40b1a43aa14c053c8b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Magic - Spells Prefabs/Spells/Encouragment.prefab using Guid(2130e246f7c4f40b1a43aa14c053c8b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7575ba093da75733bf9c029bd607552') in 0.045290 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.870343 seconds.
+  path: Assets/Magic - Spells Prefabs/Spells/SuperShield.prefab
+  artifactKey: Guid(fb2a827f4e5b2453da7cfe8110d1b4ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Magic - Spells Prefabs/Spells/SuperShield.prefab using Guid(fb2a827f4e5b2453da7cfe8110d1b4ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '740824e19893184da1bf5d67c4c92101') in 0.040780 seconds 

@@ -80,6 +80,8 @@ public class InventoryItems : MonoBehaviour
     //weaponsmith
     [SerializeField] public List<bool> weapons;
     
+    [SerializeField] private Image healthImage;
+    
     void Start()
     {
         //desertMushrooms = 0;
@@ -143,6 +145,7 @@ public class InventoryItems : MonoBehaviour
     void Update()
     {
         playerInfo = playerAnimator.GetCurrentAnimatorStateInfo(1);
+        healthImage.fillAmount = SavePlayer.playerHleath;
         
         if (removeItem)
         {
@@ -229,11 +232,6 @@ public class InventoryItems : MonoBehaviour
                 }
             }
         }
-        if (SavePlayer.manaAmount < 0.03)
-        {
-            SavePlayer.invisible = false;
-        }
-
         manaBar.fillAmount = SavePlayer.manaAmount;
         if (playerInfo.IsTag("magic"))
         {
