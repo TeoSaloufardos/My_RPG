@@ -90,7 +90,7 @@ public class EnemyMovement : MonoBehaviour
             if (distance < attackRange || distance > runRange)
             {
                 nav.isStopped = true;
-                if (distance < attackRange && enemyInfo.IsTag("nonAttack"))
+                if (distance < attackRange && enemyInfo.IsTag("nonAttack") && !anim.IsInTransition(0))
                 {
                     if (isAttacking == false)
                     {

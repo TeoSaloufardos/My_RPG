@@ -42,7 +42,7 @@ public class ParticleMover : MonoBehaviour
 
         if (encouragment)
         {
-            SavePlayer.encouragmentIncrease = 1;
+            SavePlayer.encouragmentIncrease = 80; //mporei kai 100
         }
     }
 

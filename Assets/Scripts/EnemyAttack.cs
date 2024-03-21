@@ -16,7 +16,7 @@ public class EnemyAttack: MonoBehaviour
             if (canAttack && !SavePlayer.invulnarable)
             {
                 canAttack = false;
-                SavePlayer.playerHleath -= damageAmount;
+                SavePlayer.playerHleath -= damageAmount - SavePlayer.armourValue;
                 StartCoroutine(ResetDamage());
             }
         }

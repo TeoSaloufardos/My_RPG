@@ -27,6 +27,7 @@ public class SavePlayer : MonoBehaviour
     public static int weaponIncrease;
     public static float playerHleath = 1.0f;
     public static int encouragmentIncrease = 0;
+    public static float armourValue = 0;
     
     void Start()
     {
@@ -82,6 +83,15 @@ public class SavePlayer : MonoBehaviour
             manaAmountDisplay = playerLevel;
             staminaAmountDisplay = playerLevel;
             weaponIncrease = System.Convert.ToInt32(strenghtAmountDisplay * 90);
+        }
+
+        if (armourValue == 1)
+        {
+            armourValue = 0.002f;
+        }
+        if (armourValue == 2)
+        {
+            armourValue = 0.004f;
         }
     }
 }
