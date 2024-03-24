@@ -26,22 +26,27 @@ public class AudioHandler : MonoBehaviour
             if (musicState == 1)
             {
                 audioPlayer.clip = mainLoop;
+                audioPlayer.volume = 0.3f;
                 audioPlayer.Play();
             }else if(musicState == 2)
             {
                 audioPlayer.clip = tavernLoop;
+                audioPlayer.volume = 0.3f;
                 audioPlayer.Play();
             }else if (musicState == 3)
             {
                 audioPlayer.clip = battleLoop;
+                audioPlayer.volume = 0.28f;
                 audioPlayer.Play();
             }else if (musicState == 4)
             {
                 audioPlayer.clip = weaponSmithLoop;
+                audioPlayer.volume = 0.3f;
                 audioPlayer.Play();
             }else if (musicState == 5)
             {
                 audioPlayer.clip = wizzardLoop;
+                audioPlayer.volume = 0.4f;
                 audioPlayer.Play();
             }
         }

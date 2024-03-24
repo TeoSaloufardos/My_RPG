@@ -22,12 +22,13 @@ public class SavePlayer : MonoBehaviour
     public static int armour = 0;
     public static bool changeArmour = false;
     public static float staminaAmount = 1.0f;
-    private int checkAmount = 1;
+    private int checkAmount = 8;
     public static float playerLevel = 0.1f;
     public static int weaponIncrease;
     public static float playerHleath = 1.0f;
     public static int encouragmentIncrease = 0;
     public static float armourValue = 0;
+    public static int enemiesOnScreen;
     
     void Start()
     {
@@ -78,7 +79,7 @@ public class SavePlayer : MonoBehaviour
         if (killsAmount == checkAmount)
         {
             playerLevel += 0.1f;
-            checkAmount = killsAmount + 2;
+            checkAmount = killsAmount + 8;
             strenghtAmountDisplay = playerLevel;
             manaAmountDisplay = playerLevel;
             staminaAmountDisplay = playerLevel;
