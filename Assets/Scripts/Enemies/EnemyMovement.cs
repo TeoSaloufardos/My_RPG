@@ -20,7 +20,7 @@ public class EnemyMovement : MonoBehaviour
     private float distance;
     private bool isAttacking = false;
     [SerializeField] private float attackRange = 2.0f;
-    [SerializeField] private float runRange = 12.0f;
+    private float runRange = 60.0f;
     public int enemyHp = 100;
     private int currectHp;
     private bool isAlive = true;
@@ -94,6 +94,11 @@ public class EnemyMovement : MonoBehaviour
             if (distance < attackRange || distance > runRange)
             {
                 nav.isStopped = true;
+                if (distance > runRange)
+                {
+                    SavePlayer.enemiesOnScreen--;
+                    Destroy(gameObject);
+                }
                 if (distance < attackRange && enemyInfo.IsTag("nonAttack") && !anim.IsInTransition(0))
                 {
                     if (isAttacking == false)

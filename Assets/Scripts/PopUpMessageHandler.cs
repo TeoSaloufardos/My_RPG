@@ -95,6 +95,21 @@ public class PopUpMessageHandler : MonoBehaviour, IPointerEnterHandler, IPointer
                     inventory.GetComponent<InventoryItems>().selected = objectID;
                     inventory.GetComponent<InventoryItems>().setTwo = true;
                 }
+                if (objectID == 11)
+                {
+                    SavePlayer.playerHleath += 0.05f;
+                    consumeItem(11);
+                }
+                if (objectID == 12)
+                {
+                    SavePlayer.playerHleath += 0.08f;
+                    consumeItem(12);
+                }
+                if (objectID == 13)
+                {
+                    SavePlayer.playerHleath += 0.12f;
+                    consumeItem(13);
+                }
             }
         }
         //ο ελεγχος εδω γινεται για να ειναι ανοιχτο το message καθως μπαινει στο object ο κερσορας
@@ -102,6 +117,16 @@ public class PopUpMessageHandler : MonoBehaviour, IPointerEnterHandler, IPointer
         {
             displaying = true;
         }
+    }
+    
+    public void consumeItem(int itemID)//Εδω γινεται ελεγχος εαν υπαρχει μονο 1 απο αυτο το αντικειμενο σε ποσοτητα. Εαν υπαρχει μονο ενα τοτε γινεται αφαιρεση του εικονιδιου και αντικαθυσταται με το κενο. Η διαδικασια αντικαταστασης γινεται στο InventoryItems οπου υπαρχει σχετικη μεθοδος. Εαν δεν ειναι μονο ενα τοτε αυτο που γινεται ειναι να μειωθει κατα 1 το αντικειμενο σε ποσοτητα.
+    {
+        if (InventoryItems.ItemsQuantities[itemID] == 1)
+        {
+            InventoryItems.removeItem = true;
+            InventoryItems.removeItemWithID = itemID;
+        }
+        InventoryItems.ItemsQuantities[itemID] -= 1;
     }
 
     public void MessageDisplay()

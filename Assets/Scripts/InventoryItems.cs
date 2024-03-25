@@ -252,6 +252,19 @@ public class InventoryItems : MonoBehaviour
         {
             staminaBar.fillAmount = Mathf.Lerp(staminaBar.fillAmount, SavePlayer.staminaAmount, 2 * Time.deltaTime); //delta time einai real time dependency anti gia fps dependency
         }
+
+        // if (ItemsQuantities[12] == 0)
+        // {
+        //     removeIcon(12);
+        // }
+        // if (ItemsQuantities[11] == 0)
+        // {
+        //     removeIcon(11);
+        // }
+        // if (ItemsQuantities[13] == 0)
+        // {
+        //     removeIcon(13);
+        // }
     }
 
     public void openMenu()

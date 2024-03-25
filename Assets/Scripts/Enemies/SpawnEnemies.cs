@@ -9,6 +9,7 @@ public class SpawnEnemies : MonoBehaviour
     [SerializeField] private Transform[] spawnPoints;
     [SerializeField] private GameObject myCamera;
     private bool canSpawn = true;
+    [SerializeField] private bool respawn;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -16,7 +17,7 @@ public class SpawnEnemies : MonoBehaviour
         {
             if (canSpawn)
             {
-                // canSpawn = false;
+                canSpawn = false;
                 for (int i = 0; i < enemies.Length; i++)
                 {
                     Instantiate(enemies[i], spawnPoints[i].position, spawnPoints[i].rotation);// kanei spawn ta enemies stis topothesies pou einai ta spawnpoints.
@@ -35,7 +36,10 @@ public class SpawnEnemies : MonoBehaviour
         {
             if (canSpawn == false)
             {
-                canSpawn = true;
+                if (respawn)
+                {
+                    canSpawn = true;
+                }
                 myCamera.GetComponent<AudioHandler>().musicState = 1;// epilegei na paiksei thn mousikh polemou
                 myCamera.GetComponent<AudioHandler>().canPlay = true;
             }

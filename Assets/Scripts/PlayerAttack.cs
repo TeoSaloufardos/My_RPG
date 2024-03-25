@@ -37,6 +37,12 @@ public class PlayerAttack : MonoBehaviour
             other.transform.gameObject.GetComponent<EnemyMovement>().enemyHp -= damageAmount + SavePlayer.weaponIncrease + SavePlayer.encouragmentIncrease;
             StartCoroutine(ResetDamage());
         }
+        if (other.CompareTag("spider") && canDamage )
+        {
+            canDamage = false;
+            other.transform.gameObject.GetComponent<EnemyMovement>().enemyHp -= (damageAmount/5) + SavePlayer.weaponIncrease + SavePlayer.encouragmentIncrease;
+            StartCoroutine(ResetDamage());
+        }
     }
 
     // IEnumerator WaitForDestroy()
