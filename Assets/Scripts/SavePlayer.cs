@@ -25,7 +25,7 @@ public class SavePlayer : MonoBehaviour
     private int checkAmount = 8;
     public static float playerLevel = 0.1f;
     public static int weaponIncrease;
-    public static float playerHleath = 0.1f;
+    public static float playerHleath = 1.0f;
     public static int encouragmentIncrease = 0;
     public static float armourValue = 0;
     public static int enemiesOnScreen;

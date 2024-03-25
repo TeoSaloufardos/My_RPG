@@ -67,8 +67,12 @@ public class InventoryItems : MonoBehaviour
     [SerializeField] private Image manaBar;
     [SerializeField] private GameObject inventoryScreen;
     [SerializeField] private GameObject statsScreen;
+    [SerializeField] private GameObject deedsScreen;
     [SerializeField] private GameObject characterDisplay;
+    private GameObject miniMapView;
+    private GameObject miniMapCompass;
     [SerializeField] private Image staminaBar;
+    [SerializeField] private Image healthImage;
     
     //attack animation
     private GameObject playerObj;
@@ -79,8 +83,9 @@ public class InventoryItems : MonoBehaviour
     
     //weaponsmith
     [SerializeField] public List<bool> weapons;
+    [SerializeField] private Text[] messages;
+    private int maxFour;
     
-    [SerializeField] private Image healthImage;
     
     void Start()
     {
@@ -91,12 +96,16 @@ public class InventoryItems : MonoBehaviour
         magicBookRecipes.SetActive(false);
         inventoryMenu.SetActive(false);
         openBook.SetActive(false);
+        deedsScreen.SetActive(false);
+        miniMapCompass = GameObject.FindGameObjectWithTag("compass");
+        miniMapView = GameObject.FindGameObjectWithTag("minimapitem");
         ui.SetActive(true);
         maxSizeOfEmptySlots = emptySlots.Count;
         constructItemsAndQuantities();
         audioPlayer = GetComponent<AudioSource>();
         playerObj = GameObject.FindGameObjectWithTag("Player");
         playerAnimator = playerObj.GetComponent<Animator>();
+        maxFour = messages.Length;
         
         
         //μεταφερω τα δεδομενα απο τον πινακα στο unity σε εναν static για να ειναι κοινος σε ολα τα scripts και
@@ -275,6 +284,8 @@ public class InventoryItems : MonoBehaviour
         ui.SetActive(false);
         audioPlayer.clip = bookOpenSound;
         audioPlayer.Play();
+        miniMapCompass.SetActive(false);
+        miniMapView.SetActive(false);
         openInventoryScreen();
         SavePlayer.theTarget = null;//na mhn emfanizetai to outline tou enemy otan eimaste sto inventory
         Time.timeScale = 0; //κανω pause τον χρονο για να μπει ο παικτης με την ησυχια του μεσα στο menu
@@ -287,6 +298,8 @@ public class InventoryItems : MonoBehaviour
         closedBook.SetActive(true);
         ui.SetActive(true);
         characterDisplay.SetActive(false);
+        miniMapCompass.SetActive(true);
+        miniMapView.SetActive(true);
         audioPlayer.clip = bookOpenSound;
         audioPlayer.Play();
         Time.timeScale = 1; //συνεχιζω το παιχνιδι
@@ -297,14 +310,24 @@ public class InventoryItems : MonoBehaviour
         statsScreen.SetActive(false);
         characterDisplay.SetActive(false);
         inventoryScreen.SetActive(true);
+        deedsScreen.SetActive(false);
     }
     
     public void openStatsScreen()
     {
         inventoryScreen.SetActive(false);
         statsScreen.SetActive(true);
+        deedsScreen.SetActive(false);
         characterDisplay.SetActive(true);
         statsScreen.GetComponent<StatsUpdate>().updateWeapons = true;
+    }
+    
+    public void openDeedsScreen()
+    {
+        inventoryScreen.SetActive(false);
+        statsScreen.SetActive(false);
+        deedsScreen.SetActive(true);
+        characterDisplay.SetActive(false);
     }
 
     /*Εδω ειναι η μεθοδος Reset που χρησιμοποιειται για να δημιουργησει delay μεταξυ των λειτουργιων της.
@@ -343,6 +366,19 @@ public class InventoryItems : MonoBehaviour
         {
             ItemsQuantities.Add(0);
         }
+    }
+
+    public void updateMessages(string message)
+    {
+        for (int i = 0; i < maxFour; i++)
+        {
+            if (messages[i].text == "blank")
+            {
+                maxFour = i;
+                messages[i].text = message;
+            }
+        }
+        maxFour = messages.Length;
     }
 
     public void closeMagicRecipesBook()

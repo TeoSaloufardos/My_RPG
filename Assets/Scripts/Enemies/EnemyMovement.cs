@@ -130,10 +130,11 @@ public class EnemyMovement : MonoBehaviour
             {
                 anim.SetTrigger("hit");
                 currectHp = enemyHp;
-                audioPlayer.Play();
+                // audioPlayer.Play();
                 fillHealth = enemyHp;
                 fillHealth /= 100.0f;
                 healthBar.fillAmount = fillHealth;
+                Debug.Log("Enemy: fill amount" + healthBar.fillAmount);
             }
         }
 
