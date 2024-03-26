@@ -37,7 +37,7 @@ public class InventoryItems : MonoBehaviour
     private int maxSizeOfEmptySlots; //Κραταει το maxSize των διαθεσιμων slots
     public static int newIconID = 0; //Δεχεται το Item Id για να καταχωρηθει στον πινακα και να εμφανιστει στο Inventory
     public static bool hasFreeSpace = true;
-    public static int totalCoins = 1000; //Συνολο κερματων που εχει ο παικτης
+    public static int totalCoins = 350; //Συνολο κερματων που εχει ο παικτης
     
     public static int removeItemWithID; //Στην περιπτωση πωλησης ενος αντικειμενου θα ερθει απο ενα αλλο script
     // το id του ιτεμ το οποιο επιθυμει ο παικτης να πουλησει.
@@ -68,6 +68,8 @@ public class InventoryItems : MonoBehaviour
     [SerializeField] private GameObject inventoryScreen;
     [SerializeField] private GameObject statsScreen;
     [SerializeField] private GameObject deedsScreen;
+    [SerializeField] private GameObject mapScreen;
+    [SerializeField] private GameObject mapCam;
     [SerializeField] private GameObject characterDisplay;
     private GameObject miniMapView;
     private GameObject miniMapCompass;
@@ -281,7 +283,7 @@ public class InventoryItems : MonoBehaviour
         inventoryMenu.SetActive(true);
         openBook.SetActive(true);
         closedBook.SetActive(false);
-        ui.SetActive(false);
+        ui.SetActive(true);
         audioPlayer.clip = bookOpenSound;
         audioPlayer.Play();
         miniMapCompass.SetActive(false);
@@ -300,6 +302,8 @@ public class InventoryItems : MonoBehaviour
         characterDisplay.SetActive(false);
         miniMapCompass.SetActive(true);
         miniMapView.SetActive(true);
+        mapScreen.SetActive(false);
+        mapCam.SetActive(false);
         audioPlayer.clip = bookOpenSound;
         audioPlayer.Play();
         Time.timeScale = 1; //συνεχιζω το παιχνιδι
@@ -311,6 +315,8 @@ public class InventoryItems : MonoBehaviour
         characterDisplay.SetActive(false);
         inventoryScreen.SetActive(true);
         deedsScreen.SetActive(false);
+        mapScreen.SetActive(false);
+        mapCam.SetActive(false);
     }
     
     public void openStatsScreen()
@@ -320,6 +326,8 @@ public class InventoryItems : MonoBehaviour
         deedsScreen.SetActive(false);
         characterDisplay.SetActive(true);
         statsScreen.GetComponent<StatsUpdate>().updateWeapons = true;
+        mapScreen.SetActive(false);
+        mapCam.SetActive(false);
     }
     
     public void openDeedsScreen()
@@ -328,6 +336,18 @@ public class InventoryItems : MonoBehaviour
         statsScreen.SetActive(false);
         deedsScreen.SetActive(true);
         characterDisplay.SetActive(false);
+        mapScreen.SetActive(false);
+        mapCam.SetActive(false);
+    }
+    
+    public void openMapScreen()
+    {
+        inventoryScreen.SetActive(false);
+        statsScreen.SetActive(false);
+        deedsScreen.SetActive(false);
+        characterDisplay.SetActive(false);
+        mapScreen.SetActive(true);
+        mapCam.SetActive(true);
     }
 
     /*Εδω ειναι η μεθοδος Reset που χρησιμοποιειται για να δημιουργησει delay μεταξυ των λειτουργιων της.
