@@ -22,7 +22,7 @@ public class InventoryItems : MonoBehaviour
     [SerializeField] public AudioClip pickUpSound;
 
     //Πεδια που αφορουν την καταχωρηση αντικειμενων στο inventory 
-    [SerializeField] private List<Image> emptySlots; //Πινακας που περιεχει καθε emptySlot (διαθεσιμο slot)
+    [SerializeField] public List<Image> emptySlots; //Πινακας που περιεχει καθε emptySlot (διαθεσιμο slot)
     [SerializeField] private List<Sprite> icons; //Το συνολογο των αντικειμενων με τα εικονιδια τους
     [SerializeField] private Sprite theEmptySlot; //Οριζω ποιο ειναι το empty slot (πως μοιαζει)
     
@@ -54,7 +54,7 @@ public class InventoryItems : MonoBehaviour
     
     //Ui 
     [SerializeField] private List<Image> UISlots;
-    [SerializeField] private List<Sprite> UIEmptySlots; 
+    [SerializeField] public List<Sprite> UIEmptySlots; 
     [SerializeField] private List<Sprite> magicIcons;
     [SerializeField] private List<KeyCode> keys;
     [HideInInspector] public bool set = false;

@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
+using UnityEngine.SceneManagement;
 
 public class SavePlayer : MonoBehaviour
 {
@@ -29,6 +31,34 @@ public class SavePlayer : MonoBehaviour
     public static int encouragmentIncrease = 0;
     public static float armourValue = 0;
     public static int enemiesOnScreen;
+
+    public static bool saving = false;
+    public static bool continueData = false;
+    private bool checkForLoad = false;
+    private GameObject inventoryObj;
+    
+    //Save fields
+    public int pcharS;
+    public string pnameS;
+    public float strengthAmtS;
+    public float manaPowerAmtS;
+    public float staminaPowerAmtS;
+    public int killAmtS;
+    public int weaponChoiceS;
+    public bool carryingWeaponS;
+    public int armorS;
+    public float playerLevelS;
+    public int weaponIncreaseS;
+    public float playerHealthS;
+    public int strengthIncreaseS;
+    public float armorValueS;
+    public int goldS;
+    public List<int> itemsQuantitiesS;
+    
+    public bool magicCollectedS;
+    public bool spellsCollectedS;
+    public List<bool> weaponS;
+    public int[] objectTypeS;
     
     void Start()
     {
@@ -93,6 +123,48 @@ public class SavePlayer : MonoBehaviour
         if (armourValue == 2)
         {
             armourValue = 0.004f;
+        }
+
+        if (saving)
+        {
+            saving = false;
+            if (inventoryObj == null)
+            {
+                inventoryObj = GameObject.Find("InventoryCanvas");
+            }
+            pcharS = characterPositionData;
+            pnameS = playerName;
+            strengthAmtS = strenghtAmountDisplay;
+            manaPowerAmtS = manaAmount;
+            staminaPowerAmtS = staminaAmount;
+            killAmtS = killsAmount;
+            weaponChoiceS = weaponChoice;
+            carryingWeaponS = carringWeapon;
+            armorS = armour;
+            playerLevelS = playerLevel;
+            weaponIncreaseS = weaponIncrease;
+            playerHealthS = playerHleath;
+            strengthIncreaseS = encouragmentIncrease;
+            armorValueS = armourValue;
+            goldS = InventoryItems.totalCoins;
+            for (int i = 0; i < InventoryItems.ItemsQuantities.Count; i++)
+            {
+                itemsQuantitiesS[i] = InventoryItems.ItemsQuantities[i];
+            }
+            magicCollectedS = BookCollect.magicHasCollected;
+            spellsCollectedS = BookCollect.spellsHasCollected;
+            weaponS = inventoryObj.GetComponent<InventoryItems>().weapons;
+            for (int i = 0; i < InventoryItems.ItemsQuantities.Count; i++)
+            {
+                objectTypeS[i] = inventoryObj.GetComponent<InventoryItems>().emptySlots[i].transform.gameObject
+                    .GetComponent<PopUpMessageHandler>().objectID;
+            }
+
+            string saveData = JsonUtility.ToJson(this);
+            string fileLocation = Application.persistentDataPath + "/saveDataFile.dat";
+            StreamWriter writer = new StreamWriter(fileLocation);
+            writer.WriteLine(saveData);
+            writer.Close();
         }
     }
 }

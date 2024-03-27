@@ -8,8 +8,8 @@ public class BookCollect : MonoBehaviour
 {
     [SerializeField] private GameObject spells;
     [SerializeField] private GameObject magic;
-    private bool magicHasCollected = false;
-    private bool spellsHasCollected = false;
+    public static bool magicHasCollected = false;
+    public static bool spellsHasCollected = false;
     [SerializeField] private bool bookForMagic = false;
     [SerializeField] private bool bookForSpells = false;
     [SerializeField] private GameObject gameObjectToRemove;
