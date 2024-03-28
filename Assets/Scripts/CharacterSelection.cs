@@ -50,6 +50,6 @@ public class CharacterSelection : MonoBehaviour
     {
         SavePlayer.playerName = inputPlayerName.text;  //δεν ειναι σωστο το inputPlayerName.ToString(); που είχα δοκιμάσει στην αρχή
         SavePlayer.characterPositionData = characterPosistionOnList;
-        SceneManager.LoadScene(1); //βαζω κατευθειαν το 1 χωρις να λαμβανω ποιο ειναι το current scene κτλ γιατι παντα απο το selection θα πηγαινει στο terrain.
+        SceneManager.LoadScene(2); //βαζω κατευθειαν το 1 χωρις να λαμβανω ποιο ειναι το current scene κτλ γιατι παντα απο το selection θα πηγαινει στο terrain.
     }
 }
