@@ -38,6 +38,9 @@ public class InventoryItems : MonoBehaviour
     public static int newIconID = 0; //Δεχεται το Item Id για να καταχωρηθει στον πινακα και να εμφανιστει στο Inventory
     public static bool hasFreeSpace = true;
     public static int totalCoins = 350; //Συνολο κερματων που εχει ο παικτης
+    [SerializeField] public GameObject magicUI; //gia to save einai na emfanizei to magic diplay ean yparxei sto save h oxi
+    [SerializeField] public GameObject spellsUI;
+    
     
     public static int removeItemWithID; //Στην περιπτωση πωλησης ενος αντικειμενου θα ερθει απο ενα αλλο script
     // το id του ιτεμ το οποιο επιθυμει ο παικτης να πουλησει.
@@ -403,13 +406,15 @@ public class InventoryItems : MonoBehaviour
 
     public void closeMagicRecipesBook()
     {
-        magicBookRecipes.SetActive(false);
         canvas.GetComponent<CreateMagic>().value = 0;
         canvas.GetComponent<CreateMagic>().thisValue = 0;
+        magicBookRecipes.SetActive(false);
     }
     
     public void openMagicRecipesBook()
     {
         magicBookRecipes.SetActive(true);
+        canvas.GetComponent<CreateMagic>().value = 0;
+        canvas.GetComponent<CreateMagic>().thisValue = 0;
     }
 }

@@ -193,11 +193,11 @@ public class SavePlayer : MonoBehaviour
                 if (inventoryObj != null)
                 {
                     playerName = pnameS;
-                    strengthAmtS = strenghtAmountDisplay;
-                    manaPowerAmtS = manaAmount;
-                    staminaPowerAmtS = staminaAmount;
-                    killAmtS = killsAmount;
-                    weaponChoiceS = weaponChoice;
+                    staminaAmountDisplay = strengthIncreaseS;
+                    manaAmount = manaPowerAmtS;
+                    staminaAmount = staminaPowerAmtS;
+                    killsAmount = killAmtS;
+                    weaponChoice = weaponChoiceS;
                     carringWeapon = carryingWeaponS;
                     armour = armorS;
                     playerLevel = playerLevelS;
@@ -210,12 +210,26 @@ public class SavePlayer : MonoBehaviour
                     {
                         InventoryItems.ItemsQuantities[i] = itemsQuantitiesS[i];
                     }
-                    magicCollectedS = BookCollect.magicHasCollected;
-                    spellsCollectedS = BookCollect.spellsHasCollected;
+
+                    BookCollect.magicHasCollected = magicCollectedS;
+                    BookCollect.spellsHasCollected = spellsCollectedS;
+                    if (magicCollectedS)
+                    {
+                        inventoryObj.GetComponent<InventoryItems>().magicUI.SetActive(true);
+                    }
+                    if (spellsCollectedS)
+                    {
+                        inventoryObj.GetComponent<InventoryItems>().spellsUI.SetActive(true);
+                    }
                     inventoryObj.GetComponent<InventoryItems>().weapons = weaponS;
                     if (carringWeapon)
                     {
                         weaponChange = true;
+                    }
+
+                    if (armour > 0)
+                    {
+                        changeArmour = true;
                     }
                     for (int i = 0; i < 16; i++)
                     {
