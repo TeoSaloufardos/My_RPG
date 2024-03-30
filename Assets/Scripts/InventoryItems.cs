@@ -23,7 +23,7 @@ public class InventoryItems : MonoBehaviour
 
     //Πεδια που αφορουν την καταχωρηση αντικειμενων στο inventory 
     [SerializeField] public List<Image> emptySlots; //Πινακας που περιεχει καθε emptySlot (διαθεσιμο slot)
-    [SerializeField] private List<Sprite> icons; //Το συνολογο των αντικειμενων με τα εικονιδια τους
+    [SerializeField] public List<Sprite> icons; //Το συνολογο των αντικειμενων με τα εικονιδια τους
     [SerializeField] private Sprite theEmptySlot; //Οριζω ποιο ειναι το empty slot (πως μοιαζει)
     
     //Βασεις δεδομενων που με βοηθουν στην διαχειρηση των αντικειμενων.

@@ -62,7 +62,19 @@ public class SavePlayer : MonoBehaviour
     
     void Start()
     {
-        DontDestroyOnLoad(this); 
+        DontDestroyOnLoad(this);
+        if (continueData)
+        {
+            string fileLocation = Application.persistentDataPath + "/saveDataFile.dat";
+            StreamReader reader = new StreamReader(fileLocation);
+            string saveData = reader.ReadToEnd();
+            reader.Close();
+            JsonUtility.FromJsonOverwrite(saveData, this);
+
+            characterPositionData = pcharS;
+            continueData = false;
+            checkForLoad = true;
+        }
     }
 
     // Update is called once per frame
@@ -154,7 +166,7 @@ public class SavePlayer : MonoBehaviour
             magicCollectedS = BookCollect.magicHasCollected;
             spellsCollectedS = BookCollect.spellsHasCollected;
             weaponS = inventoryObj.GetComponent<InventoryItems>().weapons;
-            for (int i = 0; i < InventoryItems.ItemsQuantities.Count; i++)
+            for (int i = 0; i < 16; i++)
             {
                 objectTypeS[i] = inventoryObj.GetComponent<InventoryItems>().emptySlots[i].transform.gameObject
                     .GetComponent<PopUpMessageHandler>().objectID;
@@ -162,9 +174,60 @@ public class SavePlayer : MonoBehaviour
 
             string saveData = JsonUtility.ToJson(this);
             string fileLocation = Application.persistentDataPath + "/saveDataFile.dat";
+            Debug.Log(fileLocation);
             StreamWriter writer = new StreamWriter(fileLocation);
             writer.WriteLine(saveData);
             writer.Close();
+        }
+
+        if (checkForLoad)
+        {
+            int sceneID = SceneManager.GetActiveScene().buildIndex;
+            if (sceneID == 2)
+            {
+                if (inventoryObj == null)
+                {
+                    inventoryObj = GameObject.Find("InventoryCanvas");
+                }
+
+                if (inventoryObj != null)
+                {
+                    playerName = pnameS;
+                    strengthAmtS = strenghtAmountDisplay;
+                    manaPowerAmtS = manaAmount;
+                    staminaPowerAmtS = staminaAmount;
+                    killAmtS = killsAmount;
+                    weaponChoiceS = weaponChoice;
+                    carringWeapon = carryingWeaponS;
+                    armour = armorS;
+                    playerLevel = playerLevelS;
+                    weaponIncrease = weaponIncreaseS;
+                    playerHleath = playerHealthS;
+                    encouragmentIncrease = strengthIncreaseS;
+                    armourValue = armorValueS;
+                    InventoryItems.totalCoins = goldS;
+                    for (int i = 0; i < InventoryItems.ItemsQuantities.Count; i++)
+                    {
+                        InventoryItems.ItemsQuantities[i] = itemsQuantitiesS[i];
+                    }
+                    magicCollectedS = BookCollect.magicHasCollected;
+                    spellsCollectedS = BookCollect.spellsHasCollected;
+                    inventoryObj.GetComponent<InventoryItems>().weapons = weaponS;
+                    if (carringWeapon)
+                    {
+                        weaponChange = true;
+                    }
+                    for (int i = 0; i < 16; i++)
+                    {
+                        inventoryObj.GetComponent<InventoryItems>().emptySlots[i].sprite =
+                            inventoryObj.GetComponent<InventoryItems>().icons[objectTypeS[i]];
+                        inventoryObj.GetComponent<InventoryItems>().emptySlots[i].transform.gameObject
+                            .GetComponent<PopUpMessageHandler>().objectID = objectTypeS[i];
+                    }
+
+                    checkForLoad = false;
+                }
+            }
         }
     }
 }

@@ -26,11 +26,12 @@ public class MainMenu : MonoBehaviour
         loadingScreen.SetActive(true);
         saveObject.SetActive(true);
         SavePlayer.continueData = true;
-        StartCoroutine(WaitToLoad());
+        StartCoroutine(WaitToLoad(2));
     }
     public void newGame()
     {
-        SceneManager.LoadScene(2);
+        loadingScreen.SetActive(true);
+        StartCoroutine(WaitToLoad(1));
     }
 
     public void quitGame()
@@ -38,10 +39,10 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
     
-    IEnumerator WaitToLoad()
+    IEnumerator WaitToLoad(int sceneID)
     {
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(sceneID);
     }
 
     // Update is called once per frame
