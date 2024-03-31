@@ -31,6 +31,8 @@ public class MainMenu : MonoBehaviour
     public void newGame()
     {
         loadingScreen.SetActive(true);
+        SavePlayer.playerHleath = 1.0f;
+        SavePlayer.newGame = true;
         StartCoroutine(WaitToLoad(1));
     }
 

@@ -31,6 +31,7 @@ public class SavePlayer : MonoBehaviour
     public static int encouragmentIncrease = 0;
     public static float armourValue = 0;
     public static int enemiesOnScreen;
+    public static bool newGame = false;
 
     public static bool saving = false;
     public static bool continueData = false;
@@ -63,6 +64,37 @@ public class SavePlayer : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(this);
+        if (newGame)
+        {
+            playerName = "player";
+            manaAmount = 1.0f;
+            staminaAmount = 1.0f;
+            strenghtAmountDisplay = 0.1f;
+            manaAmountDisplay = 0.1f;
+            staminaAmount = 0.1f;
+            invisible = false;
+            invulnarable = false;
+            killsAmount = 0;
+            weaponChoice = 0;
+            weaponChange = false;
+            carringWeapon = false;
+            armour = 0;
+            changeArmour = false;
+            playerLevel = 0.1f;
+            weaponIncrease = 0;
+            playerHleath = 1.0f;
+            strenghtAmountDisplay = 0;
+            armourValue = 0;
+            enemiesOnScreen = 0;
+            BookCollect.magicHasCollected = false;
+            BookCollect.spellsHasCollected = false;
+            for (int i = 0; i < InventoryItems.ItemsQuantities.Count; i++)
+            {
+                InventoryItems.ItemsQuantities[i] = 0;
+            }
+            
+            InventoryItems.totalCoins = 250;
+        }
         if (continueData)
         {
             string fileLocation = Application.persistentDataPath + "/saveDataFile.dat";
@@ -110,6 +142,11 @@ public class SavePlayer : MonoBehaviour
         if (staminaAmount <= 0)
         {
             staminaAmount = 0;
+        }
+
+        if (playerHleath <= 1.0)
+        {
+            playerHleath += playerHleath * 0.0005f;
         }
         if (SavePlayer.manaAmount < 0.03)
         {

@@ -20,6 +20,8 @@ public class InventoryItems : MonoBehaviour
     [SerializeField] public AudioClip buySound;
     [SerializeField] public AudioClip createMagicSound;
     [SerializeField] public AudioClip pickUpSound;
+    [SerializeField] private GameObject optionsScreen;
+    private bool optionOpen = false;
 
     //Πεδια που αφορουν την καταχωρηση αντικειμενων στο inventory 
     [SerializeField] public List<Image> emptySlots; //Πινακας που περιεχει καθε emptySlot (διαθεσιμο slot)
@@ -37,7 +39,7 @@ public class InventoryItems : MonoBehaviour
     private int maxSizeOfEmptySlots; //Κραταει το maxSize των διαθεσιμων slots
     public static int newIconID = 0; //Δεχεται το Item Id για να καταχωρηθει στον πινακα και να εμφανιστει στο Inventory
     public static bool hasFreeSpace = true;
-    public static int totalCoins = 350; //Συνολο κερματων που εχει ο παικτης
+    public static int totalCoins = 250; //Συνολο κερματων που εχει ο παικτης
     [SerializeField] public GameObject magicUI; //gia to save einai na emfanizei to magic diplay ean yparxei sto save h oxi
     [SerializeField] public GameObject spellsUI;
     
@@ -94,6 +96,7 @@ public class InventoryItems : MonoBehaviour
     
     void Start()
     {
+        optionsScreen.SetActive(false);
         //desertMushrooms = 0;
         //roots = 0;
         
@@ -113,11 +116,16 @@ public class InventoryItems : MonoBehaviour
         maxFour = messages.Length;
         
         
-        //μεταφερω τα δεδομενα απο τον πινακα στο unity σε εναν static για να ειναι κοινος σε ολα τα scripts και
-        //αμεταβλητος.
+        //μεταφερω τα δεδομενα απο τον πινακα στο unity σε εναν static για να ειναι κοινος σε ολα τα scripts.
         for (int i = 0; i < transferItemNames.Count; i++) 
         {
             itemNames.Add(transferItemNames[i]);
+        }
+
+        if (SavePlayer.newGame)
+        {
+            newIconID = 0;
+            iconUpdate = false;
         }
         secondMax = itemNames.Count;
         thirdMax = emptySlots.Count;
@@ -158,6 +166,10 @@ public class InventoryItems : MonoBehaviour
     
     void Update()
     {
+        if (SavePlayer.newGame)
+        {
+            SavePlayer.newGame = false;
+        }
         playerInfo = playerAnimator.GetCurrentAnimatorStateInfo(1);
         healthImage.fillAmount = SavePlayer.playerHleath;
         
@@ -279,6 +291,21 @@ public class InventoryItems : MonoBehaviour
         // {
         //     removeIcon(13);
         // }
+    }
+
+    public void openCloseOptions()
+    {
+        if (optionOpen == false)
+        {
+            optionsScreen.SetActive(true);
+            Time.timeScale = 0;
+            optionOpen = true;
+        }else if (optionOpen)
+        {
+            optionsScreen.SetActive(false);
+            Time.timeScale = 1;
+            optionOpen = false;
+        }
     }
 
     public void openMenu()

@@ -97,17 +97,17 @@ public class PopUpMessageHandler : MonoBehaviour, IPointerEnterHandler, IPointer
                 }
                 if (objectID == 11)
                 {
-                    SavePlayer.playerHleath += 0.05f;
+                    SavePlayer.playerHleath += 0.08f;
                     consumeItem(11);
                 }
                 if (objectID == 12)
                 {
-                    SavePlayer.playerHleath += 0.08f;
+                    SavePlayer.playerHleath += 0.12f;
                     consumeItem(12);
                 }
                 if (objectID == 13)
                 {
-                    SavePlayer.playerHleath += 0.12f;
+                    SavePlayer.playerHleath += 0.25f;
                     consumeItem(13);
                 }
             }
