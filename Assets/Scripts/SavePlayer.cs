@@ -32,6 +32,12 @@ public class SavePlayer : MonoBehaviour
     public static float armourValue = 0;
     public static int enemiesOnScreen;
     public static bool newGame = false;
+    
+    //ΝΕΑ ΠΕΔΙΑ ΝΑ ΤΑ ΚΑΝΩ save οταν τελειωσω
+    public static int correctAnswers = 0;
+    public static int wrongAnswers = 0;
+
+    public static float answersLevel = 0f;
 
     public static bool saving = false;
     public static bool continueData = false;
@@ -63,6 +69,8 @@ public class SavePlayer : MonoBehaviour
     
     void Start()
     {
+        Debug.Log("Questions level: " + answersLevel);
+        Debug.Log("Correct: " + correctAnswers);
         DontDestroyOnLoad(this);
         if (newGame)
         {

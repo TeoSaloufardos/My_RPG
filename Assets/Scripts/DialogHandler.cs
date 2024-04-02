@@ -19,6 +19,7 @@ public class DialogHandler: MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public static int rewardInCoins; //εδω θα στελνω παλι απο το speechbox το ποσα coins θα πρεπει να λαβει ο παικτης απο την σωστη του απαντηση.
     public static string correctAnswer; //εδω θα ερχεται η σωστη απαντηση και θα δινεται στον παικτη οταν δεν μπορει να απαντησει σωστα.
     public static string alternativeMessage;
+    public static int overrideLevel = -1;
     public static GameObject shopToOpen;
     //το προβλημα με αυτην την λογικη ειναι πως σε περιπτωση επεκτασης του παιχνιδιου δεν δινεται η δυνατοτητα απλης προσθηκης νεου action το οποιο θα
     //ενημερωσει ταυτοχρονα και το switch statement αλλα χρειαζεται παρεμβαση καποιου που μπορει να γραψει κωδικα.
@@ -37,8 +38,20 @@ public class DialogHandler: MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         if (buttonId == correctAnswerId) // Ελεγχει εαν το κουμπι που πατηθηκε ειναι το 
         //σωστο κουμπι και εαν ειναι τοτε δινει στον παικτη την ανταμοιβη του που οριζεται απο το σκριπτ speechbox.
         {
+            if (overrideLevel != -1)
+            {
+                rewardInCoins = rewardInCoins * (overrideLevel / 10);
+            }
+            else
+            {
+                rewardInCoins = (int) (rewardInCoins * (SavePlayer.answersLevel + 1f));
+            }
             greetingsAndQuestion.text = ("Μπράβο σου απάντησες σωστά και ως ανταμοιβή έλαβες " + rewardInCoins + " νομίσματα.");
+            SavePlayer.correctAnswers += 1;
+            SavePlayer.answersLevel += 0.02f;
             InventoryItems.totalCoins += rewardInCoins;
+            Debug.Log("Questions level: " + SavePlayer.answersLevel);
+            Debug.Log("Correct: " + SavePlayer.correctAnswers);
             foreach (var button in allButtons)//μολις απαντησει σωστα κλεινω ολα τα μηνυματα και κουμπια.
             {
                 button.gameObject.SetActive(false);
@@ -47,6 +60,8 @@ public class DialogHandler: MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         }else if (buttonId != correctAnswerId)
         {
             greetingsAndQuestion.text = ("Η σωστή απάντηση είναι: " + correctAnswer);
+            SavePlayer.wrongAnswers++;
+            SavePlayer.answersLevel -= 0.02f;
             gameObject.SetActive(false);
             foreach (var button in allButtons)
             {
