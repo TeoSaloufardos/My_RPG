@@ -8,7 +8,7 @@ public class SpawnEnemies : MonoBehaviour
     [SerializeField] private GameObject[] enemies;
     [SerializeField] private Transform[] spawnPoints;
     [SerializeField] private GameObject myCamera;
-    private bool canSpawn = true;
+    [HideInInspector] public bool canSpawn = true;
     [SerializeField] private bool respawn;
 
     private void OnTriggerEnter(Collider other)

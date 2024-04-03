@@ -36,8 +36,9 @@ public class SavePlayer : MonoBehaviour
     //ΝΕΑ ΠΕΔΙΑ ΝΑ ΤΑ ΚΑΝΩ save οταν τελειωσω
     public static int correctAnswers = 0;
     public static int wrongAnswers = 0;
-
     public static float answersLevel = 0f;
+    public static bool firstStageCompleted = false;
+    public static bool secondStageCompleted = false;
 
     public static bool saving = false;
     public static bool continueData = false;
@@ -154,7 +155,7 @@ public class SavePlayer : MonoBehaviour
 
         if (playerHleath <= 1.0)
         {
-            playerHleath += playerHleath * 0.0005f;
+            playerHleath += 0.003f * Time.deltaTime;
         }
         if (SavePlayer.manaAmount < 0.03)
         {
