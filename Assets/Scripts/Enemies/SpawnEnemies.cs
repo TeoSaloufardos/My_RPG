@@ -22,8 +22,8 @@ public class SpawnEnemies : MonoBehaviour
                 {
                     Instantiate(enemies[i], spawnPoints[i].position, spawnPoints[i].rotation);// kanei spawn ta enemies stis topothesies pou einai ta spawnpoints.
                     SavePlayer.enemiesOnScreen++;
-                    myCamera.GetComponent<AudioHandler>().musicState = 3;// epilegei na paiksei thn mousikh polemou
-                    myCamera.GetComponent<AudioHandler>().canPlay = true;
+                    // myCamera.GetComponent<AudioHandler>().musicState = 3;// epilegei na paiksei thn mousikh polemou
+                    // myCamera.GetComponent<AudioHandler>().canPlay = true;
                 }
             }
         }
@@ -40,8 +40,8 @@ public class SpawnEnemies : MonoBehaviour
                 {
                     canSpawn = true;
                 }
-                myCamera.GetComponent<AudioHandler>().musicState = 1;// epilegei na paiksei thn mousikh polemou
-                myCamera.GetComponent<AudioHandler>().canPlay = true;
+                // myCamera.GetComponent<AudioHandler>().musicState = 1;// epilegei na paiksei thn mousikh polemou
+                // myCamera.GetComponent<AudioHandler>().canPlay = true;
             }
         }
     }

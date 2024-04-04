@@ -20,6 +20,7 @@ public class DialogHandler: MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public static string correctAnswer; //εδω θα ερχεται η σωστη απαντηση και θα δινεται στον παικτη οταν δεν μπορει να απαντησει σωστα.
     public static string alternativeMessage;
     public static int overrideLevel = -1;
+    public static int itemID = -1;
     public static GameObject shopToOpen;
     //το προβλημα με αυτην την λογικη ειναι πως σε περιπτωση επεκτασης του παιχνιδιου δεν δινεται η δυνατοτητα απλης προσθηκης νεου action το οποιο θα
     //ενημερωσει ταυτοχρονα και το switch statement αλλα χρειαζεται παρεμβαση καποιου που μπορει να γραψει κωδικα.
@@ -46,7 +47,21 @@ public class DialogHandler: MonoBehaviour, IPointerEnterHandler, IPointerExitHan
             {
                 rewardInCoins = (int) (rewardInCoins * (SavePlayer.answersLevel + 1f));
             }
-            greetingsAndQuestion.text = ("Μπράβο σου απάντησες σωστά και ως ανταμοιβή έλαβες " + rewardInCoins + " νομίσματα.");
+            string prize = "Μπράβο σου απάντησες σωστά και ως ανταμοιβή έλαβες " + rewardInCoins + " νομίσματα.";
+            if (itemID > 0)
+            {
+                if (InventoryItems.hasFreeSpace == false)
+                {
+                    prize += " Δυστυχώς όμως δεν είχες αρκετό χώρο στο inventory σου για να λάβεις και το αντικείμενο που σου έκανα δώρο.";
+                }
+                else
+                {
+                    addItemToInventory(itemID);
+                    itemID = -1;
+                    prize += " Επίσης κέρδισες και ένα αντικείμενο στο inventory σου.";
+                }
+            }
+            greetingsAndQuestion.text = (prize);
             SavePlayer.correctAnswers += 1;
             SavePlayer.answersLevel += 0.02f;
             InventoryItems.totalCoins += rewardInCoins;
@@ -82,6 +97,16 @@ public class DialogHandler: MonoBehaviour, IPointerEnterHandler, IPointerExitHan
             return;
         }
         shopToOpen.SetActive(true);
+    }
+    
+    public void addItemToInventory(int item)
+    {
+        if (InventoryItems.ItemsQuantities[item] == 0)//Ιδια διαδικασια και με το itemPickUp
+        {
+            InventoryItems.newIconID = item; 
+            InventoryItems.iconUpdate = true;
+        }
+        InventoryItems.ItemsQuantities[item] += 1;
     }
     
     

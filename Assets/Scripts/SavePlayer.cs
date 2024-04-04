@@ -39,6 +39,12 @@ public class SavePlayer : MonoBehaviour
     public static float answersLevel = 0f;
     public static bool firstStageCompleted = false;
     public static bool secondStageCompleted = false;
+    public static bool thirdStageCompleted = false;
+
+    public static int desertKills;
+    public static int witchForestKills;
+    public static int mountainForestKills;
+    public static int villageKills;
 
     public static bool saving = false;
     public static bool continueData = false;
@@ -136,6 +142,15 @@ public class SavePlayer : MonoBehaviour
 
     public void Update()
     {
+        if (wrongAnswers < 0)
+        {
+            wrongAnswers = 0;
+        }
+
+        if (correctAnswers > 100)
+        {
+            correctAnswers = 100;
+        }
         if (manaAmount < 1.0)
         {
             manaAmount += ( manaAmountDisplay/10 + 0.040f ) * Time.deltaTime; //gemizei ton eauto tou otan paei katw apo to 100% san regen.

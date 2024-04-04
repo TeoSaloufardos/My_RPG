@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -20,6 +20,8 @@ public class SpeechBox : MonoBehaviour
     //Πεδια χρησιμα για ερωτησεις προς τον παικτη
     [Header("In case of question fill the followings.")]
     [SerializeField] private int coinsAsPrize = 20;//Τα νομισματα που θα δινονται στην σωστη απαντηση, default ειναι τα 20
+    [SerializeField] private bool itemAsPrize = false;
+    [SerializeField] private int itemID;
     [Range(1,3)] [SerializeField] private int amountOfQuestions = 1; //orizetai poses erwthseis mporoun na ginoun apo auton ton npc
     [Range(0,4)] [SerializeField] private int questionPoolLevel = 0; //Επιλογή ανάμεσα σε 1 (απλές ερωτήσεις), 2 (Δύσκολες ερωτήσεις θεωρίας), 3 (Γρήγορες ασκήσεις) και 4 (Θέματα θεωριτικά πανελλαδικών).
     [Header("Choose the answer buttons for a question.")]
@@ -91,25 +93,29 @@ public class SpeechBox : MonoBehaviour
                 {  
                     if (SavePlayer.answersLevel >= 0 && SavePlayer.answersLevel < 0.25)
                     {
+                        Debug.Log("1");
                         prepareTheQuestion(1);
                     }else if (SavePlayer.answersLevel >= 0.25 && SavePlayer.answersLevel < 0.50)
                     {
+                        Debug.Log("2");
                         prepareTheQuestion(1);
                     }else if (SavePlayer.answersLevel >= 0.50 && SavePlayer.answersLevel < 0.75)
                     {
+                        Debug.Log("3");
                         prepareTheQuestion(2);
                     }
                     else
                     {
+                        Debug.Log("4");
                         prepareTheQuestion(4);
                     }
                 }
-                question = QuestionsDatabase.questionsLevel1[0][0];
-                answer1 = QuestionsDatabase.questionsLevel1[0][1];
-                answer2 = QuestionsDatabase.questionsLevel1[0][2];
-                answer3 = QuestionsDatabase.questionsLevel1[0][3];
-                answer4 = QuestionsDatabase.questionsLevel1[0][4];
-                correctAnswer = int.Parse(QuestionsDatabase.questionsLevel1[0][5]);
+                // question = QuestionsDatabase.questionsLevel1[0][0];
+                // answer1 = QuestionsDatabase.questionsLevel1[0][1];
+                // answer2 = QuestionsDatabase.questionsLevel1[0][2];
+                // answer3 = QuestionsDatabase.questionsLevel1[0][3];
+                // answer4 = QuestionsDatabase.questionsLevel1[0][4];
+                // correctAnswer = int.Parse(QuestionsDatabase.questionsLevel1[0][5]);
                 
                 //ληψη ερωτησης, απαντησεων και σωστς απαντησης απο τα δεδομενα.
                 displayAnswerOne.GetComponentInChildren<Text>().text = answer1;
@@ -122,6 +128,10 @@ public class SpeechBox : MonoBehaviour
                 DialogHandler.correctAnswer = QuestionsDatabase.questionsLevel1[0][correctAnswer];
                 DialogHandler.correctAnswerId = correctAnswer;
                 DialogHandler.rewardInCoins = coinsAsPrize;
+                if (itemAsPrize)
+                {
+                    DialogHandler.itemID = itemID;
+                }
                 amountOfQuestions -= 1; //μειωνεται το ποσο των ερωτησεων γιατι εχει εμφανιστει μια 
                 Time.timeScale = 0; //γινεται pause του χρονου μεχρι να απαντησει ο παικτης
             }
@@ -162,36 +172,44 @@ public class SpeechBox : MonoBehaviour
         switch (level)
         {
             case 1:
-                question = QuestionsDatabase.questionsLevel1[Random.Range(0,2)][0];
-                answer1 = QuestionsDatabase.questionsLevel1[Random.Range(0,2)][1];
-                answer2 = QuestionsDatabase.questionsLevel1[Random.Range(0,2)][2];
-                answer3 = QuestionsDatabase.questionsLevel1[Random.Range(0,2)][3];
-                answer4 = QuestionsDatabase.questionsLevel1[Random.Range(0,2)][4];
-                correctAnswer = int.Parse(QuestionsDatabase.questionsLevel1[0][5]);
+                Debug.Log("1q");
+                int randomQuestionOne = Random.Range(0, 2);
+                question = QuestionsDatabase.questionsLevel1[randomQuestionOne][0];
+                answer1 = QuestionsDatabase.questionsLevel1[randomQuestionOne][1];
+                answer2 = QuestionsDatabase.questionsLevel1[randomQuestionOne][2];
+                answer3 = QuestionsDatabase.questionsLevel1[randomQuestionOne][3];
+                answer4 = QuestionsDatabase.questionsLevel1[randomQuestionOne][4];
+                correctAnswer = int.Parse(QuestionsDatabase.questionsLevel1[randomQuestionOne][5]);
                 break;
             case 2:
-                question = QuestionsDatabase.questionsLevel2[Random.Range(0,30)][0];
-                answer1 = QuestionsDatabase.questionsLevel2[Random.Range(0,30)][1];
-                answer2 = QuestionsDatabase.questionsLevel2[Random.Range(0,30)][2];
-                answer3 = QuestionsDatabase.questionsLevel2[Random.Range(0,30)][3];
-                answer4 = QuestionsDatabase.questionsLevel2[Random.Range(0,30)][4];
-                correctAnswer = int.Parse(QuestionsDatabase.questionsLevel2[0][5]);
+                Debug.Log("2q");
+                int randomQuestionTwo = Random.Range(0, 2);
+                question = QuestionsDatabase.questionsLevel2[randomQuestionTwo][0];
+                answer1 = QuestionsDatabase.questionsLevel2[randomQuestionTwo][1];
+                answer2 = QuestionsDatabase.questionsLevel2[randomQuestionTwo][2];
+                answer3 = QuestionsDatabase.questionsLevel2[randomQuestionTwo][3];
+                answer4 = QuestionsDatabase.questionsLevel2[randomQuestionTwo][4];
+                correctAnswer = int.Parse(QuestionsDatabase.questionsLevel2[randomQuestionTwo][5]);
                 break;
             case 3:
-                question = QuestionsDatabase.questionsLevel3[Random.Range(0,30)][0];
-                answer1 = QuestionsDatabase.questionsLevel3[Random.Range(0,30)][1];
-                answer2 = QuestionsDatabase.questionsLevel3[Random.Range(0,30)][2];
-                answer3 = QuestionsDatabase.questionsLevel3[Random.Range(0,30)][3];
-                answer4 = QuestionsDatabase.questionsLevel3[Random.Range(0,30)][4];
-                correctAnswer = int.Parse(QuestionsDatabase.questionsLevel3[0][5]);
+                Debug.Log("3q");
+                int randomQuestionThree = Random.Range(0, 2);
+                question = QuestionsDatabase.questionsLevel3[randomQuestionThree][0];
+                answer1 = QuestionsDatabase.questionsLevel3[randomQuestionThree][1];
+                answer2 = QuestionsDatabase.questionsLevel3[randomQuestionThree][2];
+                answer3 = QuestionsDatabase.questionsLevel3[randomQuestionThree][3];
+                answer4 = QuestionsDatabase.questionsLevel3[randomQuestionThree][4];
+                correctAnswer = int.Parse(QuestionsDatabase.questionsLevel3[randomQuestionThree][5]);
                 break;
             case 4:
-                question = QuestionsDatabase.questionsLevel4Panel[Random.Range(0,30)][0];
-                answer1 = QuestionsDatabase.questionsLevel4Panel[Random.Range(0,30)][1];
-                answer2 = QuestionsDatabase.questionsLevel4Panel[Random.Range(0,30)][2];
-                answer3 = QuestionsDatabase.questionsLevel4Panel[Random.Range(0,30)][3];
-                answer4 = QuestionsDatabase.questionsLevel4Panel[Random.Range(0,30)][4];
-                correctAnswer = int.Parse(QuestionsDatabase.questionsLevel4Panel[0][5]);
+                Debug.Log("4q");
+                int randomQuestionFour = Random.Range(0, 2);
+                question = QuestionsDatabase.questionsLevel4Panel[randomQuestionFour][0];
+                answer1 = QuestionsDatabase.questionsLevel4Panel[randomQuestionFour][1];
+                answer2 = QuestionsDatabase.questionsLevel4Panel[randomQuestionFour][2];
+                answer3 = QuestionsDatabase.questionsLevel4Panel[randomQuestionFour][3];
+                answer4 = QuestionsDatabase.questionsLevel4Panel[randomQuestionFour][4];
+                correctAnswer = int.Parse(QuestionsDatabase.questionsLevel4Panel[randomQuestionFour][5]);
                 break;
         }
     }
