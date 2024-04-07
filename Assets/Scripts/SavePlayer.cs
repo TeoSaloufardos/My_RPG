@@ -40,12 +40,12 @@ public class SavePlayer : MonoBehaviour
     public static bool firstStageCompleted = false;
     public static bool secondStageCompleted = false;
     public static bool thirdStageCompleted = false;
-
     public static int desertKills;
     public static int witchForestKills;
     public static int mountainForestKills;
     public static int villageKills;
 
+    // ===============================
     public static bool saving = false;
     public static bool continueData = false;
     private bool checkForLoad = false;
@@ -142,14 +142,14 @@ public class SavePlayer : MonoBehaviour
 
     public void Update()
     {
-        if (wrongAnswers < 0)
+        if (answersLevel < 0f)
         {
-            wrongAnswers = 0;
+            answersLevel = 0f;
         }
 
-        if (correctAnswers > 100)
+        if (answersLevel > 1f)
         {
-            correctAnswers = 100;
+            answersLevel = 1f;
         }
         if (manaAmount < 1.0)
         {

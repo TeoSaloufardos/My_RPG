@@ -22,6 +22,7 @@ public class SpeechBox : MonoBehaviour
     [SerializeField] private int coinsAsPrize = 20;//Τα νομισματα που θα δινονται στην σωστη απαντηση, default ειναι τα 20
     [SerializeField] private bool itemAsPrize = false;
     [SerializeField] private int itemID;
+    [SerializeField] private bool withDialog = true; //ean tha uparksei enas mikros dialogos apo prin. PANTA THA EINAI TRUE se auto to version tou project. 
     [Range(1,3)] [SerializeField] private int amountOfQuestions = 1; //orizetai poses erwthseis mporoun na ginoun apo auton ton npc
     [Range(0,4)] [SerializeField] private int questionPoolLevel = 0; //Επιλογή ανάμεσα σε 1 (απλές ερωτήσεις), 2 (Δύσκολες ερωτήσεις θεωρίας), 3 (Γρήγορες ασκήσεις) και 4 (Θέματα θεωριτικά πανελλαδικών).
     [Header("Choose the answer buttons for a question.")]
@@ -49,6 +50,9 @@ public class SpeechBox : MonoBehaviour
     [SerializeField] private GameObject shopOrMenu;
 
     [SerializeField] private bool justDialog; //εαν επιλεγει αυτο τοτε μπορει να μην υπαρχει καποιο καταστημα αλλα θα υπαρξει ενας διαλογος
+
+    private List<Button> questionsToBePassed = new List<Button>();
+    private int totalAvailableQuestions;
     
     // private enum Actions//επιλογες για ενα drop down menu μεσω του unity ετσι ωστε κατα τον ελεγχο του action να μην γινεται σφαλμα.
     // {
@@ -76,15 +80,15 @@ public class SpeechBox : MonoBehaviour
         {
             //εαν εξαντληθουν οι ερωτησεις που μπορουν να γινουν στον χρηστη δεν τον επιτρεπει να δει και να απαντησει αλλες. Το ποσες μπορει να λαβει ο χρηστης
             //δηλωνεται στην μεταβλητη αυτη.
-            if (shopOrMenu == null && !justDialog)//Εαν επιλεγει απο τον editor το question τοτε γινεται η διαδικασια για την εμφανιση των καταλληλων αντικειμενων για την περιπτωηση της ερωτησης που θελει απαντηση.
+            if (shopOrMenu == null && !justDialog && withDialog)//Εαν επιλεγει απο τον editor το question τοτε γινεται η διαδικασια για την εμφανιση των καταλληλων αντικειμενων για την περιπτωηση της ερωτησης που θελει απαντηση.
             {
                 if (amountOfQuestions == 0) { UiMessageHandler.passedMessage = "Έχουν εξαντληθεί οι διαθέσιμες ερωτήσεις από αυτόν τον NPC."; return; }
-                questionOne.gameObject.SetActive(false);
+                questionOne.gameObject.SetActive(true);
                 questionTwo.gameObject.SetActive(false);
-                displayAnswerOne.gameObject.SetActive(true);
-                displayAnswerTwo.gameObject.SetActive(true);
-                displayAnswerThree.gameObject.SetActive(true);
-                displayAnswerFour.gameObject.SetActive(true);
+                displayAnswerOne.gameObject.SetActive(false);
+                displayAnswerTwo.gameObject.SetActive(false);
+                displayAnswerThree.gameObject.SetActive(false);
+                displayAnswerFour.gameObject.SetActive(false);
                 if (questionPoolLevel != 0) //ΕΠΙΛΕΓΟΝΤΑΣ QUESTIONPOOLLEVEL ΑΠΟ ΤΟΝ editor γινεται override του questiolevel
                 {
                     prepareTheQuestion(questionPoolLevel);
@@ -104,36 +108,41 @@ public class SpeechBox : MonoBehaviour
                         Debug.Log("3");
                         prepareTheQuestion(2);
                     }
-                    else
+                    else if (SavePlayer.answersLevel >= 0.75 && SavePlayer.answersLevel <= 1)
                     {
                         Debug.Log("4");
                         prepareTheQuestion(4);
                     }
                 }
-                // question = QuestionsDatabase.questionsLevel1[0][0];
-                // answer1 = QuestionsDatabase.questionsLevel1[0][1];
-                // answer2 = QuestionsDatabase.questionsLevel1[0][2];
-                // answer3 = QuestionsDatabase.questionsLevel1[0][3];
-                // answer4 = QuestionsDatabase.questionsLevel1[0][4];
-                // correctAnswer = int.Parse(QuestionsDatabase.questionsLevel1[0][5]);
                 
                 //ληψη ερωτησης, απαντησεων και σωστς απαντησης απο τα δεδομενα.
+                questionOne.GetComponentInChildren<Text>().text = choiceOneToDisplay; //Εμφανιζει το μηνυμα 1
+                
+                //pernaei tis erwthseis sto handler etsi wste na ta emfanisei meta otan ginei o dialogos
                 displayAnswerOne.GetComponentInChildren<Text>().text = answer1;
+                questionsToBePassed.Add(displayAnswerOne);
                 displayAnswerTwo.GetComponentInChildren<Text>().text = answer2;
+                questionsToBePassed.Add(displayAnswerTwo);
                 displayAnswerThree.GetComponentInChildren<Text>().text = answer3;
+                questionsToBePassed.Add(displayAnswerThree);
                 displayAnswerFour.GetComponentInChildren<Text>().text = answer4;
-                greetingsQuestion.text = (question + " [" + amountOfQuestions + "]");
+                questionsToBePassed.Add(displayAnswerFour);
+                greetingsQuestion.text = greetingsMessage;
                 
                 //εδω περνιουνται τα δεδομενα στο script dialoghandler που διαχειριζεται τα κουμπια.
-                DialogHandler.correctAnswer = QuestionsDatabase.questionsLevel1[0][correctAnswer];
+                // DialogHandler.correctAnswer = QuestionsDatabase.questionsLevel1[0][correctAnswer];
+                DialogHandler.dialogFirstThenQuestions = true;
                 DialogHandler.correctAnswerId = correctAnswer;
                 DialogHandler.rewardInCoins = coinsAsPrize;
+                DialogHandler.passedQuestions = questionsToBePassed;
+                DialogHandler.passedGreetingText = greetingsQuestion;
+                DialogHandler.answerOneDisplay = questionOne;
+                DialogHandler.passedQuestion = (question + " [" + amountOfQuestions + "/" + totalAvailableQuestions + "]");
                 if (itemAsPrize)
                 {
                     DialogHandler.itemID = itemID;
                 }
                 amountOfQuestions -= 1; //μειωνεται το ποσο των ερωτησεων γιατι εχει εμφανιστει μια 
-                Time.timeScale = 0; //γινεται pause του χρονου μεχρι να απαντησει ο παικτης
             }
             else
             {
@@ -167,6 +176,14 @@ public class SpeechBox : MonoBehaviour
         }
     }
 
+    public void Start()
+    {
+        if (shopOrMenu == null)
+        {
+            totalAvailableQuestions = amountOfQuestions;
+        }
+    }
+
     public void prepareTheQuestion(int level)
     { 
         switch (level)
@@ -180,6 +197,7 @@ public class SpeechBox : MonoBehaviour
                 answer3 = QuestionsDatabase.questionsLevel1[randomQuestionOne][3];
                 answer4 = QuestionsDatabase.questionsLevel1[randomQuestionOne][4];
                 correctAnswer = int.Parse(QuestionsDatabase.questionsLevel1[randomQuestionOne][5]);
+                DialogHandler.correctAnswer = QuestionsDatabase.questionsLevel1[randomQuestionOne][correctAnswer];
                 break;
             case 2:
                 Debug.Log("2q");
@@ -190,6 +208,7 @@ public class SpeechBox : MonoBehaviour
                 answer3 = QuestionsDatabase.questionsLevel2[randomQuestionTwo][3];
                 answer4 = QuestionsDatabase.questionsLevel2[randomQuestionTwo][4];
                 correctAnswer = int.Parse(QuestionsDatabase.questionsLevel2[randomQuestionTwo][5]);
+                DialogHandler.correctAnswer = QuestionsDatabase.questionsLevel1[randomQuestionTwo][correctAnswer];
                 break;
             case 3:
                 Debug.Log("3q");
@@ -200,6 +219,7 @@ public class SpeechBox : MonoBehaviour
                 answer3 = QuestionsDatabase.questionsLevel3[randomQuestionThree][3];
                 answer4 = QuestionsDatabase.questionsLevel3[randomQuestionThree][4];
                 correctAnswer = int.Parse(QuestionsDatabase.questionsLevel3[randomQuestionThree][5]);
+                DialogHandler.correctAnswer = QuestionsDatabase.questionsLevel1[randomQuestionThree][correctAnswer];
                 break;
             case 4:
                 Debug.Log("4q");
@@ -210,6 +230,7 @@ public class SpeechBox : MonoBehaviour
                 answer3 = QuestionsDatabase.questionsLevel4Panel[randomQuestionFour][3];
                 answer4 = QuestionsDatabase.questionsLevel4Panel[randomQuestionFour][4];
                 correctAnswer = int.Parse(QuestionsDatabase.questionsLevel4Panel[randomQuestionFour][5]);
+                DialogHandler.correctAnswer = QuestionsDatabase.questionsLevel1[randomQuestionFour][correctAnswer];
                 break;
         }
     }

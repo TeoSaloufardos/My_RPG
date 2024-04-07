@@ -25,6 +25,13 @@ public class DialogHandler: MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     //το προβλημα με αυτην την λογικη ειναι πως σε περιπτωση επεκτασης του παιχνιδιου δεν δινεται η δυνατοτητα απλης προσθηκης νεου action το οποιο θα
     //ενημερωσει ταυτοχρονα και το switch statement αλλα χρειαζεται παρεμβαση καποιου που μπορει να γραψει κωδικα.
 
+    public static List<Button> passedQuestions; // einai oi apanthseis pou tha dinontai na epileksei o xrhsths
+    public static Text passedGreetingText; // pernaei to Text object gia na allaxtei h erwthsh meta ton dialogo.
+    public static string passedQuestion; //to passedquestion einai to mhnuma pou kanei replace to greeting message.
+    public static Button answerOneDisplay; // ston dialogo tha emfanisei sto paikth ena koumpi molis paththei tha prepei na 
+    // eksafanistei to koumpi gia na efmanistoun oi apanthseis "passedQuestions". Auto to field ginei prosbash sto koumpi auto.
+    public static bool dialogFirstThenQuestions = false;
+
     public void OnPointerEnter(PointerEventData eventData)
     {
         buttonText.color = messageOn;
@@ -91,12 +98,30 @@ public class DialogHandler: MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         //Ειναι ενας ελεγχος που γινεται σε καθε περιπτωση action και ουσιαστικα εαν ο παικτης επιλεξει για παραδειγμα αντι στην αρχη να πατησει το open....
         //για να ανοιξει το καταστημα, πατησει το να μιλησει με τον npc τοτε σε αυτην την περιπτωση θα εμφανιστει το μηνυμα που εχει προκαθωριστει. Εδω ο ελεγχος ελεγχει εαν
         //πατηθει το κουμπι με το id 6 που αντιστοιχει στο κουμπι αυτο της επικοινωνιας.
-        if (buttonId == 6)
+        if (!dialogFirstThenQuestions) //elegxw ean einai question kai proupothetei oti tha uparksei dialogos pio prin.
         {
-            greetingsAndQuestion.text = alternativeMessage;
-            return;
+            if (buttonId == 6)
+            {
+                greetingsAndQuestion.text = alternativeMessage;
+                return;
+            }
+            shopToOpen.SetActive(true);
         }
-        shopToOpen.SetActive(true);
+        else
+        {
+            if (buttonId == 6)
+            {
+                Time.timeScale = 0; //γινεται pause του χρονου μεχρι να απαντησει ο παικτης
+                foreach (var question in passedQuestions)
+                {
+                    question.gameObject.SetActive(true);
+                }
+                answerOneDisplay.gameObject.SetActive(false);
+                passedGreetingText.text = passedQuestion;
+                dialogFirstThenQuestions = false;
+            }
+        }
+        
     }
     
     public void addItemToInventory(int item)
