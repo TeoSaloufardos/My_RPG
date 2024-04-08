@@ -37,9 +37,16 @@ public class SavePlayer : MonoBehaviour
     public static int correctAnswers = 0;
     public static int wrongAnswers = 0;
     public static float answersLevel = 0f;
+    public static int smallSkeletonKills = 0;
+    public static int bigSkeletonKills = 0;
+    public static int orcRiderKills = 0;
+    public static int pigKills = 0;
+    //desert to save
     public static bool firstStageCompleted = false;
     public static bool secondStageCompleted = false;
     public static bool thirdStageCompleted = false;
+    public static bool fourthStageCompleted = false;
+    
     public static int desertKills;
     public static int witchForestKills;
     public static int mountainForestKills;

@@ -78,6 +78,7 @@ public class DialogHandler: MonoBehaviour, IPointerEnterHandler, IPointerExitHan
             {
                 button.gameObject.SetActive(false);
             }
+            Time.timeScale = 1;
             
         }else if (buttonId != correctAnswerId)
         {
@@ -89,8 +90,8 @@ public class DialogHandler: MonoBehaviour, IPointerEnterHandler, IPointerExitHan
             {
                 button.gameObject.SetActive(false);
             }
+            Time.timeScale = 1;
         }
-        Time.timeScale = 1;
     }
 
     public void doTheAction()

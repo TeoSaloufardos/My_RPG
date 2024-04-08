@@ -29,6 +29,7 @@ public class EnemyMovement : MonoBehaviour
     private float fillHealth;
     [SerializeField] private GameObject mainCam;
     [SerializeField] private GameObject coinsPickUp;
+    [SerializeField] private int enemyID;
     
     void Start()
     {
@@ -134,7 +135,6 @@ public class EnemyMovement : MonoBehaviour
                 fillHealth = enemyHp;
                 fillHealth /= 100.0f;
                 healthBar.fillAmount = fillHealth;
-                Debug.Log("Enemy: fill amount" + healthBar.fillAmount);
             }
         }
 
@@ -156,6 +156,23 @@ public class EnemyMovement : MonoBehaviour
         yield return new WaitForSeconds(1);
         Instantiate(coinsPickUp, transform.position, transform.rotation);
         Destroy(gameObject, 0.2f);
-        SavePlayer.killsAmount++;
+        switch (enemyID)
+        {
+            case 0:
+                SavePlayer.smallSkeletonKills++;
+                break;
+            case 1:
+                SavePlayer.bigSkeletonKills++;
+                break;
+            case 2:
+                SavePlayer.orcRiderKills++;
+                break;
+            case 3:
+                SavePlayer.pigKills++;
+                break;
+            default:
+                SavePlayer.killsAmount++;
+                break;
+        }
     }
 }
