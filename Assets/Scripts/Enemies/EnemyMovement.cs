@@ -160,15 +160,19 @@ public class EnemyMovement : MonoBehaviour
         {
             case 0:
                 SavePlayer.smallSkeletonKills++;
+                SavePlayer.killsAmount++;
                 break;
             case 1:
                 SavePlayer.bigSkeletonKills++;
+                SavePlayer.killsAmount++;
                 break;
             case 2:
                 SavePlayer.orcRiderKills++;
+                SavePlayer.killsAmount++;
                 break;
             case 3:
                 SavePlayer.pigKills++;
+                SavePlayer.killsAmount++;
                 break;
             default:
                 SavePlayer.killsAmount++;

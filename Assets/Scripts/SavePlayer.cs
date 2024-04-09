@@ -46,6 +46,7 @@ public class SavePlayer : MonoBehaviour
     public static bool secondStageCompleted = false;
     public static bool thirdStageCompleted = false;
     public static bool fourthStageCompleted = false;
+    public static bool desertAllCompleted = false;
     
     public static int desertKills;
     public static int witchForestKills;

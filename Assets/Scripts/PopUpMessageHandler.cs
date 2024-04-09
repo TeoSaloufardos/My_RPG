@@ -24,6 +24,8 @@ public class PopUpMessageHandler : MonoBehaviour, IPointerEnterHandler, IPointer
     [SerializeField] private GameObject theCanvas;
     [SerializeField] private bool isMagicType;
     [SerializeField] private bool isSpellType;
+    [SerializeField] private String spellName;
+    [SerializeField] private String spellDescription;
     [SerializeField] private GameObject magicBook;
 
     [SerializeField] private GameObject inventory;
@@ -163,7 +165,12 @@ public class PopUpMessageHandler : MonoBehaviour, IPointerEnterHandler, IPointer
             {
                 itemTitle.text = magicBook.GetComponent<MagicBook>().names[objectID];
                 message.text = magicBook.GetComponent<MagicBook>().descriptions[objectID];
-            }else
+            }else if (isSpellType)
+            {
+                itemTitle.text = spellName;
+                message.text = spellDescription;
+            }
+            else
             {
                 itemTitle.text = InventoryItems.itemNames[objectID];
                 message.text = "Έχεις " + InventoryItems.ItemsQuantities[objectID] + "x " + InventoryItems.itemNames[objectID];
