@@ -24,18 +24,22 @@ public class DesertAllDeeds : MonoBehaviour
     {
         finalDesertNPC.SetActive(false);
         completeMessage.SetActive(false);
+        fenceForNextStage.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (SavePlayer.firstStageCompleted && !collectedBookObject.activeSelf && SavePlayer.smallSkeletonKills >= 5 && SavePlayer.bigSkeletonKills >= 2 && InventoryItems.totalCoins >= 260 && SavePlayer.thirdStageCompleted && InventoryItems.ItemsQuantities[6] >= 15 && InventoryItems.ItemsQuantities[2] >= 5)
+        if ((SavePlayer.firstStageCompleted && !collectedBookObject.activeSelf && SavePlayer.smallSkeletonKills >= 5 &&
+             SavePlayer.bigSkeletonKills >= 2 && InventoryItems.totalCoins >= 260 && SavePlayer.thirdStageCompleted &&
+             InventoryItems.ItemsQuantities[6] >= 15 && InventoryItems.ItemsQuantities[2] >= 5) || SavePlayer.desertAllCompleted)
         {
             finalDesertNPC.SetActive(true);
             foreach (var stage in desertStagesCleaner)
             {
                 Destroy(stage);
             }
+
             foreach (var message in allMessages)
             {
                 Destroy(message);
@@ -43,8 +47,10 @@ public class DesertAllDeeds : MonoBehaviour
             completeMessage.SetActive(true);
             fenceForNextStage.SetActive(false);
             finalDesertNPC.SetActive(true);
+            SavePlayer.desertAllCompleted = true;
             Destroy(this);
         }
+
         if (SavePlayer.firstStageCompleted)
         {
             buyWeapon.GetComponentInChildren<Text>().color = Color.green;

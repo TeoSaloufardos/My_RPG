@@ -15,6 +15,10 @@ public class FourthStage : MonoBehaviour
             fourthStageNPC.SetActive(false);
             Destroy(this);
         }
+        else
+        {
+            fourthStageNPC.SetActive(false);
+        }
     }
 
     // Update is called once per frame

@@ -34,6 +34,7 @@ public class SavePlayer : MonoBehaviour
     public static bool newGame = false;
     
     //ΝΕΑ ΠΕΔΙΑ ΝΑ ΤΑ ΚΑΝΩ save οταν τελειωσω
+    //public 
     public static int correctAnswers = 0;
     public static int wrongAnswers = 0;
     public static float answersLevel = 0f;
@@ -41,6 +42,7 @@ public class SavePlayer : MonoBehaviour
     public static int bigSkeletonKills = 0;
     public static int orcRiderKills = 0;
     public static int pigKills = 0;
+    
     //desert to save
     public static bool firstStageCompleted = false;
     public static bool secondStageCompleted = false;
@@ -48,10 +50,36 @@ public class SavePlayer : MonoBehaviour
     public static bool fourthStageCompleted = false;
     public static bool desertAllCompleted = false;
     
+    public static int DsmallSkeletonKills = 0;
+    public static int DbigSkeletonKills = 0;
+    public static int DorcRiderKills = 0;
+    public static int DpigKills = 0;
+    public static int DcorrectAnswers;
     public static int desertKills;
+    
+    //witch
+    public static int WsmallSkeletonKills = 0;
+    public static int WbigSkeletonKills = 0;
+    public static int WorcRiderKills = 0;
+    public static int WpigKills = 0;
+    public static int WcorrectAnswers;
     public static int witchForestKills;
+    
+    //mountain
+    public static int MsmallSkeletonKills = 0;
+    public static int MbigSkeletonKills = 0;
+    public static int MorcRiderKills = 0;
+    public static int MpigKills = 0;
+    public static int McorrectAnswers;
     public static int mountainForestKills;
-    public static int villageKills;
+    
+    //village
+    public static int VsmallSkeletonKills = 0;
+    public static int VbigSkeletonKills = 0;
+    public static int VorcRiderKills = 0;
+    public static int VpigKills = 0;
+    public static int VcorrectAnswers;
+    public static int VillageKills;
 
     // ===============================
     public static bool saving = false;
