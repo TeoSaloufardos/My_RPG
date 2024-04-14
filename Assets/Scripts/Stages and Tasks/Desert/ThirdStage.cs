@@ -11,7 +11,7 @@ public class ThirdStage : MonoBehaviour
     
     void Start()
     {
-        if (SavePlayer.thirdStageCompleted == false && SavePlayer.secondStageCompleted)
+        if (SavePlayer.thirdStageCompleted == false)
         {
             answerQuestionsNPC.SetActive(true);
             taskToCompleteAllDeeds.SetActive(false);

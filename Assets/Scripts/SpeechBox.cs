@@ -23,8 +23,10 @@ public class SpeechBox : MonoBehaviour
     [SerializeField] private bool itemAsPrize = false;
     [SerializeField] private int itemID;
     [SerializeField] private bool withDialog = true; //ean tha uparksei enas mikros dialogos apo prin. PANTA THA EINAI TRUE se auto to version tou project. 
-    [Range(1,3)] [SerializeField] private int amountOfQuestions = 1; //orizetai poses erwthseis mporoun na ginoun apo auton ton npc
+    [Range(1,15)] [SerializeField] private int amountOfQuestions = 1; //orizetai poses erwthseis mporoun na ginoun apo auton ton npc
     [Range(0,4)] [SerializeField] private int questionPoolLevel = 0; //Επιλογή ανάμεσα σε 1 (απλές ερωτήσεις), 2 (Δύσκολες ερωτήσεις θεωρίας), 3 (Γρήγορες ασκήσεις) και 4 (Θέματα θεωριτικά πανελλαδικών).
+    [SerializeField] private bool techQuestion = false;
+    [SerializeField] private bool ecoQuestion = false;
     [Header("Choose the answer buttons for a question.")]
     [FormerlySerializedAs("answerOne")] [SerializeField] private Button displayAnswerOne;
     [FormerlySerializedAs("answerTwo")] [SerializeField] private Button displayAnswerTwo;
@@ -138,6 +140,8 @@ public class SpeechBox : MonoBehaviour
                 DialogHandler.passedGreetingText = greetingsQuestion;
                 DialogHandler.answerOneDisplay = questionOne;
                 DialogHandler.passedQuestion = (question + " [" + amountOfQuestions + "/" + totalAvailableQuestions + "]");
+                DialogHandler.isTechQuestion = techQuestion;
+                DialogHandler.isEcoQuestion = ecoQuestion;
                 if (itemAsPrize)
                 {
                     DialogHandler.itemID = itemID;
@@ -190,7 +194,22 @@ public class SpeechBox : MonoBehaviour
         {
             case 1:
                 Debug.Log("1q");
+                bool techQuestionHasNotFound = true;
                 int randomQuestionOne = Random.Range(0, 2);
+                if (techQuestion)
+                {
+                    while (techQuestionHasNotFound)
+                    {
+                        if (QuestionsDatabase.questionsLevel1[randomQuestionOne][6] == "T")
+                        {
+                            techQuestionHasNotFound = false;
+                        }
+                        else
+                        {
+                            randomQuestionOne = Random.Range(0, 2);
+                        }
+                    }
+                }
                 question = QuestionsDatabase.questionsLevel1[randomQuestionOne][0];
                 answer1 = QuestionsDatabase.questionsLevel1[randomQuestionOne][1];
                 answer2 = QuestionsDatabase.questionsLevel1[randomQuestionOne][2];

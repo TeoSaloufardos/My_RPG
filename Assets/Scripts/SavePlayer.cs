@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
 
 public class SavePlayer : MonoBehaviour
@@ -66,6 +67,11 @@ public class SavePlayer : MonoBehaviour
     public static int witchForestKills;
     
     //mountain
+    public static bool taskOneCompleted = false;
+    public static bool taskTwoCompleted = false;
+    public static bool taskThreeCompleted = false;
+    public static bool mountainAllCompleted = false;
+    
     public static int MsmallSkeletonKills = 0;
     public static int MbigSkeletonKills = 0;
     public static int MorcRiderKills = 0;

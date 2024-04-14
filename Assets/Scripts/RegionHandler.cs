@@ -6,6 +6,7 @@ using UnityEngine;
 public class RegionHandler : MonoBehaviour
 {
     [SerializeField] private GameObject regionalObject;
+    [SerializeField] private GameObject regionalDeeds;
 
     enum  Region
     {
@@ -22,12 +23,14 @@ public class RegionHandler : MonoBehaviour
     private void Start()
     {
         regionalObject.SetActive(false);
+        regionalDeeds.SetActive(false);
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
-        {
+        { 
+            regionalObject.SetActive(true);
            switch (selectedRegion)
             {
                 case Region.Desert:
@@ -90,6 +93,7 @@ public class RegionHandler : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            regionalObject.SetActive(true);
             switch (selectedRegion)
             {
                 case Region.Desert:

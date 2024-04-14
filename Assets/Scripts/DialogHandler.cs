@@ -14,6 +14,9 @@ public class DialogHandler: MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     [SerializeField] private Color32 messageOn;
 
     [SerializeField] private List<Button> allButtons; //εδω δηλωνονται ολα τα γειτονικα κουμπια που υπαρχουν.
+    [SerializeField] private List<GameObject> weaponsmithPriceTexts;
+    [SerializeField] private List<GameObject> weaponsmithPrices;
+    private List<int> prices;
 
     public static int correctAnswerId; //εδω θα στελνω απο το speechbox το id της σωστης απαντησης οταν προκειται για ερωτηση και για επικοινωνια.
     public static int rewardInCoins; //εδω θα στελνω παλι απο το speechbox το ποσα coins θα πρεπει να λαβει ο παικτης απο την σωστη του απαντηση.
@@ -31,6 +34,8 @@ public class DialogHandler: MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public static Button answerOneDisplay; // ston dialogo tha emfanisei sto paikth ena koumpi molis paththei tha prepei na 
     // eksafanistei to koumpi gia na efmanistoun oi apanthseis "passedQuestions". Auto to field ginei prosbash sto koumpi auto.
     public static bool dialogFirstThenQuestions = false;
+    public static bool isTechQuestion = false;
+    public static bool isEcoQuestion = false;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -46,6 +51,35 @@ public class DialogHandler: MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         if (buttonId == correctAnswerId) // Ελεγχει εαν το κουμπι που πατηθηκε ειναι το 
         //σωστο κουμπι και εαν ειναι τοτε δινει στον παικτη την ανταμοιβη του που οριζεται απο το σκριπτ speechbox.
         {
+            if (isTechQuestion)
+            {
+                // foreach (var priceText in weaponsmithPriceTexts)
+                // {
+                //     string newPriceString = priceText.gameObject.GetComponentInChildren<Text>().ToString();
+                //     print("number as string: " + newPriceString);
+                //     int newPrice = int.Parse(newPriceString);
+                //     print("Price as int: " + newPrice);
+                //     priceText.gameObject.GetComponentInChildren<Text>().text = (newPrice - 15).ToString();
+                // }
+
+                foreach (var price in weaponsmithPrices)
+                {
+                    price.gameObject.GetComponentInChildren<BuyWeapon>().cost =
+                        price.gameObject.GetComponentInChildren<BuyWeapon>().cost - 15;
+                    print(price.gameObject.GetComponentInChildren<BuyWeapon>().cost);
+                    prices.Add(price.gameObject.GetComponentInChildren<BuyWeapon>().cost);
+                }
+
+                for (int i = 0; i < prices.Count; i++)
+                {
+                    weaponsmithPriceTexts[i].gameObject.GetComponentInChildren<Text>().text = prices[i].ToString();
+                    // string newPriceString = priceText.gameObject.GetComponentInChildren<Text>().ToString();
+                    // print("number as string: " + newPriceString);
+                    // int newPrice = int.Parse(newPriceString);
+                    // print("Price as int: " + newPrice);
+                    // priceText.gameObject.GetComponentInChildren<Text>().text = (newPrice - 15).ToString();
+                }
+            }
             if (overrideLevel != -1)
             {
                 rewardInCoins = rewardInCoins * (overrideLevel / 10);

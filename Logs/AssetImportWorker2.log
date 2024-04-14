@@ -1,0 +1,341 @@
+Unity Editor version:    2021.3.25f1 (68ef2c4f8861)
+Branch:                  2021.3/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 14.0 (Build 23A339)
+Darwin version:          23.0.0
+Architecture:            arm64
+Running under Rosetta:   NO
+Available memory:        8192 MB
+Using pre-set license
+Pro License: YES
+
+COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+/Users/teotataris/Documents/GitHub/My_RPG
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+59976
+Successfully changed project path to: /Users/teotataris/Documents/GitHub/My_RPG
+/Users/teotataris/Documents/GitHub/My_RPG
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [8121488128] Host "[IP] 10.4.22.6 [Port] 0 [Flags] 2 [Guid] 3334664412 [EditorId] 3334664412 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air-Teo.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [8121488128] Host "[IP] 10.4.22.6 [Port] 0 [Flags] 2 [Guid] 3334664412 [EditorId] 3334664412 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air-Teo.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 522.71 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.25f1 (68ef2c4f8861)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/teotataris/Documents/GitHub/My_RPG/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+ preferred device: Apple M1 (high power)
+Metal devices available: 1
+0: Apple M1 (high power)
+Using device Apple M1 (high power)
+Initializing Metal device caps: Apple M1
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
+Mono config path = '/Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56125
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.001337 seconds.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 361.73 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.455 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1456ms)
+		BeginReloadAssembly (213ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (2ms)
+		EndReloadAssembly (1052ms)
+			LoadAssemblies (209ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (214ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (74ms)
+			SetupLoadedEditorAssemblies (674ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (362ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (230ms)
+				ProcessInitializeOnLoadMethodAttributes (71ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.004855 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/teotataris/Documents/GitHub/My_RPG/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/teotataris/Documents/GitHub/My_RPG/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 409.04 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.465 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3467ms)
+		BeginReloadAssembly (219ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (10ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (53ms)
+		EndReloadAssembly (3046ms)
+			LoadAssemblies (126ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (740ms)
+			ReleaseScriptCaches (11ms)
+			RebuildScriptCaches (219ms)
+			SetupLoadedEditorAssemblies (1826ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (409ms)
+				BeforeProcessingInitializeOnLoad (266ms)
+				ProcessInitializeOnLoadAttributes (1045ms)
+				ProcessInitializeOnLoadMethodAttributes (98ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launching external process: /Applications/Unity/Hub/Editor/2021.3.25f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.44 seconds
+Refreshing native plugins compatible for Editor in 4.03 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6070 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 86 unused Assets / (3.4 MB). Loaded Objects now: 6545.
+Memory consumption went from 414.3 MB to 410.9 MB.
+Total: 93.724709 ms (FindLiveObjects: 2.845166 ms CreateObjectMapping: 0.692583 ms MarkObjects: 66.297500 ms  DeleteObjects: 23.862917 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 962203.228556 seconds.
+  path: Assets/Useful Stuff/FantasyEnvironments/Environments/FBX/Mushroom1.FBX
+  artifactKey: Guid(bdeb79af937bc3940958acedeb2e5c15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/FantasyEnvironments/Environments/FBX/Mushroom1.FBX using Guid(bdeb79af937bc3940958acedeb2e5c15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '292da1a5d8f715287f5e659be008ee1c') in 1.474352 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000329 seconds.
+  path: Assets/Useful Stuff/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Mushroom_Fantasy_Purple_08.fbx
+  artifactKey: Guid(6aac2ae04e9a93646918391471e1a564) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Mushroom_Fantasy_Purple_08.fbx using Guid(6aac2ae04e9a93646918391471e1a564) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08ee6f35591c1f5e083437b02d3c128a') in 0.106326 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 392.241035 seconds.
+  path: Assets/Low Poly Mushrooms Pack
+  artifactKey: Guid(03dc657fe803d4d0e9a0aed726554b85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly Mushrooms Pack using Guid(03dc657fe803d4d0e9a0aed726554b85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0688bd6e2c2dc8ba7945669441f6f4ea') in 0.004858 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.954719 seconds.
+  path: Assets/Low Poly Mushrooms Pack/Prefabs
+  artifactKey: Guid(c6a1861a168237f439898cc8c12179ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly Mushrooms Pack/Prefabs using Guid(c6a1861a168237f439898cc8c12179ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8495bdcc8d5e405f01de3dcf6e6f466d') in 0.001280 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.718995 seconds.
+  path: Assets/Low Poly Mushrooms Pack/Prefabs/Mushrooms
+  artifactKey: Guid(d1d8945504f21fc49a80df59727ac196) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly Mushrooms Pack/Prefabs/Mushrooms using Guid(d1d8945504f21fc49a80df59727ac196) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89b049787c5f0a91a5007efb13127486') in 0.002228 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.051291 seconds.
+  path: Assets/Low Poly Mushrooms Pack/Prefabs/Mushrooms/Amanita_big.prefab
+  artifactKey: Guid(b41ef6b0fcdee1c4b9e62aa1102626d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly Mushrooms Pack/Prefabs/Mushrooms/Amanita_big.prefab using Guid(b41ef6b0fcdee1c4b9e62aa1102626d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1e3e99e3085afbc1e35a810be9b31e8') in 0.118674 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 165.843684 seconds.
+  path: Assets/Useful Stuff/FantasyEnvironments/Environments/FBX/Flower1.FBX
+  artifactKey: Guid(d9b2cda8a1e050e478497f2213c37e99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/FantasyEnvironments/Environments/FBX/Flower1.FBX using Guid(d9b2cda8a1e050e478497f2213c37e99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fba01c9761982fa08d7217d8f5befe53') in 0.091331 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000138 seconds.
+  path: Assets/Useful Stuff/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Sunflower_04.fbx
+  artifactKey: Guid(5374e258aa8b0a54b9ad017e47f849ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Sunflower_04.fbx using Guid(5374e258aa8b0a54b9ad017e47f849ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '589867f3a2bcb5164150a288f6621b74') in 0.036023 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.703557 seconds.
+  path: Assets/Useful Stuff/Polytope Studio/Lowpoly_Environments/Sources/Meshes/Flowers
+  artifactKey: Guid(62117514495abd046b014d1c85ba4c7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/Polytope Studio/Lowpoly_Environments/Sources/Meshes/Flowers using Guid(62117514495abd046b014d1c85ba4c7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c85dd0ad72297595832233b1bf63c21e') in 0.003581 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.848702 seconds.
+  path: Assets/Useful Stuff/Polytope Studio/Lowpoly_Environments/Sources/Meshes/Flowers/PT_Poppy_02.fbx
+  artifactKey: Guid(5c7de3ea78afce6468d2ebe76dd0bf6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/Polytope Studio/Lowpoly_Environments/Sources/Meshes/Flowers/PT_Poppy_02.fbx using Guid(5c7de3ea78afce6468d2ebe76dd0bf6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5998cf1c272007f6581e5058a5411158') in 0.839736 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 300.647206 seconds.
+  path: Assets/Enemies/FourEvilDragonsHP/Prefab/DragonNightmare/Blue.prefab
+  artifactKey: Guid(edd34a89cfe571f4ca766dcca2459bbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/FourEvilDragonsHP/Prefab/DragonNightmare/Blue.prefab using Guid(edd34a89cfe571f4ca766dcca2459bbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bb0a40408fb051511ac07b055cb6051') in 0.233522 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000254 seconds.
+  path: Assets/Enemies/FourEvilDragonsHP/Prefab/DragonUsurper/Blue.prefab
+  artifactKey: Guid(445a5c29e7f715947b713a753f242af0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/FourEvilDragonsHP/Prefab/DragonUsurper/Blue.prefab using Guid(445a5c29e7f715947b713a753f242af0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '316c2110d434183089e6f551f7cce1ea') in 0.121134 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000269 seconds.
+  path: Assets/Enemies/FourEvilDragonsHP/Texture/DragonTerrorBringer/BlueHP.png
+  artifactKey: Guid(2f825827868c75a4fa366c81b5d8b977) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/FourEvilDragonsHP/Texture/DragonTerrorBringer/BlueHP.png using Guid(2f825827868c75a4fa366c81b5d8b977) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a54d7f2a2d5ccaeb6f728e9995450669') in 1.942397 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000307 seconds.
+  path: Assets/Useful Stuff/Assets and Props/Furniture/Meshes/SRC_Props/Potion_Blue_01.fbx
+  artifactKey: Guid(c5167bae8688479f845f4e42e244aac1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/Assets and Props/Furniture/Meshes/SRC_Props/Potion_Blue_01.fbx using Guid(c5167bae8688479f845f4e42e244aac1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91866a12120d33a04327902c622986ce') in 0.120983 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000136 seconds.
+  path: Assets/Prefabs/Particles/DarkBlue Glow.prefab
+  artifactKey: Guid(fca5a1670e71af549b9ebfc5cad1ae18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Particles/DarkBlue Glow.prefab using Guid(fca5a1670e71af549b9ebfc5cad1ae18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab0e365d9e8084f9b23092f01064f335') in 0.048547 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000162 seconds.
+  path: Assets/Useful Stuff/Cartoon Heroes/Male/3D/Torsos/Torso_1/Materials/Male_Torso_1_Blue.mat
+  artifactKey: Guid(9f874ffaba85f234389775ed49b4e691) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/Cartoon Heroes/Male/3D/Torsos/Torso_1/Materials/Male_Torso_1_Blue.mat using Guid(9f874ffaba85f234389775ed49b4e691) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '653add7d2c58369703f2f30b98d77c22') in 0.337562 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Assets/Useful Stuff/Cartoon Heroes/Female/3D/Torsos/Torso_1/Materials/Female_Torso_1_Blue.mat
+  artifactKey: Guid(3133fd49998134d468b65d0d0208fb5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/Cartoon Heroes/Female/3D/Torsos/Torso_1/Materials/Female_Torso_1_Blue.mat using Guid(3133fd49998134d468b65d0d0208fb5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '567b0736824103e065cd9ab1c35696ad') in 0.039328 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000098 seconds.
+  path: Assets/Prefabs/Furniture etc/Books And Alchemy/Potion_Blue_01.prefab
+  artifactKey: Guid(6a61beb91ee14785add56c8d67ee6e6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Furniture etc/Books And Alchemy/Potion_Blue_01.prefab using Guid(6a61beb91ee14785add56c8d67ee6e6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ffd2e8c083aacb3175e2581277eb93c') in 0.086936 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000111 seconds.
+  path: Assets/Enemies/FourEvilDragonsHP/Texture/DragonNightmare/BlueHP.png
+  artifactKey: Guid(7bc2111318adeb14684c06f70d594a45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/FourEvilDragonsHP/Texture/DragonNightmare/BlueHP.png using Guid(7bc2111318adeb14684c06f70d594a45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31ff0b0ff983e21875250cc1ad0ad5f0') in 0.020471 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000091 seconds.
+  path: Assets/Enemies/FourEvilDragonsHP/Texture/DragonUsurper/BlueHP.png
+  artifactKey: Guid(bd6a5ac65d3f73a48bdbc2102872fac0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/FourEvilDragonsHP/Texture/DragonUsurper/BlueHP.png using Guid(bd6a5ac65d3f73a48bdbc2102872fac0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25edc7ebc0364136403b1ef7f1fcc935') in 0.024305 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000129 seconds.
+  path: Assets/Useful Stuff/Cartoon Heroes/Male/Textures/Torsos/Torso_1/Male_Torso_1_Blue.tga
+  artifactKey: Guid(19137f3eb09828f4c83eb1a56b8da66c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/Cartoon Heroes/Male/Textures/Torsos/Torso_1/Male_Torso_1_Blue.tga using Guid(19137f3eb09828f4c83eb1a56b8da66c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23c1e22cbb4e4a62883eade995f267ba') in 0.137784 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000090 seconds.
+  path: Assets/Useful Stuff/Cartoon Heroes/Female/3D/Torsos/Torso_3/Materials/Female_Torso_3_Blue.mat
+  artifactKey: Guid(99be721522d8cd244a5d60f0d28d2d3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/Cartoon Heroes/Female/3D/Torsos/Torso_3/Materials/Female_Torso_3_Blue.mat using Guid(99be721522d8cd244a5d60f0d28d2d3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfafe416576eb12dde0eea1e0c858d2b') in 0.029122 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000092 seconds.
+  path: Assets/Useful Stuff/Cartoon Heroes/Male/3D/Torsos/Torso_2/Materials/Male_Torso_2_Blue.mat
+  artifactKey: Guid(82e49f9e37249c74392c3fb56ce726fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/Cartoon Heroes/Male/3D/Torsos/Torso_2/Materials/Male_Torso_2_Blue.mat using Guid(82e49f9e37249c74392c3fb56ce726fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '311b4e34839c5aa006d34734df1ef16a') in 0.030527 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000096 seconds.
+  path: Assets/NPC-Prefabs/Man Blue Variant.prefab
+  artifactKey: Guid(5535066a8b5fe40ab8802c6da5569171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NPC-Prefabs/Man Blue Variant.prefab using Guid(5535066a8b5fe40ab8802c6da5569171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15919e03b05b620138c9023af1ad0094') in 0.093277 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000570 seconds.
+  path: Assets/Enemies/FourEvilDragonsHP/Materials/DragonSoulEater/BlueHP.mat
+  artifactKey: Guid(5fcde950c31077243850f23d14ba9a5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/FourEvilDragonsHP/Materials/DragonSoulEater/BlueHP.mat using Guid(5fcde950c31077243850f23d14ba9a5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a921f7717d4d61ecfd6b068414a0eb20') in 0.020430 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.024254 seconds.
+  path: Assets/Enemies/FourEvilDragonsHP/Materials/DragonTerrorBringer/BlueHP.mat
+  artifactKey: Guid(dcc7344671ccf0044a1fb5038007860e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/FourEvilDragonsHP/Materials/DragonTerrorBringer/BlueHP.mat using Guid(dcc7344671ccf0044a1fb5038007860e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b2e4b5cefc8bc28ca38dfef759fe5a2') in 0.017659 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000100 seconds.
+  path: Assets/Useful Stuff/SineVFX/PostProcessingV2/Textures/Spectral LUTs/SpectralLut_RedBlue.tga
+  artifactKey: Guid(ff5f3317371838d4fa16ac6c2acf2040) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/SineVFX/PostProcessingV2/Textures/Spectral LUTs/SpectralLut_RedBlue.tga using Guid(ff5f3317371838d4fa16ac6c2acf2040) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5add17b92369737f2358649cf423bcf') in 0.011281 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000119 seconds.
+  path: Assets/Useful Stuff/Cartoon Heroes/Female/3D/Torsos/Torso_2/Materials/Female_Torso_2_Blue.mat
+  artifactKey: Guid(b51421c6a4ea7ac4895dc01f52a1901c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Useful Stuff/Cartoon Heroes/Female/3D/Torsos/Torso_2/Materials/Female_Torso_2_Blue.mat using Guid(b51421c6a4ea7ac4895dc01f52a1901c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5aa4ead556748359fcd1c58f2c59926') in 0.029197 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting

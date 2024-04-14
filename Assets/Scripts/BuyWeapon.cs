@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class BuyWeapon : MonoBehaviour
 {
     [SerializeField] private int weaponNumber = 0;
-    [SerializeField] private int cost;
+    [SerializeField] public int cost;
     [SerializeField] private Text currencyText;
     [SerializeField] private GameObject inventoryObject;
     [SerializeField] private int armourNumber;
