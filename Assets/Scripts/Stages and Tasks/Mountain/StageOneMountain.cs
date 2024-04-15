@@ -19,7 +19,7 @@ public class StageOneMountain : MonoBehaviour
     public static bool chestHasFound;
     public static bool labHasFound;
     private bool mobsHasKilled;
-    private int destroyedBoxes = 0;
+    private bool fourBoxesHasDestroyed = false;
     private bool keyHasFound;
     
     //Pedia pou emfanizoun tis apostoles
@@ -71,6 +71,7 @@ public class StageOneMountain : MonoBehaviour
     {
         if (firstNPC.activeSelf)
         {
+            int destroyedBoxes = 0;
             foreach (var box in boxes)
             {
                 if (!box.activeSelf)
@@ -78,8 +79,13 @@ public class StageOneMountain : MonoBehaviour
                     destroyedBoxes++;
                 }
             }
+
+            if (destroyedBoxes >= 4)
+            {
+                fourBoxesHasDestroyed = true;
+            }
         }
-        if (InventoryItems.ItemsQuantities[3] >= 15 && InventoryItems.ItemsQuantities[1] >= 4 && destroyedBoxes >= 4)
+        if (InventoryItems.ItemsQuantities[3] >= 15 && InventoryItems.ItemsQuantities[1] >= 4 && fourBoxesHasDestroyed)
         {
             firstNPC.SetActive(false);
             secondNPC.SetActive(true);
@@ -132,7 +138,7 @@ public class StageOneMountain : MonoBehaviour
             collectFourRedMushrooms.GetComponentInChildren<Text>().color = Color.green;
         }
 
-        if (destroyedBoxes >= 4)
+        if (fourBoxesHasDestroyed)
         {
             destroyBoxes.GetComponentInChildren<Text>().color = Color.green;
         }
@@ -147,7 +153,7 @@ public class StageOneMountain : MonoBehaviour
             answerTenQuestions.GetComponentInChildren<Text>().color = Color.green;
         }
 
-        if ((SavePlayer.correctAnswers + SavePlayer.wrongAnswers) >= 10 && superWiseHasFound && destroyedBoxes >= 4 && InventoryItems.ItemsQuantities[1] >= 4 && InventoryItems.ItemsQuantities[3] >= 15 && labHasFound && chestHasFound && SavePlayer.bigSkeletonKills >= 1 && SavePlayer.pigKills >= 3)
+        if ((SavePlayer.correctAnswers + SavePlayer.wrongAnswers) >= 10 && superWiseHasFound && fourBoxesHasDestroyed && InventoryItems.ItemsQuantities[1] >= 4 && InventoryItems.ItemsQuantities[3] >= 15 && labHasFound && chestHasFound && SavePlayer.bigSkeletonKills >= 1 && SavePlayer.pigKills >= 3)
         {
             SavePlayer.mountainAllCompleted = true;
             Destroy(theWholeStageWithObjects);

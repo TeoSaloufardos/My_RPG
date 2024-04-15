@@ -30,7 +30,6 @@ public class RegionHandler : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         { 
-            regionalObject.SetActive(true);
            switch (selectedRegion)
             {
                 case Region.Desert:
@@ -45,6 +44,7 @@ public class RegionHandler : MonoBehaviour
                     SavePlayer.DcorrectAnswers = SavePlayer.correctAnswers;
                     SavePlayer.correctAnswers = 0;
                     regionalObject.SetActive(false);
+                    regionalDeeds.SetActive(false);
                     break;
                 case Region.Mountain:
                     SavePlayer.MsmallSkeletonKills = SavePlayer.smallSkeletonKills;
@@ -58,6 +58,7 @@ public class RegionHandler : MonoBehaviour
                     SavePlayer.McorrectAnswers = SavePlayer.correctAnswers;
                     SavePlayer.correctAnswers = 0;
                     regionalObject.SetActive(false);
+                    regionalDeeds.SetActive(false);
                     break;
                 case Region.Village:
                     SavePlayer.VsmallSkeletonKills = SavePlayer.smallSkeletonKills;
@@ -71,6 +72,7 @@ public class RegionHandler : MonoBehaviour
                     SavePlayer.VcorrectAnswers = SavePlayer.correctAnswers;
                     SavePlayer.correctAnswers = 0;
                     regionalObject.SetActive(false);
+                    regionalDeeds.SetActive(false);
                     break;
                 case Region.WizardForest:
                     SavePlayer.WsmallSkeletonKills = SavePlayer.smallSkeletonKills;
@@ -84,6 +86,7 @@ public class RegionHandler : MonoBehaviour
                     SavePlayer.WcorrectAnswers = SavePlayer.correctAnswers;
                     SavePlayer.correctAnswers = 0;
                     regionalObject.SetActive(false);
+                    regionalDeeds.SetActive(false);
                     break;
             } 
         }
@@ -93,7 +96,7 @@ public class RegionHandler : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            regionalObject.SetActive(true);
+            
             switch (selectedRegion)
             {
                 case Region.Desert:
@@ -103,6 +106,7 @@ public class RegionHandler : MonoBehaviour
                     SavePlayer.pigKills += SavePlayer.DpigKills;
                     SavePlayer.correctAnswers += SavePlayer.DcorrectAnswers;
                     regionalObject.SetActive(true);
+                    regionalDeeds.SetActive(true);
                     break;
                 case Region.Mountain:
                     SavePlayer.smallSkeletonKills += SavePlayer.MsmallSkeletonKills;
@@ -111,6 +115,7 @@ public class RegionHandler : MonoBehaviour
                     SavePlayer.pigKills += SavePlayer.MpigKills;
                     SavePlayer.correctAnswers += SavePlayer.McorrectAnswers;
                     regionalObject.SetActive(true);
+                    regionalDeeds.SetActive(true);
                     break;
                 case Region.Village:
                     SavePlayer.smallSkeletonKills += SavePlayer.VsmallSkeletonKills;
@@ -119,6 +124,7 @@ public class RegionHandler : MonoBehaviour
                     SavePlayer.pigKills += SavePlayer.VpigKills;
                     SavePlayer.correctAnswers += SavePlayer.VcorrectAnswers;
                     regionalObject.SetActive(true);
+                    regionalDeeds.SetActive(true);
                     break;
                 case Region.WizardForest:
                     SavePlayer.smallSkeletonKills += SavePlayer.WsmallSkeletonKills;
@@ -127,6 +133,7 @@ public class RegionHandler : MonoBehaviour
                     SavePlayer.pigKills += SavePlayer.WpigKills;
                     SavePlayer.correctAnswers += SavePlayer.WcorrectAnswers;
                     regionalObject.SetActive(true);
+                    regionalDeeds.SetActive(true);
                     break;
             }
         }

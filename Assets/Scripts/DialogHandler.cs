@@ -16,7 +16,7 @@ public class DialogHandler: MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     [SerializeField] private List<Button> allButtons; //εδω δηλωνονται ολα τα γειτονικα κουμπια που υπαρχουν.
     [SerializeField] private List<GameObject> weaponsmithPriceTexts;
     [SerializeField] private List<GameObject> weaponsmithPrices;
-    private List<int> prices;
+    private List<int> prices = new List<int>();
 
     public static int correctAnswerId; //εδω θα στελνω απο το speechbox το id της σωστης απαντησης οταν προκειται για ερωτηση και για επικοινωνια.
     public static int rewardInCoins; //εδω θα στελνω παλι απο το speechbox το ποσα coins θα πρεπει να λαβει ο παικτης απο την σωστη του απαντηση.
@@ -79,6 +79,7 @@ public class DialogHandler: MonoBehaviour, IPointerEnterHandler, IPointerExitHan
                     // print("Price as int: " + newPrice);
                     // priceText.gameObject.GetComponentInChildren<Text>().text = (newPrice - 15).ToString();
                 }
+                prices.Clear();
             }
             if (overrideLevel != -1)
             {

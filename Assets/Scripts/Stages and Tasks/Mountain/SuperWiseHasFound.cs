@@ -21,6 +21,7 @@ public class SuperWiseHasFound : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             StageOneMountain.superWiseHasFound = true;
+            Destroy(this);
         }
     }
 }
