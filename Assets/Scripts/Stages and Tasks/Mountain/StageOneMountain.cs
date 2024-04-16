@@ -63,6 +63,7 @@ public class StageOneMountain : MonoBehaviour
 
         if (SavePlayer.mountainAllCompleted)
         {
+            fences.SetActive(false);
             Destroy(theWholeStageWithObjects);
         }
     }
@@ -155,6 +156,7 @@ public class StageOneMountain : MonoBehaviour
 
         if ((SavePlayer.correctAnswers + SavePlayer.wrongAnswers) >= 10 && superWiseHasFound && fourBoxesHasDestroyed && InventoryItems.ItemsQuantities[1] >= 4 && InventoryItems.ItemsQuantities[3] >= 15 && labHasFound && chestHasFound && SavePlayer.bigSkeletonKills >= 1 && SavePlayer.pigKills >= 3)
         {
+            fences.SetActive(false);
             SavePlayer.mountainAllCompleted = true;
             Destroy(theWholeStageWithObjects);
         }

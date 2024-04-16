@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class SpawnEnemies : MonoBehaviour
 {
-    [SerializeField] private GameObject[] enemies;
+    [SerializeField] public GameObject[] enemies;
     [SerializeField] private Transform[] spawnPoints;
     [SerializeField] private GameObject myCamera;
     [HideInInspector] public bool canSpawn = true;

@@ -65,7 +65,9 @@ public class SavePlayer : MonoBehaviour
     public static int WpigKills = 0;
     public static int WcorrectAnswers;
     public static int witchForestKills;
-    
+
+    public static bool firstStagePickUpBookCompleted = false;
+    public static bool witchAllCompleted = false;
     //mountain
     public static bool taskOneCompleted = false;
     public static bool taskTwoCompleted = false;
@@ -78,6 +80,7 @@ public class SavePlayer : MonoBehaviour
     public static int MpigKills = 0;
     public static int McorrectAnswers;
     public static int mountainForestKills;
+    public static bool MountainEventHasCompleted = false;
     
     //village
     public static int VsmallSkeletonKills = 0;
