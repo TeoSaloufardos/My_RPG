@@ -114,6 +114,7 @@ public class RegionHandler : MonoBehaviour
                     SavePlayer.orcRiderKills += SavePlayer.MorcRiderKills;
                     SavePlayer.pigKills += SavePlayer.MpigKills;
                     SavePlayer.correctAnswers += SavePlayer.McorrectAnswers;
+                    StageOneMountain.playerJoinedToRegion = true;
                     regionalObject.SetActive(true);
                     regionalDeeds.SetActive(true);
                     break;

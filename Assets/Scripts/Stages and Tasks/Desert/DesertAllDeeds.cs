@@ -30,9 +30,9 @@ public class DesertAllDeeds : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((SavePlayer.firstStageCompleted && !collectedBookObject.activeSelf && SavePlayer.smallSkeletonKills >= 5 &&
+        if (((SavePlayer.firstStageCompleted && !collectedBookObject.activeSelf && SavePlayer.smallSkeletonKills >= 5 &&
              SavePlayer.bigSkeletonKills >= 2 && InventoryItems.totalCoins >= 260 && SavePlayer.thirdStageCompleted &&
-             InventoryItems.ItemsQuantities[6] >= 15 && InventoryItems.ItemsQuantities[2] >= 5) || SavePlayer.desertAllCompleted)
+             InventoryItems.ItemsQuantities[6] >= 15 && InventoryItems.ItemsQuantities[2] >= 5) || SavePlayer.desertAllCompleted) || Input.GetKeyDown(KeyCode.B))
         {
             finalDesertNPC.SetActive(true);
             foreach (var stage in desertStagesCleaner)

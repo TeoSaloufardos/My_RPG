@@ -65,13 +65,15 @@ public class WizardStages : MonoBehaviour
             craftTwoPotionsCompleted = true;
         }
 
-        if (!bookParticle.activeSelf && !findAndCollectTheBookCompleted)
+        if (bookParticle != null)
         {
-            findAndCollectTheBook.gameObject.GetComponentInChildren<Text>().color = Color.green;
-            findAndCollectTheBookCompleted = true;
+            if (!bookParticle.activeSelf && !findAndCollectTheBookCompleted)
+            {
+                findAndCollectTheBook.gameObject.GetComponentInChildren<Text>().color = Color.green;
+                findAndCollectTheBookCompleted = true;
+            } 
         }
-
-        if (key == null && findTheLostkeyCompleted)
+        if (key == null && !findTheLostkeyCompleted)
         {
             findTheLostkey.gameObject.GetComponentInChildren<Text>().color = Color.green;
             findTheLostkeyCompleted = true;
