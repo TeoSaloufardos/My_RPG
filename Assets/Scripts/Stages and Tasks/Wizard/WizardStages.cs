@@ -65,13 +65,12 @@ public class WizardStages : MonoBehaviour
             craftTwoPotionsCompleted = true;
         }
 
-        if (bookParticle != null)
+        if (bookParticle == null && !findAndCollectTheBookCompleted)
         {
-            if (!bookParticle.activeSelf && !findAndCollectTheBookCompleted)
-            {
-                findAndCollectTheBook.gameObject.GetComponentInChildren<Text>().color = Color.green;
-                findAndCollectTheBookCompleted = true;
-            } 
+            findAndCollectTheBook.gameObject.GetComponentInChildren<Text>().color = Color.green;
+            firstNPC.SetActive(false);
+            secondNPC.SetActive(true);
+            findAndCollectTheBookCompleted = true;
         }
         if (key == null && !findTheLostkeyCompleted)
         {
@@ -91,7 +90,7 @@ public class WizardStages : MonoBehaviour
             killTwoBigSkeletonsCompleted = true;
         }
 
-        if (SavePlayer.pigKills >= 3 && killThreePigMenCompleted)
+        if (SavePlayer.pigKills >= 3 && !killThreePigMenCompleted)
         {
             killThreePigMen.gameObject.GetComponentInChildren<Text>().color = Color.green;
             killThreePigMenCompleted = true;
@@ -114,6 +113,7 @@ public class WizardStages : MonoBehaviour
             craftTwoPotions.SetActive(false);
             findTheLostkey.SetActive(false);
             allCompleted.SetActive(true);
+            Destroy(fence);
             Destroy(this);
         }
         

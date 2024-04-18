@@ -177,7 +177,7 @@ public class StageOneMountain : MonoBehaviour
             answerTenQuestions.GetComponentInChildren<Text>().color = Color.green;
         }
 
-        if (destroyBoxesCompleted && collect15BrownMushroomsCompleted && collectFourRedMushroomsCompleted && findTheLabCompleted && findTheSuperWiseCompleted && killOneBigAndThreePigsCompleted && findTheHiddenChestCompleted && answerTenQuestionsCompleted)
+        if ((destroyBoxesCompleted && collect15BrownMushroomsCompleted && collectFourRedMushroomsCompleted && findTheLabCompleted && findTheSuperWiseCompleted && killOneBigAndThreePigsCompleted && findTheHiddenChestCompleted && answerTenQuestionsCompleted) || Input.GetKeyDown(KeyCode.H))
         {
             fences.SetActive(false);
             SavePlayer.mountainAllCompleted = true;
