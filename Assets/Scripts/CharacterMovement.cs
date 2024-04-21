@@ -149,7 +149,7 @@ public class CharacterMovement : MonoBehaviour
             StartCoroutine(TurnOffTrail());
         }
 
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (SavePlayer.carringWeapon && SavePlayer.staminaAmount > 0.2)
             {

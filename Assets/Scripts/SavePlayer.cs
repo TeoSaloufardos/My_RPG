@@ -33,6 +33,7 @@ public class SavePlayer : MonoBehaviour
     public static float armourValue = 0;
     public static int enemiesOnScreen;
     public static bool newGame = false;
+    public static int regionZone = 0;
     
     //ΝΕΑ ΠΕΔΙΑ ΝΑ ΤΑ ΚΑΝΩ save οταν τελειωσω
     //public 
@@ -43,6 +44,7 @@ public class SavePlayer : MonoBehaviour
     public static int bigSkeletonKills = 0;
     public static int orcRiderKills = 0;
     public static int pigKills = 0;
+    public static int spiderKilled = 0;
     
     //desert to save
     public static bool firstStageCompleted = false;
@@ -89,6 +91,7 @@ public class SavePlayer : MonoBehaviour
     public static int VpigKills = 0;
     public static int VcorrectAnswers;
     public static int VillageKills;
+    public static bool villageAllCompleted = false;
 
     // ===============================
     public static bool saving = false;
@@ -97,6 +100,18 @@ public class SavePlayer : MonoBehaviour
     private GameObject inventoryObj;
     
     //Save fields
+    public  bool firstStageCompletedS;
+    public  bool secondStageCompletedS;
+    public  bool thirdStageCompletedS;
+    public  bool fourthStageCompletedS;
+    public  bool desertAllCompletedS;
+    public  bool firstStagePickUpBookCompletedS;
+    public  bool witchAllCompletedS;
+    public  bool taskOneCompletedS;
+    public  bool taskTwoCompletedS;
+    public  bool taskThreeCompletedS;
+    public  bool mountainAllCompletedS;
+    public  bool villageAllCompletedS;
     public int pcharS;
     public string pnameS;
     public float strengthAmtS;
@@ -121,8 +136,6 @@ public class SavePlayer : MonoBehaviour
     
     void Start()
     {
-        Debug.Log("Questions level: " + answersLevel);
-        Debug.Log("Correct: " + correctAnswers);
         DontDestroyOnLoad(this);
         if (newGame)
         {
@@ -187,6 +200,10 @@ public class SavePlayer : MonoBehaviour
 
     public void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
         if (answersLevel < 0f)
         {
             answersLevel = 0f;
@@ -250,6 +267,48 @@ public class SavePlayer : MonoBehaviour
             {
                 inventoryObj = GameObject.Find("InventoryCanvas");
             }
+
+            if (regionZone == 0) //desert
+            {
+                DpigKills = pigKills;
+                DsmallSkeletonKills = smallSkeletonKills;
+                DbigSkeletonKills = bigSkeletonKills;
+                DorcRiderKills = orcRiderKills;
+            }
+            if (regionZone == 1) //mountain
+            {
+                MpigKills = pigKills;
+                MsmallSkeletonKills = smallSkeletonKills;
+                MbigSkeletonKills = bigSkeletonKills;
+                MorcRiderKills = orcRiderKills;
+            }
+            if (regionZone == 2) //wizard
+            {
+                WpigKills = pigKills;
+                WsmallSkeletonKills = smallSkeletonKills;
+                WbigSkeletonKills = bigSkeletonKills;
+                WorcRiderKills = orcRiderKills;
+            }
+            if (regionZone == 3) //village
+            {
+                VpigKills = pigKills;
+                VsmallSkeletonKills = smallSkeletonKills;
+                VbigSkeletonKills = bigSkeletonKills;
+                VorcRiderKills = orcRiderKills;
+            }
+            villageAllCompletedS = villageAllCompleted;
+            taskOneCompletedS = taskOneCompleted; 
+            taskTwoCompletedS = taskTwoCompleted;
+            taskThreeCompletedS = taskThreeCompleted;
+            mountainAllCompletedS = mountainAllCompleted;
+            firstStagePickUpBookCompletedS = firstStagePickUpBookCompleted;
+            witchAllCompletedS = witchAllCompleted;
+            firstStageCompletedS = firstStageCompleted;
+            secondStageCompletedS = secondStageCompleted;
+            thirdStageCompletedS = thirdStageCompleted;
+            fourthStageCompletedS = fourthStageCompleted;
+            desertAllCompletedS = desertAllCompleted;
+            
             pcharS = characterPositionData;
             pnameS = playerName;
             strengthAmtS = strenghtAmountDisplay;
@@ -298,6 +357,18 @@ public class SavePlayer : MonoBehaviour
 
                 if (inventoryObj != null)
                 {
+                    villageAllCompleted = villageAllCompletedS;
+                    taskOneCompleted = taskOneCompletedS; 
+                    taskTwoCompleted = taskTwoCompletedS;
+                    taskThreeCompleted = taskThreeCompletedS;
+                    mountainAllCompleted = mountainAllCompletedS;
+                    firstStagePickUpBookCompleted = firstStagePickUpBookCompletedS;
+                    witchAllCompleted = witchAllCompletedS;
+                    firstStageCompleted = firstStageCompletedS;
+                    secondStageCompleted = secondStageCompletedS;
+                    thirdStageCompleted = thirdStageCompletedS;
+                    fourthStageCompleted = fourthStageCompletedS;
+                    desertAllCompleted = desertAllCompletedS;
                     playerName = pnameS;
                     staminaAmountDisplay = strengthIncreaseS;
                     manaAmount = manaPowerAmtS;

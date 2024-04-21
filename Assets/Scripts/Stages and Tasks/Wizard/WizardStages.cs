@@ -76,6 +76,7 @@ public class WizardStages : MonoBehaviour
         {
             findTheLostkey.gameObject.GetComponentInChildren<Text>().color = Color.green;
             findTheLostkeyCompleted = true;
+            chest.SetActive(true);
         }
 
         if (SavePlayer.smallSkeletonKills >= 5 && !killFiveSmallSkeletonsCompleted)
@@ -102,7 +103,7 @@ public class WizardStages : MonoBehaviour
             collectBlueFlowersCompleted = true;
         }
 
-        if (collectBlueFlowersCompleted && killTwoBigSkeletonsCompleted && killFiveSmallSkeletonsCompleted && killThreePigMenCompleted && findAndCollectTheBookCompleted && craftTwoPotionsCompleted && findTheLostkeyCompleted)
+        if ((collectBlueFlowersCompleted && killTwoBigSkeletonsCompleted && killFiveSmallSkeletonsCompleted && killThreePigMenCompleted && findAndCollectTheBookCompleted && craftTwoPotionsCompleted && findTheLostkeyCompleted) || Input.GetKeyDown(KeyCode.O))
         {
             SavePlayer.witchAllCompleted = true;
             collectBlueFlowers.SetActive(false);

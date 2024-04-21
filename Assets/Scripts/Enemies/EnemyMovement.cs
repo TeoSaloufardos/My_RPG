@@ -174,6 +174,10 @@ public class EnemyMovement : MonoBehaviour
                 SavePlayer.pigKills++;
                 SavePlayer.killsAmount++;
                 break;
+            case 4:
+                SavePlayer.spiderKilled++;
+                SavePlayer.killsAmount++;
+                break;
             default:
                 SavePlayer.killsAmount++;
                 break;

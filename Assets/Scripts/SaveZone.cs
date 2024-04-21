@@ -8,6 +8,9 @@ public class SaveZone : MonoBehaviour
     [SerializeField] private GameObject saveScreen;
     [SerializeField] private GameObject saveText;
     private bool savePause = false;
+
+    
+    [SerializeField] private int selectedRegion;
     
     void Start()
     {
@@ -37,6 +40,7 @@ public class SaveZone : MonoBehaviour
     public void SelectYes()
     {
         SavePlayer.saving = true;
+        SavePlayer.regionZone = selectedRegion;
         saveText.SetActive(true);
         Time.timeScale = 1;
         StartCoroutine(Continue());

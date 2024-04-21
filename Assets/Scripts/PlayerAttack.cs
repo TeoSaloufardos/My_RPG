@@ -40,7 +40,7 @@ public class PlayerAttack : MonoBehaviour
         if (other.CompareTag("spider") && canDamage )
         {
             canDamage = false;
-            other.transform.gameObject.GetComponent<EnemyMovement>().enemyHp -= (damageAmount/5) + SavePlayer.weaponIncrease + SavePlayer.encouragmentIncrease;
+            other.transform.gameObject.GetComponent<EnemyMovement>().enemyHp -= (damageAmount/8) + SavePlayer.weaponIncrease/2 + SavePlayer.encouragmentIncrease/2;
             StartCoroutine(ResetDamage());
         }
     }

@@ -21,6 +21,7 @@ public class InventoryItems : MonoBehaviour
     [SerializeField] public AudioClip createMagicSound;
     [SerializeField] public AudioClip pickUpSound;
     [SerializeField] private GameObject optionsScreen;
+    [SerializeField] private GameObject optionsQuestionsButton;
     private bool optionOpen = false;
 
     //Πεδια που αφορουν την καταχωρηση αντικειμενων στο inventory 
@@ -73,6 +74,7 @@ public class InventoryItems : MonoBehaviour
     [SerializeField] private GameObject inventoryScreen;
     [SerializeField] private GameObject statsScreen;
     [SerializeField] private GameObject deedsScreen;
+    [SerializeField] private GameObject questionsPool;
     [SerializeField] private GameObject mapScreen;
     [SerializeField] private GameObject mapCam;
     [SerializeField] private GameObject characterDisplay;
@@ -80,6 +82,7 @@ public class InventoryItems : MonoBehaviour
     private GameObject miniMapCompass;
     [SerializeField] private Image staminaBar;
     [SerializeField] private Image healthImage;
+    [SerializeField] private Image answersLevel;
     
     //attack animation
     private GameObject playerObj;
@@ -97,6 +100,7 @@ public class InventoryItems : MonoBehaviour
     void Start()
     {
         optionsScreen.SetActive(false);
+        questionsPool.SetActive(false);
         //desertMushrooms = 0;
         //roots = 0;
         
@@ -172,6 +176,7 @@ public class InventoryItems : MonoBehaviour
         }
         playerInfo = playerAnimator.GetCurrentAnimatorStateInfo(1);
         healthImage.fillAmount = SavePlayer.playerHleath;
+        answersLevel.fillAmount = SavePlayer.answersLevel;
         
         if (removeItem)
         {
@@ -300,11 +305,18 @@ public class InventoryItems : MonoBehaviour
             optionsScreen.SetActive(true);
             Time.timeScale = 0;
             optionOpen = true;
+            optionsQuestionsButton.SetActive(true);
+            miniMapCompass.SetActive(false);
+            miniMapView.SetActive(false);
         }else if (optionOpen)
         {
             optionsScreen.SetActive(false);
             Time.timeScale = 1;
+            questionsPool.SetActive(false);
             optionOpen = false;
+            miniMapCompass.SetActive(true);
+            optionsQuestionsButton.SetActive(false);
+            miniMapView.SetActive(true);
         }
     }
 
