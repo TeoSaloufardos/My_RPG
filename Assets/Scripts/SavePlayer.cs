@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class SavePlayer : MonoBehaviour
 {
     public static int characterPositionData = 3; //0-2 female -- 3-5 male
-    public static string playerName = "Player";
+    public static string playerName;
     public static GameObject spawnPoint;
     public static GameObject theTarget;
     public static float manaAmount = 1.0f;
@@ -200,13 +200,9 @@ public class SavePlayer : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
         if (answersLevel < 0f)
         {
-            answersLevel = 0f;
+            answersLevel = 0.01f;
         }
 
         if (answersLevel > 1f)
@@ -215,7 +211,7 @@ public class SavePlayer : MonoBehaviour
         }
         if (manaAmount < 1.0)
         {
-            manaAmount += ( manaAmountDisplay/10 + 0.040f ) * Time.deltaTime; //gemizei ton eauto tou otan paei katw apo to 100% san regen.
+            manaAmount += ( manaAmountDisplay/10 + 0.028f ) * Time.deltaTime; //gemizei ton eauto tou otan paei katw apo to 100% san regen.
         }
         if (manaAmount <= 0)
         {
@@ -223,7 +219,7 @@ public class SavePlayer : MonoBehaviour
         }
         if (staminaAmount < 1.0)
         {
-            staminaAmount += (staminaAmountDisplay/10 + 0.040f) * Time.deltaTime;
+            staminaAmount += (staminaAmountDisplay/10 + 0.035f) * Time.deltaTime;
         }
         if (staminaAmount <= 0)
         {
@@ -248,7 +244,7 @@ public class SavePlayer : MonoBehaviour
             strenghtAmountDisplay = playerLevel;
             manaAmountDisplay = playerLevel;
             staminaAmountDisplay = playerLevel;
-            weaponIncrease = System.Convert.ToInt32(strenghtAmountDisplay * 90);
+            weaponIncrease = System.Convert.ToInt32(strenghtAmountDisplay * 70);
         }
 
         if (armourValue == 1)

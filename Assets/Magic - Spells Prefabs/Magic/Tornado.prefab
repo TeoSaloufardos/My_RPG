@@ -154,6 +154,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 19892480, guid: 90393fb9e43e4614399458a973650b70, type: 3}
+      propertyPath: simulationSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 19892480, guid: 90393fb9e43e4614399458a973650b70, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
       value: 0.31728375
       objectReference: {fileID: 0}
@@ -248,32 +252,22 @@ MonoBehaviour:
   target: {fileID: 0}
   obj: {fileID: 2871651719537846773}
   speed: 5
-  lifeTime: 5
+  lifeTime: 4
   enemySeeker: 1
   nonMoving: 0
   followPlayer: 0
-  manaCost: 0.08
+  manaCost: 0.64
   invisibility: 0
-  damageAmount: 30
+  superShield: 0
+  healing: 0
+  encouragment: 0
+  damageAmount: 27
   lastObj: {fileID: 0}
 --- !u!1 &4393014594215572826 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 154536, guid: 90393fb9e43e4614399458a973650b70, type: 3}
   m_PrefabInstance: {fileID: 4393014594215423730}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &3751491603322916720
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4393014594215572826}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 13.3969345, y: 15.30244, z: 13.411999}
-  m_Center: {x: -0.20516062, y: 3.1244254, z: 0.0021021331}
 --- !u!54 &8945441464501880786
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -290,6 +284,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &3751491603322916720
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4393014594215572826}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 13.3969345, y: 15.30244, z: 13.411999}
+  m_Center: {x: -0.20516062, y: 3.1244254, z: 0.0021021331}
 --- !u!114 &4154150792912887209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,7 +304,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4393014594215572826}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45a86d2ef5c314f3c869551aea08dff7, type: 3}
   m_Name: 
@@ -311,6 +318,9 @@ MonoBehaviour:
   followPlayer: 0
   manaCost: 0.25
   invisibility: 0
+  superShield: 0
+  healing: 0
+  encouragment: 0
   damageAmount: 45
   lastObj: {fileID: 0}
 --- !u!4 &4393014594215807124 stripped

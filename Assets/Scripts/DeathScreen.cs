@@ -24,6 +24,6 @@ public class DeathScreen : MonoBehaviour
     IEnumerator WaitToReload()
     {
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene(0);
+        Application.Quit();
     }
 }

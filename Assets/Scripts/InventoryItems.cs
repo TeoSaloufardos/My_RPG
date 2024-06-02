@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.TerrainTools;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,7 +20,7 @@ public class InventoryItems : MonoBehaviour
     [SerializeField] public AudioClip createMagicSound;
     [SerializeField] public AudioClip pickUpSound;
     [SerializeField] private GameObject optionsScreen;
-    [SerializeField] private GameObject optionsQuestionsButton;
+    // [SerializeField] private GameObject optionsQuestionsButton;
     private bool optionOpen = false;
 
     //Πεδια που αφορουν την καταχωρηση αντικειμενων στο inventory 
@@ -74,7 +73,7 @@ public class InventoryItems : MonoBehaviour
     [SerializeField] private GameObject inventoryScreen;
     [SerializeField] private GameObject statsScreen;
     [SerializeField] private GameObject deedsScreen;
-    [SerializeField] private GameObject questionsPool;
+    // [SerializeField] private GameObject questionsPool;
     [SerializeField] private GameObject mapScreen;
     [SerializeField] private GameObject mapCam;
     [SerializeField] private GameObject characterDisplay;
@@ -99,8 +98,8 @@ public class InventoryItems : MonoBehaviour
     
     void Start()
     {
-        optionsScreen.SetActive(false);
-        questionsPool.SetActive(false);
+        // optionsScreen.SetActive(false);
+        // questionsPool.SetActive(false);
         //desertMushrooms = 0;
         //roots = 0;
         
@@ -204,6 +203,7 @@ public class InventoryItems : MonoBehaviour
             true που θα δεχτει το iconUpdate*/
             // StartCoroutine(Reset()); /*Το StartCoroutine ειναι μια μεθοδος που μου επιτρεπει να τρεξει μια μεθοδος με
             // καθυστερηση. Για παραδειγμα εδω ξεκιναει να τρεξει η μεθοδος Reset της οποιας η υλοποιηση βρισκεται παρακατω.*/
+            
         }
         if (set && selected != 0)
         {
@@ -249,8 +249,8 @@ public class InventoryItems : MonoBehaviour
                             audioPlayer.Play();
                             playerAnimator.SetTrigger("magicAttack");
                             playerAnimator.SetLayerWeight(1,
-                                1); //kathorizei thn barurthta tou layer 1 pou einai to attack animation gia na ginei execute afou pio prin exei ginei katallhlh diadikasia gia na uparksei h prosbash se auta ta objects.
-                            weightAmount = 1;
+                                0.3f); //kathorizei thn barurthta tou layer 1 pou einai to attack animation gia na ginei execute afou pio prin exei ginei katallhlh diadikasia gia na uparksei h prosbash se auta ta objects.
+                            weightAmount = 0.3f;
                         }
 
                         if (magicAttacks[i] < 7 &&
@@ -296,6 +296,7 @@ public class InventoryItems : MonoBehaviour
         // {
         //     removeIcon(13);
         // }
+        openCloseOptionsWithEscape();
     }
 
     public void openCloseOptions()
@@ -305,18 +306,45 @@ public class InventoryItems : MonoBehaviour
             optionsScreen.SetActive(true);
             Time.timeScale = 0;
             optionOpen = true;
-            optionsQuestionsButton.SetActive(true);
+            // optionsQuestionsButton.SetActive(true);
             miniMapCompass.SetActive(false);
             miniMapView.SetActive(false);
-        }else if (optionOpen)
+        }
+        else if (optionOpen)
         {
             optionsScreen.SetActive(false);
             Time.timeScale = 1;
-            questionsPool.SetActive(false);
+            // questionsPool.SetActive(false);
             optionOpen = false;
             miniMapCompass.SetActive(true);
-            optionsQuestionsButton.SetActive(false);
+            // optionsQuestionsButton.SetActive(false);
             miniMapView.SetActive(true);
+        }
+    }
+    
+    public void openCloseOptionsWithEscape()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (optionOpen == false)
+            {
+                optionsScreen.SetActive(true);
+                Time.timeScale = 0;
+                optionOpen = true;
+                // optionsQuestionsButton.SetActive(true);
+                miniMapCompass.SetActive(false);
+                miniMapView.SetActive(false);
+            }
+            else if (optionOpen)
+            {
+                optionsScreen.SetActive(false);
+                Time.timeScale = 1;
+                // questionsPool.SetActive(false);
+                optionOpen = false;
+                miniMapCompass.SetActive(true);
+                // optionsQuestionsButton.SetActive(false);
+                miniMapView.SetActive(true);
+            }
         }
     }
 

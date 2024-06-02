@@ -108,6 +108,10 @@ public class DialogHandler: MonoBehaviour, IPointerEnterHandler, IPointerExitHan
             SavePlayer.answersLevel += 0.02f;
             InventoryItems.totalCoins += rewardInCoins;
             Debug.Log("Questions level: " + SavePlayer.answersLevel);
+            if (QuestionsInstructions.displayQuestionInstructions == false)
+            {
+                QuestionsInstructions.displayQuestionInstructions = true;
+            }
             Debug.Log("Correct: " + SavePlayer.correctAnswers);
             foreach (var button in allButtons)//μολις απαντησει σωστα κλεινω ολα τα μηνυματα και κουμπια.
             {
@@ -121,6 +125,10 @@ public class DialogHandler: MonoBehaviour, IPointerEnterHandler, IPointerExitHan
             SavePlayer.wrongAnswers++;
             SavePlayer.answersLevel -= 0.02f;
             gameObject.SetActive(false);
+            if (QuestionsInstructions.displayQuestionInstructions == false)
+            {
+                QuestionsInstructions.displayQuestionInstructions = true;
+            }
             foreach (var button in allButtons)
             {
                 button.gameObject.SetActive(false);

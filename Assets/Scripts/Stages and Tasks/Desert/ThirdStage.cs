@@ -38,7 +38,7 @@ public class ThirdStage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((SavePlayer.correctAnswers + SavePlayer.wrongAnswers) >= 10)
+        if ((SavePlayer.correctAnswers + SavePlayer.wrongAnswers) >= 6)
         {
             answerQuestionsNPC.SetActive(false);
             taskToCompleteAllDeeds.SetActive(true);

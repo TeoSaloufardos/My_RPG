@@ -19,6 +19,11 @@ public class Options : MonoBehaviour
     {
         sfxMixer.SetFloat("sfxVol", sfxSlider.value);
     }
+
+    public void quiteTheGame()
+    {
+        Application.Quit();
+    }
     void Start()
     {
         

@@ -223,8 +223,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.9289496, y: 1.6244766, z: 1.7714841}
+  m_Center: {x: 0.09306093, y: 0.3122383, z: -0.30429596}
 --- !u!54 &2069339642
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -256,8 +256,13 @@ MonoBehaviour:
   messageBox: {fileID: 0}
   greetingsQuestion: {fileID: 0}
   coinsAsPrize: 16
+  itemAsPrize: 0
+  itemID: 0
+  withDialog: 1
   amountOfQuestions: 1
   questionPoolLevel: 1
+  techQuestion: 0
+  ecoQuestion: 0
   displayAnswerOne: {fileID: 0}
   displayAnswerTwo: {fileID: 0}
   displayAnswerThree: {fileID: 0}
@@ -276,6 +281,7 @@ MonoBehaviour:
     \u03C3\u03B5 \u03B1\u03C5\u03C4\u03BF \u03C3\u03BF\u03C5 \u03C4\u03BF \u03C4\u03B1\u03BE\u03B9\u03B4\u03B9
     \u03C3\u03C4\u03BF\u03BD \u03BA\u03BF\u03C3\u03BC\u03BF \u03B1\u03C5\u03C4\u03BF\u03BD."
   shopOrMenu: {fileID: 0}
+  justDialog: 0
 --- !u!114 &2069339644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,6 +315,8 @@ MonoBehaviour:
   meatAmount: 5
   cheeseAmount: 8
   breadAmount: 12
+  inventory: {fileID: 0}
+  audioPlayer: {fileID: 0}
 --- !u!1001 &3452651685624435223
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -318,7 +326,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3755790145896833874, guid: f1e04e5bc3a9e468c98afe681546823f, type: 3}
       propertyPath: m_Name
-      value: Man White
+      value: Man White Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4563535730691258856, guid: f1e04e5bc3a9e468c98afe681546823f, type: 3}
       propertyPath: m_RootOrder

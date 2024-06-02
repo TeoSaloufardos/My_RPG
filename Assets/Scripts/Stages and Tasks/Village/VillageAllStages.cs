@@ -12,6 +12,7 @@ public class VillageAllStages : MonoBehaviour
     [SerializeField] private List<GameObject> keys;
     [SerializeField] private GameObject singleSpawnSpawners;
     [SerializeField] private GameObject multiSpawnSpawners;
+    [SerializeField] private GameObject victoryScreen;
 
     //deeds ui
     [SerializeField] private GameObject killAllMobsUI;
@@ -24,6 +25,7 @@ public class VillageAllStages : MonoBehaviour
     [SerializeField] private GameObject inventory;
     [SerializeField] private AudioClip victorySound;
     public static bool keysCollected = false;
+    public static bool gateHasOpened = false;
     
     private bool killAllMobsCompleted = false;
     private bool collectWheatsCompleted = false;
@@ -40,6 +42,7 @@ public class VillageAllStages : MonoBehaviour
             fields.SetActive(false);
             singleSpawnSpawners.SetActive(false);
             multiSpawnSpawners.SetActive(true);
+            victoryScreen.SetActive(true);
             foreach (var key in keys)
             {
                 key.SetActive(false);
@@ -47,6 +50,7 @@ public class VillageAllStages : MonoBehaviour
             Destroy(this);
         }   
         firstNPC.SetActive(true);
+        victoryScreen.SetActive(false);
         multiSpawnSpawners.SetActive(false);
         singleSpawnSpawners.SetActive(true);
         killTheSpider.SetActive(false);
@@ -108,7 +112,7 @@ public class VillageAllStages : MonoBehaviour
             }
         }
 
-        if (!openTheDungeonGateCompleted && !openTheDungeonGate.activeSelf)
+        if (!openTheDungeonGateCompleted && gateHasOpened)
         {
             openTheDungeonGate.GetComponentInChildren<Text>().color = Color.green;
             openTheDungeonGateCompleted = true;
@@ -121,6 +125,7 @@ public class VillageAllStages : MonoBehaviour
             collectWheats.SetActive(false);
             collectFiveKeys.SetActive(false);
             killAllMobsUI.SetActive(false);
+            openTheDungeonGate.SetActive(false);
         }
 
         if (SavePlayer.spiderKilled >= 1)
@@ -130,6 +135,9 @@ public class VillageAllStages : MonoBehaviour
             killTheSpider.SetActive(false);
             inventory.GetComponent<AudioSource>().clip = victorySound;
             inventory.GetComponent<AudioSource>().Play();
+            victoryScreen.SetActive(true);
+            VictoryScreen.hasOpened = true;
+            Time.timeScale = 0;
             Destroy(this);
         }
     }

@@ -21,6 +21,7 @@ public class DungeonGate : MonoBehaviour
             if (InventoryItems.ItemsQuantities[16] >= 5 && VillageAllStages.keysCollected)
             {
                 closedGate.SetActive(false);
+                VillageAllStages.gateHasOpened = true;
                 openGate.SetActive(true);
                 Destroy(this);
             }

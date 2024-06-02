@@ -99,20 +99,16 @@ public class SpeechBox : MonoBehaviour
                 {  
                     if (SavePlayer.answersLevel >= 0 && SavePlayer.answersLevel < 0.25)
                     {
-                        Debug.Log("1");
                         prepareTheQuestion(1);
                     }else if (SavePlayer.answersLevel >= 0.25 && SavePlayer.answersLevel < 0.50)
                     {
-                        Debug.Log("2");
-                        prepareTheQuestion(1);
+                        prepareTheQuestion(2);
                     }else if (SavePlayer.answersLevel >= 0.50 && SavePlayer.answersLevel < 0.75)
                     {
-                        Debug.Log("3");
-                        prepareTheQuestion(2);
+                        prepareTheQuestion(3);
                     }
                     else if (SavePlayer.answersLevel >= 0.75 && SavePlayer.answersLevel <= 1)
                     {
-                        Debug.Log("4");
                         prepareTheQuestion(4);
                     }
                 }
@@ -195,7 +191,7 @@ public class SpeechBox : MonoBehaviour
             case 1:
                 Debug.Log("1q");
                 bool techQuestionHasNotFound = true;
-                int randomQuestionOne = Random.Range(0, 2);
+                int randomQuestionOne = Random.Range(0, QuestionsDatabase.questionsLevel1.Count);
                 if (techQuestion)
                 {
                     while (techQuestionHasNotFound)
@@ -206,7 +202,7 @@ public class SpeechBox : MonoBehaviour
                         }
                         else
                         {
-                            randomQuestionOne = Random.Range(0, 2);
+                            randomQuestionOne = Random.Range(0, QuestionsDatabase.questionsLevel1.Count);
                         }
                     }
                 }
@@ -220,36 +216,81 @@ public class SpeechBox : MonoBehaviour
                 break;
             case 2:
                 Debug.Log("2q");
-                int randomQuestionTwo = Random.Range(0, 2);
+                bool techQuestionHasNotFoundTwo = true;
+                int randomQuestionTwo = Random.Range(0, QuestionsDatabase.questionsLevel2.Count);
+                if (techQuestion)
+                {
+                    while (techQuestionHasNotFoundTwo)
+                    {
+                        if (QuestionsDatabase.questionsLevel2[randomQuestionTwo][6] == "T")
+                        {
+                            techQuestionHasNotFoundTwo = false;
+                        }
+                        else
+                        {
+                            randomQuestionTwo = Random.Range(0, QuestionsDatabase.questionsLevel2.Count);
+                        }
+                    }
+                }
                 question = QuestionsDatabase.questionsLevel2[randomQuestionTwo][0];
                 answer1 = QuestionsDatabase.questionsLevel2[randomQuestionTwo][1];
                 answer2 = QuestionsDatabase.questionsLevel2[randomQuestionTwo][2];
                 answer3 = QuestionsDatabase.questionsLevel2[randomQuestionTwo][3];
                 answer4 = QuestionsDatabase.questionsLevel2[randomQuestionTwo][4];
                 correctAnswer = int.Parse(QuestionsDatabase.questionsLevel2[randomQuestionTwo][5]);
-                DialogHandler.correctAnswer = QuestionsDatabase.questionsLevel1[randomQuestionTwo][correctAnswer];
+                DialogHandler.correctAnswer = QuestionsDatabase.questionsLevel2[randomQuestionTwo][correctAnswer];
                 break;
             case 3:
                 Debug.Log("3q");
-                int randomQuestionThree = Random.Range(0, 2);
+                bool techQuestionHasNotFoundThree = true;
+                int randomQuestionThree = Random.Range(0, QuestionsDatabase.questionsLevel3.Count);
+                if (techQuestion)
+                {
+                    while (techQuestionHasNotFoundThree)
+                    {
+                        if (QuestionsDatabase.questionsLevel3[randomQuestionThree][6] == "T")
+                        {
+                            techQuestionHasNotFoundThree = false;
+                        }
+                        else
+                        {
+                            randomQuestionThree = Random.Range(0, QuestionsDatabase.questionsLevel3.Count);
+                        }
+                    }
+                }
                 question = QuestionsDatabase.questionsLevel3[randomQuestionThree][0];
                 answer1 = QuestionsDatabase.questionsLevel3[randomQuestionThree][1];
                 answer2 = QuestionsDatabase.questionsLevel3[randomQuestionThree][2];
                 answer3 = QuestionsDatabase.questionsLevel3[randomQuestionThree][3];
                 answer4 = QuestionsDatabase.questionsLevel3[randomQuestionThree][4];
                 correctAnswer = int.Parse(QuestionsDatabase.questionsLevel3[randomQuestionThree][5]);
-                DialogHandler.correctAnswer = QuestionsDatabase.questionsLevel1[randomQuestionThree][correctAnswer];
+                DialogHandler.correctAnswer = QuestionsDatabase.questionsLevel3[randomQuestionThree][correctAnswer];
                 break;
             case 4:
                 Debug.Log("4q");
-                int randomQuestionFour = Random.Range(0, 2);
+                bool techQuestionHasNotFoundFour = true;
+                int randomQuestionFour = Random.Range(0, QuestionsDatabase.questionsLevel4Panel.Count);
+                if (techQuestion)
+                {
+                    while (techQuestionHasNotFoundFour)
+                    {
+                        if (QuestionsDatabase.questionsLevel4Panel[randomQuestionFour][6] == "T")
+                        {
+                            techQuestionHasNotFoundFour = false;
+                        }
+                        else
+                        {
+                            randomQuestionFour = Random.Range(0, QuestionsDatabase.questionsLevel4Panel.Count);
+                        }
+                    }
+                }
                 question = QuestionsDatabase.questionsLevel4Panel[randomQuestionFour][0];
                 answer1 = QuestionsDatabase.questionsLevel4Panel[randomQuestionFour][1];
                 answer2 = QuestionsDatabase.questionsLevel4Panel[randomQuestionFour][2];
                 answer3 = QuestionsDatabase.questionsLevel4Panel[randomQuestionFour][3];
                 answer4 = QuestionsDatabase.questionsLevel4Panel[randomQuestionFour][4];
                 correctAnswer = int.Parse(QuestionsDatabase.questionsLevel4Panel[randomQuestionFour][5]);
-                DialogHandler.correctAnswer = QuestionsDatabase.questionsLevel1[randomQuestionFour][correctAnswer];
+                DialogHandler.correctAnswer = QuestionsDatabase.questionsLevel4Panel[randomQuestionFour][correctAnswer];
                 break;
         }
     }

@@ -100,5 +100,10 @@ public class ParticleMover : MonoBehaviour
             other.transform.gameObject.GetComponent<EnemyMovement>().enemyHp -= damageAmount;
             lastObj = other.transform.gameObject;
         }
+        if (other.CompareTag("spider") && other.transform.gameObject != lastObj)//elegxei ektos tou oti ean einai enemy ean einai kai to idio object me prin.
+        {
+            other.transform.gameObject.GetComponent<EnemyMovement>().enemyHp -= damageAmount/3;
+            lastObj = other.transform.gameObject;
+        }
     }
 }

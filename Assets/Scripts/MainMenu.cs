@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
     {
         if (Application.persistentDataPath + "/saveDataFile.dat" != null)
         {
-            contienueButton.SetActive(true);
+            contienueButton.SetActive(false);
         }
         else
         {
